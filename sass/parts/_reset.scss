@@ -1,0 +1,28 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+nav, ul, li,
+div {
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  color: #555;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,78 @@
+// include
+@import "parts/usdefault";
+@import "parts/bourbon/bourbon";
+@import "parts/neat/neat";
+@import "parts/reset";
+@import "parts/setting";
+
+#content {
+  @include outer-container(1000px);
+}
+
+#primary {
+  @include span-columns(9);
+}
+
+#secondary {
+  @include span-columns(3);
+}
+
+.site-branding {
+  @include outer-container(1000px);
+}
+
+.menu {
+  @include outer-container(1000px);
+  position: relative;
+  ul {
+    @include clearfix;
+  }
+  li {
+    float: left;
+    padding: 0 20px 0 0;
+  }
+  a {
+    display: block;
+    padding: 10px 0;
+    color: #555;
+  }
+}
+
+.site-title {
+  font-size: 1.4rem;
+}
+
+.site-description {
+  font-size: 1.0rem;
+}
+
+.main-navigation {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  .children {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.children {
+  position: absolute;
+  margin: 0;
+  .children {
+    left: 40px;
+  }
+  li {
+    float: inherit;
+  }
+  @media #{$sp} {
+    left: 0;
+    background: #fff;
+    @include clearfix;
+    li {
+      float: left;
+    }
+  }
+}

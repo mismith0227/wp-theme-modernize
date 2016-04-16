@@ -7,6 +7,15 @@
       });
 
       $('#main img').attr('data-action', 'zoom');
+
   });
 
 } )( jQuery );
+
+var myElement = document.querySelector(".main-navigation");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement, {
+  offset : 200
+});
+// initialise
+headroom.init();

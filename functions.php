@@ -110,6 +110,24 @@ function underscorestheme_widgets_init() {
 }
 add_action( 'widgets_init', 'underscorestheme_widgets_init' );
 
+
+//hooks
+add_filter( 'the_content' , 'underscorestheme_the_content_filter' );
+function underscorestheme_the_content_filter( $content ) {
+    if ( is_home() || is_archive() ){
+        $content = underscorestheme_make_excerpt($content);
+    }
+    return $content;
+}
+
+function underscorestheme_make_excerpt($content){
+    global $post;
+    $length = 120;
+    $content = mb_substr( strip_tags( $post -> post_content ), 0, $length );
+    $content = $content . "...";
+    return $content;
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -118,12 +136,14 @@ function underscorestheme_scripts() {
 
 	wp_enqueue_style(
 		'underscorestheme-style-zoom',
-		$url . '/layouts/zoom.css'
+		$url . '/css/zoom.css'
 	);
 
 	wp_enqueue_style( 'underscorestheme-style', get_stylesheet_uri() );
 
 	// wp_enqueue_script( 'underscorestheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'underscorestheme-headroom', get_template_directory_uri() . '/js/headroom.min.js', array(), '1.0.0', true );
 
 	wp_enqueue_script( 'underscorestheme-transition', get_template_directory_uri() . '/js/transition.js', array('jquery'), '1.0.0', true );
 

@@ -933,31 +933,34 @@ li {
   display: table;
 }
 
-.menu {
+#primary-menu {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#primary-menu::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.main-navigation {
   position: relative;
 }
 
-.menu::after {
+.main-navigation ul::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.menu ul::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.menu li {
+.main-navigation li {
   float: left;
   padding: 0 20px 0 0;
 }
 
-.menu a {
+.main-navigation a {
   display: block;
   padding: 10px 0;
   color: #555;
@@ -976,7 +979,8 @@ li {
   border-bottom: 1px solid #eee;
 }
 
-.main-navigation .children {
+.main-navigation .children,
+.main-navigation .sub-menu {
   display: none;
 }
 
@@ -984,30 +988,36 @@ li {
   display: none;
 }
 
-.children {
+.children,
+.sub-menu {
   position: absolute;
   margin: 0;
 }
 
-.children .children {
+.children .children,
+.sub-menu .children {
   left: 40px;
 }
 
-.children li {
+.children li,
+.sub-menu li {
   float: inherit;
 }
 
 @media only screen and (max-width: 520px) {
-  .children {
+  .children,
+  .sub-menu {
     left: 0;
     background: #fff;
   }
-  .children::after {
+  .children::after,
+  .sub-menu::after {
     clear: both;
     content: "";
     display: table;
   }
-  .children li {
+  .children li,
+  .sub-menu li {
     float: left;
   }
 }

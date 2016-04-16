@@ -5,6 +5,8 @@
         console.log('test');
         $(this).find('.children').css({'display': 'block'});
       });
+
+      $('#main img').attr('data-action', 'zoom');
   });
 
 } )( jQuery );

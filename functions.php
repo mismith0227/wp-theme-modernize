@@ -114,9 +114,20 @@ add_action( 'widgets_init', 'underscorestheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function underscorestheme_scripts() {
+	$url = get_template_directory_uri();
+
+	wp_enqueue_style(
+		'underscorestheme-style-zoom',
+		$url . '/layouts/zoom.css'
+	);
+
 	wp_enqueue_style( 'underscorestheme-style', get_stylesheet_uri() );
 
 	// wp_enqueue_script( 'underscorestheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'underscorestheme-transition', get_template_directory_uri() . '/js/transition.js', array('jquery'), '1.0.0', true );
+
+	wp_enqueue_script( 'underscorestheme-zoom', get_template_directory_uri() . '/js/zoom.min.js', array('jquery'), '1.0.0', true );
 
 	wp_enqueue_script( 'underscorestheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

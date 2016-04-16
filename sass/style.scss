@@ -21,8 +21,11 @@
   @include outer-container(1000px);
 }
 
-.menu {
+#primary-menu {
   @include outer-container(1000px);
+}
+
+.main-navigation {
   position: relative;
   ul {
     @include clearfix;
@@ -49,7 +52,8 @@
 .main-navigation {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  .children {
+  .children,
+  .sub-menu {
     display: none;
   }
 }
@@ -58,7 +62,8 @@
   display: none;
 }
 
-.children {
+.children,
+.sub-menu {
   position: absolute;
   margin: 0;
   .children {

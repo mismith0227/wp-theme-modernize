@@ -945,10 +945,6 @@ li {
   display: table;
 }
 
-.main-navigation {
-  position: relative;
-}
-
 .main-navigation ul::after {
   clear: both;
   content: "";
@@ -993,6 +989,7 @@ li {
 .sub-menu {
   position: absolute;
   margin: 0;
+  padding: 0;
   background-color: #fff;
 }
 
@@ -1005,24 +1002,7 @@ li {
 .children li,
 .sub-menu li {
   float: inherit;
-}
-
-@media only screen and (max-width: 520px) {
-  .children,
-  .sub-menu {
-    left: 0;
-    background: #fff;
-  }
-  .children::after,
-  .sub-menu::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  .children li,
-  .sub-menu li {
-    float: left;
-  }
+  padding: 0 20px;
 }
 
 .page_item_has_children:hover > .children {
@@ -1036,14 +1016,35 @@ li {
   transition: transform 200ms linear;
 }
 
+@media only screen and (max-width: 1024px) {
+  .headroom {
+    position: fixed;
+    top: inherit;
+    bottom: 0;
+  }
+}
+
 .headfixed {
   position: fixed;
 }
 
 .headroom--pinned {
+  transform: translate3d(0, 100%, 0);
+}
+
+@media only screen and (max-width: 1024px) {
+  .headroom--pinned {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.headroom--unpinned,
+.headroom--top {
   transform: translate3d(0, 0, 0);
 }
 
-.headroom--unpinned {
-  transform: translate3d(0, -100%, 0);
+@media only screen and (max-width: 1024px) {
+  .headroom--unpinned {
+    transform: translate3d(0, 100%, 0);
+  }
 }

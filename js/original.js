@@ -1,26 +1,41 @@
 ( function( $ ) {
   $(function(){
 
+    var setting = {
+      tablet: 1024
+    }
+
+    var head_dist = $('#primary-menu').offset().top;
+    var nav_height = $('#primary-menu').outerHeight() + 2;
+    var hdtar = head_dist + nav_height + 50;
+
+    var myElement = document.querySelector(".main-navigation");
+    var headroom  = new Headroom(myElement, {
+      offset : hdtar
+    });
+    headroom.init();
+
     function headstyle() {
+      var wW = $(window).width();
+      if(wW < setting.tablet) {
+        $('.headroom').css({'top': 'inherit'});
+      } else {
+        $('.headroom').css({'top': -nav_height});
+      }
+
+
     	if ( $('#wpadminbar').length ) {
     		console.log('test');
     	}
     }
     headstyle();
-
-    var head_dist = $('#primary-menu').offset().top;
-    var nav_height = $('#primary-menu').height();
-    var hdtar = head_dist + nav_height + 50;
-
-    var myElement = document.querySelector(".main-navigation");
-    var headroom  = new Headroom(myElement, {
-      offset : head_dist
+    $(window).on('resize', function(){
+      headstyle();
     });
-    headroom.init();
 
     $(window).on('scroll', function(){
       var scrval = $(window).scrollTop();
-      if(scrval > head_dist) {
+      if(scrval > hdtar) {
         $('.headroom').addClass('headfixed');
         $('#content').css({'margin-top': nav_height});
       } else {

@@ -26,7 +26,6 @@
 }
 
 .main-navigation {
-  position: relative;
   ul {
     @include clearfix;
   }
@@ -67,6 +66,7 @@
 .sub-menu {
   position: absolute;
   margin: 0;
+  padding: 0;
   background-color: #fff;
   .children {
     top: 0;
@@ -74,14 +74,7 @@
   }
   li {
     float: inherit;
-  }
-  @media #{$sp} {
-    left: 0;
-    background: #fff;
-    @include clearfix;
-    li {
-      float: left;
-    }
+    padding: 0 20px;
   }
 }
 
@@ -96,6 +89,11 @@
   left: 0;
   width: 100%;
   transition: transform 200ms linear;
+  @media #{$tablet} {
+    position: fixed;
+    top: inherit;
+    bottom: 0;
+  }
 }
 
 .headfixed {
@@ -103,9 +101,19 @@
 }
 
 .headroom--pinned {
+  transform: translate3d(0, 100%, 0);
+  @media #{$tablet} {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.headroom--unpinned,
+.headroom--top {
   transform: translate3d(0, 0, 0);
 }
 
 .headroom--unpinned {
-  transform: translate3d(0, -100%, 0);
+  @media #{$tablet} {
+    transform: translate3d(0, 100%, 0);
+  }
 }

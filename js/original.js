@@ -9,12 +9,14 @@
     var nav_height = $('#primary-menu').outerHeight() + 2;
     var hdtar = head_dist + nav_height + 50;
 
+    // headroom
     var myElement = document.querySelector(".main-navigation");
     var headroom  = new Headroom(myElement, {
       offset : hdtar
     });
     headroom.init();
 
+    // headerstyle
     function headstyle() {
       var wW = $(window).width();
       if(wW < setting.tablet) {

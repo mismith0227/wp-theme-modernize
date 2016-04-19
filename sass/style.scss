@@ -55,6 +55,9 @@
   .children,
   .sub-menu {
     display: none;
+    @media #{$tablet} {
+      display: block;
+    }
   }
 }
 
@@ -81,6 +84,54 @@
 .page_item_has_children:hover {
   &>.children {
     display: block;
+    @media #{$tablet} {
+      display: block;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+    }
+  }
+}
+
+.menu-item-has-children:hover {
+  &>.sub-menu {
+    display: block;
+    @media #{$tablet} {
+      display: block;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+    }
+  }
+}
+
+.page_item_has_children {
+  .page_item_has_children {
+    .children {
+      position: inherit;
+    }
+    &:hover {
+      .children {
+        position: inherit;
+      }
+    }
+  }
+}
+
+.menu-item-has-children {
+  .menu-item-has-children {
+    .sub-menu {
+      position: inherit;
+    }
+    &:hover {
+      .sub-menu {
+        position: inherit;
+      }
+    }
   }
 }
 

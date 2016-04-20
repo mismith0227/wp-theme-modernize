@@ -933,16 +933,22 @@ li {
   display: table;
 }
 
-#primary-menu {
+.primary-menu {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#primary-menu::after {
+.primary-menu::after {
   clear: both;
   content: "";
   display: table;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-navigation {
+    overflow-x: scroll;
+  }
 }
 
 .main-navigation ul::after {
@@ -992,7 +998,6 @@ li {
   display: none;
 }
 
-.children,
 .sub-menu {
   position: absolute;
   margin: 0;
@@ -1000,13 +1005,6 @@ li {
   background-color: #fff;
 }
 
-.children .children,
-.sub-menu .children {
-  top: 0;
-  left: 100%;
-}
-
-.children li,
 .sub-menu li {
   float: inherit;
   padding: 0 20px;

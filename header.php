@@ -42,8 +42,14 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscorestheme' ); ?></button> -->
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_class'     => 'primary-menu',
+						 ) );
+					?>
+			<?php endif; ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

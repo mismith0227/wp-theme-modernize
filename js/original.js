@@ -5,8 +5,8 @@
       tablet: 1024
     }
 
-    var head_dist = $('#primary-menu').offset().top;
-    var nav_height = $('#primary-menu').outerHeight() + 2;
+    var head_dist = $('#site-navigation').offset().top;
+    var nav_height = $('#site-navigation').outerHeight() + 2;
     var hdtar = head_dist + nav_height + 50;
 
     // headroom
@@ -25,10 +25,31 @@
         $('.headroom').css({'top': -nav_height});
       }
 
-
     	if ( $('#wpadminbar').length ) {
     		console.log('test');
     	}
+
+      var $nav = $('.primary-menu');
+      var $navli = $nav.children('li');
+
+      var sumli = 0;
+      var linum = $navli.length;
+      for(i = 0; i < linum; i++) {
+        sumli += $navli.eq(i).outerWidth(true);
+      }
+
+      if(wW < setting.tablet) {
+        $nav.css({
+          'width': sumli + 10
+        });
+      } else {
+        $nav.css({
+          'width': 'auto'
+        });
+      }
+
+
+      console.log(sumli);
     }
     headstyle();
     $(window).on('resize', function(){

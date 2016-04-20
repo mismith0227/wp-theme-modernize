@@ -21,11 +21,14 @@
   @include outer-container(1000px);
 }
 
-#primary-menu {
+.primary-menu {
   @include outer-container(1000px);
 }
 
 .main-navigation {
+  @media #{$tablet} {
+    overflow-x: scroll;
+  }
   ul {
     @include clearfix;
   }
@@ -65,16 +68,11 @@
   display: none;
 }
 
-.children,
 .sub-menu {
   position: absolute;
   margin: 0;
   padding: 0;
   background-color: #fff;
-  .children {
-    top: 0;
-    left: 100%;
-  }
   li {
     float: inherit;
     padding: 0 20px;

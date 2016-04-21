@@ -1,26 +1,27 @@
 ( function( $ ) {
   $(function(){
 
-
     var setting = {
       tablet: 1024
     }
 
+    var myElement = document.querySelector(".main-navigation");
+    var headroom  = new Headroom(myElement, {
+      offset : 300
+    });
+    headroom.init();
+
     // headerstyle
     function headstyle() {
       var wW = $(window).width();
-      var myElement = document.querySelector(".main-navigation");
-      var headroom  = new Headroom(myElement, {
-        offset : 300
-      });
 
       if(wW < setting.tablet) {
-        headroom.destroy();
-        $('.main-navigation').css({'top': 100 + '%'});
+        $('.menu-all-pages-container').appendTo('body');
       } else {
-        headroom.init();
-        $('.main-navigation').css({'top': 0});
+        $('.menu-all-pages-container').appendTo('#site-navigation');
       }
+
+
 
     	if ( $('#wpadminbar').length ) {
 

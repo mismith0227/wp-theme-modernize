@@ -50,6 +50,7 @@
 						 ) );
 					?>
 			<?php endif; ?>
+			<button class="toggle">x</button>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

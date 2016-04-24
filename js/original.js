@@ -21,8 +21,6 @@
         $('.menu-all-pages-container').appendTo('#site-navigation');
       }
 
-
-
     	if ( $('#wpadminbar').length ) {
 
     	}
@@ -46,6 +44,43 @@
 
     // zoom.js
     $('#main img').attr('data-action', 'zoom');
+
+    var Drawer = (function() {
+
+      var setting = {
+        state: false,
+        class: {
+          toggle: 'underscorestheme-toggle',
+          menu: 'menu-all-pages-container'
+        }
+      }
+
+      function _toggle() {
+        $('.' + setting.class.toggle).on('click',function(){
+          if (setting.state == true) {
+            _close();
+          } else {
+            _open();
+          }
+        });
+      }
+
+      function _open() {
+        $('.' + setting.class.menu).addClass('open');
+        setting.state = true;
+      }
+
+      function _close() {
+        $('.' + setting.class.menu).removeClass('open');
+        setting.state = false;
+      }
+
+      return {
+        toggle: _toggle // 公開する機能のみ返す
+      }
+    })();
+
+    Drawer.toggle();
   });
 
 } )( jQuery );

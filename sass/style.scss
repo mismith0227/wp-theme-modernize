@@ -124,6 +124,7 @@
     position: fixed;
     top: 100%;
     left: 0;
+    z-index: 5;
     width: 100%;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -150,7 +151,7 @@
   }
 }
 
-.toggle {
+.underscorestheme-toggle {
   display: none;
   @media #{$tablet} {
     display: block;

@@ -55,11 +55,17 @@
         }
       }
 
+      var nowScroll;
+
       function _toggle() {
         $('.' + setting.class.toggle).on('click',function(){
           if (setting.state == true) {
+            $('body').removeClass('bodyfixed').css({'top': 'inherit'});
+            window.scrollTo( 0 , -nowScroll );
             _close();
           } else {
+            nowScroll = $(window).scrollTop() * -1;
+            $('body').addClass('bodyfixed').css({'top': nowScroll});
             _open();
           }
         });
@@ -67,11 +73,13 @@
 
       function _open() {
         $('.' + setting.class.menu).addClass('open');
+        $('.' + setting.class.toggle).addClass('toggle-open');
         setting.state = true;
       }
 
       function _close() {
         $('.' + setting.class.menu).removeClass('open');
+        $('.' + setting.class.toggle).removeClass('toggle-open');
         setting.state = false;
       }
 

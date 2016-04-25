@@ -50,7 +50,9 @@
 						 ) );
 					?>
 			<?php endif; ?>
-			<button class="underscorestheme-toggle">x</button>
+			<button class="underscorestheme-toggle">
+				<span></span>
+			</button>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

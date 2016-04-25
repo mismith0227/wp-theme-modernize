@@ -17,12 +17,22 @@
   @include span-columns(3);
 }
 
+.site {
+  padding-bottom: 45px;
+}
+
 .site-branding {
   @include outer-container(1000px);
 }
 
 .primary-menu {
   @include outer-container(1000px);
+  @media #{$tablet} {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 60px 0;
+    overflow-y: auto;
+  }
 }
 
 .site-title {
@@ -35,6 +45,11 @@
 
 .main-navigation {
   background: #fff;
+  @media #{$tablet} {
+    position: relative;
+    height: 45px;
+    box-shadow: 0px 10px 6px 10px rgba(0,0,0,0.4);
+  }
   ul {
     @include clearfix;
   }
@@ -59,11 +74,18 @@
     left: 0;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-overflow-scrolling: touch;
     &.open {
       -webkit-transform: translate3d(0, -100%, 0);
       transform: translate3d(0, -100%, 0);
+    }
+    li {
+      margin-top: 80px;
     }
   }
   border-top: 1px solid #eee;
@@ -151,9 +173,91 @@
   }
 }
 
+.headroom--bottom {
+  @media #{$tablet} {
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@mixin border() {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 35px;
+  height: 2px;
+  background-color: #666;
+}
+
 .underscorestheme-toggle {
   display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  span {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 35px;
+    height: 2px;
+    margin: auto;
+    background-color: #666;
+    &::before {
+      @include border();
+      top: 10px;
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      -webkit-transition: .3s;
+      transition: .3s;
+    }
+    &::after {
+      @include border();
+      bottom: 10px;
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      -webkit-transition: .3s;
+      transition: .3s;
+    }
+  }
+  &.toggle-open {
+    span {
+      background-color: rgba(0, 0, 0, 0);
+      &::before {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &::after {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
   @media #{$tablet} {
     display: block;
   }
+}
+
+.bodyfixed {
+  position: fixed;
+  left: 0;
+  width: 100%;
 }

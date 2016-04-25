@@ -5,20 +5,26 @@
 @import "parts/reset";
 @import "parts/setting";
 
-#content {
+.site-content {
   @include outer-container(1000px);
+  margin-top: 40px;
 }
 
-#primary {
-  @include span-columns(9);
+.primary {
+  @include span-columns(8);
 }
 
-#secondary {
-  @include span-columns(3);
+.secondary {
+  @include span-columns(4);
 }
 
 .site {
   padding-bottom: 45px;
+  background-color: #fafafa;
+}
+
+.site-header {
+  background-color: #fff;
 }
 
 .site-branding {
@@ -44,6 +50,7 @@
 }
 
 .main-navigation {
+  position: relative;
   background: #fff;
   @media #{$tablet} {
     position: relative;
@@ -93,6 +100,7 @@
   background: #fff;
   .sub-menu {
     display: none;
+    z-index: 5;
     @media #{$tablet} {
       display: block;
     }
@@ -142,11 +150,11 @@
   left: 0;
   width: 100%;
   transition: transform 200ms linear;
+  z-index: 5;
   @media #{$tablet} {
     position: fixed;
     top: 100%;
     left: 0;
-    z-index: 5;
     width: 100%;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -260,4 +268,44 @@
   position: fixed;
   left: 0;
   width: 100%;
+}
+
+/*
+  記事一覧
+*/
+
+.home .post {
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background-color: #fff;
+  .entry-title {
+    margin: 0;
+  }
+  .wrap-thumb + .entry-title {
+    margin-top: 16px;
+  }
+}
+
+.wrap-thumb {
+  position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+a {
+  color: #00ab6b;
 }

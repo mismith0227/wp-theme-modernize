@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: underscorestheme
 Theme URI: http://underscores.me/
@@ -887,42 +888,48 @@ li {
   list-style: none;
 }
 
-#content {
+.site-content {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
 }
 
-#content::after {
+.site-content::after {
   clear: both;
   content: "";
   display: table;
 }
 
-#primary {
+.primary {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
+  width: 65.88078%;
 }
 
-#primary:last-child {
+.primary:last-child {
   margin-right: 0;
 }
 
-#secondary {
+.secondary {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
+  width: 31.76157%;
 }
 
-#secondary:last-child {
+.secondary:last-child {
   margin-right: 0;
 }
 
 .site {
   padding-bottom: 45px;
+  background-color: #fafafa;
+}
+
+.site-header {
+  background-color: #fff;
 }
 
 .site-branding {
@@ -967,6 +974,7 @@ li {
 }
 
 .main-navigation {
+  position: relative;
   background: #fff;
 }
 
@@ -1032,6 +1040,7 @@ li {
 
 .menu-all-pages-container .sub-menu {
   display: none;
+  z-index: 5;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1090,6 +1099,7 @@ li {
   left: 0;
   width: 100%;
   transition: transform 200ms linear;
+  z-index: 5;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1097,7 +1107,6 @@ li {
     position: fixed;
     top: 100%;
     left: 0;
-    z-index: 5;
     width: 100%;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -1228,4 +1237,47 @@ li {
   position: fixed;
   left: 0;
   width: 100%;
+}
+
+/*
+  記事一覧
+*/
+.home .post {
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.home .post .entry-title {
+  margin: 0;
+}
+
+.home .post .wrap-thumb + .entry-title {
+  margin-top: 16px;
+}
+
+.wrap-thumb {
+  position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+}
+
+.wrap-thumb a {
+  display: block;
+}
+
+.wrap-thumb img {
+  display: block;
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+a {
+  color: #00ab6b;
 }

@@ -38,12 +38,12 @@
       if(scrval > 300) {
         $('#content').css({'margin-top': nav_height});
       } else {
-        $('#content').css({'margin-top': 0});
+        $('#content').css({'margin-top': 40 + 'px'});
       }
     });
 
     // zoom.js
-    $('#main img').attr('data-action', 'zoom');
+    $('.single-post .entry-content img').attr('data-action', 'zoom');
 
     var Drawer = (function() {
 

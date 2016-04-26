@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package underscorestheme
+ * @package modernize
  */
 
-if ( ! function_exists( 'underscorestheme_posted_on' ) ) :
+if ( ! function_exists( 'modernize_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function underscorestheme_posted_on() {
+function modernize_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -25,12 +25,12 @@ function underscorestheme_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'underscorestheme' ),
+		esc_html_x( 'Posted on %s', 'post date', 'modernize' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'underscorestheme' ),
+		esc_html_x( 'by %s', 'post author', 'modernize' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -39,37 +39,37 @@ function underscorestheme_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'underscorestheme_entry_footer' ) ) :
+if ( ! function_exists( 'modernize_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function underscorestheme_entry_footer() {
+function modernize_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'underscorestheme' ) );
-		if ( $categories_list && underscorestheme_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'underscorestheme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		$categories_list = get_the_category_list( esc_html__( ', ', 'modernize' ) );
+		if ( $categories_list && modernize_categorized_blog() ) {
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'modernize' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'underscorestheme' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'modernize' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'underscorestheme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'modernize' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'underscorestheme' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'modernize' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'underscorestheme' ),
+			esc_html__( 'Edit %s', 'modernize' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
@@ -83,8 +83,8 @@ endif;
  *
  * @return bool
  */
-function underscorestheme_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'underscorestheme_categories' ) ) ) {
+function modernize_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'modernize_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -96,27 +96,27 @@ function underscorestheme_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'underscorestheme_categories', $all_the_cool_cats );
+		set_transient( 'modernize_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so underscorestheme_categorized_blog should return true.
+		// This blog has more than 1 category so modernize_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so underscorestheme_categorized_blog should return false.
+		// This blog has only 1 category so modernize_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in underscorestheme_categorized_blog.
+ * Flush out the transients used in modernize_categorized_blog.
  */
-function underscorestheme_category_transient_flusher() {
+function modernize_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'underscorestheme_categories' );
+	delete_transient( 'modernize_categories' );
 }
-add_action( 'edit_category', 'underscorestheme_category_transient_flusher' );
-add_action( 'save_post',     'underscorestheme_category_transient_flusher' );
+add_action( 'edit_category', 'modernize_category_transient_flusher' );
+add_action( 'save_post',     'modernize_category_transient_flusher' );

@@ -7,6 +7,6 @@ module.exports = {
   dist: 'dist',
   sassOptions: {
     includePaths: ['node_modules/'],
-    outputStyle: 'compressed'
+    outputStyle: 'expanded'
   }
 }

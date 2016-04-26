@@ -5,6 +5,9 @@
       tablet: 1024
     }
 
+    var navdis = $('#site-navigation').offset().top;
+    var nav_height = $('#site-navigation').outerHeight;
+
     var myElement = document.querySelector(".main-navigation");
     var headroom  = new Headroom(myElement, {
       offset : 300
@@ -36,7 +39,7 @@
       var scrval = $(window).scrollTop();
       var nav_height = $('#site-navigation').outerHeight();
       if(scrval > 300) {
-        $('#content').css({'margin-top': nav_height});
+        $('#content').css({'margin-top': nav_height + 40 + 'px'});
       } else {
         $('#content').css({'margin-top': 40 + 'px'});
       }
@@ -50,7 +53,7 @@
       var setting = {
         state: false,
         class: {
-          toggle: 'underscorestheme-toggle',
+          toggle: 'modernize-toggle',
           menu: 'menu-all-pages-container'
         }
       }

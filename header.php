@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package underscorestheme
+ * @package modernize
  */
 
 ?><!DOCTYPE html>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'underscorestheme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'modernize' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
@@ -50,7 +50,7 @@
 						 ) );
 					?>
 			<?php endif; ?>
-			<button class="underscorestheme-toggle">
+			<button class="modernize-toggle">
 				<span></span>
 			</button>
 		</nav><!-- #site-navigation -->

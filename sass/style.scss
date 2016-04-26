@@ -32,6 +32,7 @@
 
 .site-branding {
   @include outer-container(1000px);
+  padding: 16px 0;
 }
 
 .primary-menu {
@@ -45,10 +46,12 @@
 }
 
 .site-title {
-  font-size: 1.4rem;
+  margin: 0;
+  font-size: 2.0rem;
 }
 
 .site-description {
+  margin-bottom: 0;
   font-size: 1.0rem;
 }
 
@@ -203,7 +206,7 @@
   background-color: #666;
 }
 
-.underscorestheme-toggle {
+.modernize-toggle {
   display: none;
   position: absolute;
   top: 0;

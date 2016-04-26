@@ -50,7 +50,7 @@
       var setting = {
         state: false,
         class: {
-          toggle: 'underscorestheme-toggle',
+          toggle: 'modernize-toggle',
           menu: 'menu-all-pages-container'
         }
       }

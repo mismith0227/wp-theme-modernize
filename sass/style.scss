@@ -20,8 +20,10 @@
 }
 
 .site {
-  padding-bottom: 45px;
   background-color: #fafafa;
+  @media #{$tablet} {
+    padding-bottom: 45px;
+  }
 }
 
 .site-header {
@@ -275,6 +277,42 @@
   記事一覧
 */
 
+@mixin postlayout($top: 0) {
+  width: 96%;
+  max-width: 800px;
+  margin: $top auto 0;
+}
+
+.single-post {
+  .site-content {
+    @include outer-container(100%);
+  }
+  .primary {
+    @include span-columns(12);
+    float: inherit;
+  }
+  .secondary {
+    @include span-columns(12);
+    @include postlayout(80px);
+    float: inherit;
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+  .entry-content {
+    @include postlayout();
+  }
+  .entry-footer {
+    @include postlayout(40px);
+  }
+  .post-navigation {
+    @include postlayout(40px);
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
 .home .post {
   padding: 20px;
   border: 1px solid #eee;
@@ -307,6 +345,13 @@
   }
 }
 
-a {
-  color: #00ab6b;
+.site-footer {
+  margin-top: 40px;
+  padding: 100px 0;
+  background-color: #020733;
+  color: #fff;
+  text-align: center;
+  a {
+    color: #fff;
+  }
 }

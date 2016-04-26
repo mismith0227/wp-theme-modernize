@@ -11,8 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.1",
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.2.0"
+    "gulp-sass": "^2.2.0",
+    "require-dir": "^0.3.0"
   }
 }

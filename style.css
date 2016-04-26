@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /*
 Theme Name: modernize
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme URI:
+Author: Takuma Misumi
+Author URI: http://blog.mismithportfolio.com/
+Description: Modernize is a modernized take on an ever-popular WordPress layout
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: modernize
-Tags:
+Tags: black, gray, white, Responsive Layout
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1299,6 +1299,10 @@ li {
   margin: 0 auto 0;
 }
 
+.single-post .entry-header {
+  position: relative;
+}
+
 .single-post .entry-footer {
   width: 96%;
   max-width: 800px;
@@ -1311,8 +1315,8 @@ li {
   margin: 40px auto 0;
 }
 
-.single-post p {
-  font-size: 16px;
+.single-post .wrap-thumb img {
+  min-width: 100%;
 }
 
 .home .post {
@@ -1328,6 +1332,10 @@ li {
 
 .home .post .wrap-thumb + .entry-title {
   margin-top: 16px;
+}
+
+.entry-content p {
+  font-size: 1.6rem;
 }
 
 .wrap-thumb {

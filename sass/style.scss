@@ -305,14 +305,19 @@
   .entry-content {
     @include postlayout();
   }
+  .entry-header {
+    position: relative;
+  }
   .entry-footer {
     @include postlayout(40px);
   }
   .post-navigation {
     @include postlayout(40px);
   }
-  p {
-    font-size: 16px;
+  .wrap-thumb {
+    img {
+      min-width: 100%;
+    }
   }
 }
 
@@ -326,6 +331,12 @@
   }
   .wrap-thumb + .entry-title {
     margin-top: 16px;
+  }
+}
+
+.entry-content {
+  p {
+    font-size: 1.6rem;
   }
 }
 

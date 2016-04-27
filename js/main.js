@@ -18,12 +18,13 @@
       var wW = $(window).width();
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
-        $('.site-content').addClass('site-content-pad');
-        if($('.single-post').length) {
-          $('.site-content').removeClass('site-content-pad');
+
+        if($('.single-post').length || $('.page').length) {
+          $('.site-content').css({'padding-top': 0 + 'px'});
         } else {
-          $('.site-content').addClass('site-content-pad');
+          $('.site-content').css({'padding-top': 40 + 'px'});
         }
+
       } else {
         $('.menu-all-pages-container').appendTo('#site-navigation');
         $('.site-content').css({'padding-top': nav_height + 'px'});

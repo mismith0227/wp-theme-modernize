@@ -884,6 +884,50 @@ body {
   background-color: #fafafa;
 }
 
+.site-header {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-header {
+    border-top: 1px solid #eee;
+    border-bottom: none;
+    box-shadow: 0px 15px 20px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.site-header-inner {
+  display: table;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-header-inner {
+    padding: 0 8px;
+  }
+}
+
+.site-branding {
+  display: table-cell;
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-branding {
+    padding-right: 60px;
+    vertical-align: middle;
+  }
+}
+
+.main-navigation {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 /*
   layout
 */
@@ -939,75 +983,25 @@ body {
   }
 }
 
+.site-footer {
+  margin-top: 40px;
+  padding: 100px 0;
+  background-color: #020733;
+  color: #fff;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
 /*
   header
 */
-.site-header {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
-  background-color: #fff;
-}
-
-@media only screen and (max-width: 1024px) {
-  .site-header {
-    border-top: 1px solid #eee;
-    border-bottom: none;
-    box-shadow: 0px 15px 20px 12px rgba(0, 0, 0, 0.4);
-  }
-}
-
-.site-header-inner {
-  display: table;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 1024px) {
-  .site-header-inner {
-    padding: 0 8px;
-  }
-}
-
-.site-branding {
-  display: table-cell;
-}
-
-@media only screen and (max-width: 1024px) {
-  .site-branding {
-    padding-right: 60px;
-    vertical-align: middle;
-  }
-}
-
-.main-navigation {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .menu-all-pages-container::after {
   content: "";
   display: block;
   clear: both;
-}
-
-.sd-header {
-  display: none;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  background-color: #fff;
-  text-align: center;
-}
-
-@media only screen and (max-width: 1024px) {
-  .sd-header {
-    display: block;
-  }
-}
-
-.sp-ttl {
-  margin: 0;
 }
 
 .primary-menu {
@@ -1445,16 +1439,4 @@ body {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
-}
-
-.site-footer {
-  margin-top: 40px;
-  padding: 100px 0;
-  background-color: #020733;
-  color: #fff;
-  text-align: center;
-}
-
-.site-footer a {
-  color: #fff;
 }

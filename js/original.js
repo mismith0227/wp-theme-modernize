@@ -8,7 +8,7 @@
     var navdis = $('#site-navigation').offset().top;
     var nav_height = $('#site-navigation').outerHeight;
 
-    var myElement = document.querySelector(".main-navigation");
+    var myElement = document.querySelector(".site-header");
     var headroom  = new Headroom(myElement, {
       offset : 300
     });
@@ -17,7 +17,6 @@
     // headerstyle
     function headstyle() {
       var wW = $(window).width();
-
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
       } else {

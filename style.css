@@ -852,14 +852,6 @@ object {
 }
 
 html {
-  box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
-html {
   font-size: 62.5%;
 }
 
@@ -888,43 +880,29 @@ li {
   list-style: none;
 }
 
-.site-content {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+body {
+  background-color: #fafafa;
 }
 
-.site-content::after {
-  clear: both;
-  content: "";
+/*
+  layout
+*/
+.site-content {
   display: table;
+  max-width: 1000px;
+  margin: 40px auto 0;
 }
 
 .primary {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%;
-}
-
-.primary:last-child {
-  margin-right: 0;
+  display: table-cell;
+  padding-right: 40px;
+  vertical-align: top;
 }
 
 .secondary {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-}
-
-.secondary:last-child {
-  margin-right: 0;
-}
-
-.site {
-  background-color: #fafafa;
+  display: table-cell;
+  width: 300px;
+  vertical-align: top;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -933,33 +911,85 @@ li {
   }
 }
 
+/*
+  header
+*/
 .site-header {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
   background-color: #fff;
 }
 
-.site-branding {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 0;
+@media only screen and (max-width: 1024px) {
+  .site-header {
+    border-top: 1px solid #eee;
+    border-bottom: none;
+    box-shadow: 0px 15px 20px 12px rgba(0, 0, 0, 0.4);
+  }
 }
 
-.site-branding::after {
-  clear: both;
-  content: "";
+.site-header-inner {
   display: table;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-header-inner {
+    padding: 0 8px;
+  }
+}
+
+.site-branding {
+  display: table-cell;
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-branding {
+    padding-right: 60px;
+    vertical-align: middle;
+  }
+}
+
+.main-navigation {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.menu-all-pages-container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sd-header {
+  display: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sd-header {
+    display: block;
+  }
+}
+
+.sp-ttl {
+  margin: 0;
 }
 
 .primary-menu {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  float: right;
 }
 
 .primary-menu::after {
-  clear: both;
   content: "";
-  display: table;
+  display: block;
+  clear: both;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -976,9 +1006,21 @@ li {
   font-size: 2.0rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .site-title {
+    display: inline-block;
+  }
+}
+
 .site-description {
   margin-bottom: 0;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-description {
+    display: inline-block;
+  }
 }
 
 .main-navigation {
@@ -990,19 +1032,12 @@ li {
   .main-navigation {
     position: relative;
     height: 45px;
-    box-shadow: 0px 10px 6px 10px rgba(0, 0, 0, 0.4);
   }
-}
-
-.main-navigation ul::after {
-  clear: both;
-  content: "";
-  display: table;
 }
 
 .main-navigation li {
   float: left;
-  padding: 0 20px 0 0;
+  padding: 0 0 0 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1017,12 +1052,6 @@ li {
   color: #555;
 }
 
-.menu-all-pages-container {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-}
-
 @media only screen and (max-width: 1024px) {
   .menu-all-pages-container {
     position: fixed;
@@ -1031,6 +1060,7 @@ li {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    background-color: #fff;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-transition: .4s;
@@ -1250,43 +1280,15 @@ li {
 /*
   記事一覧
 */
-.single-post .site-content {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.single-post .site-content::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
 .single-post .primary {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
   float: inherit;
 }
 
-.single-post .primary:last-child {
-  margin-right: 0;
-}
-
 .single-post .secondary {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
   width: 96%;
   max-width: 800px;
   margin: 80px auto 0;
   float: inherit;
-}
-
-.single-post .secondary:last-child {
-  margin-right: 0;
 }
 
 .single-post .secondary:last-child {

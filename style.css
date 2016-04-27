@@ -890,7 +890,7 @@ body {
 .site-content {
   display: table;
   max-width: 1000px;
-  margin: 40px auto 0;
+  margin: 0 auto;
 }
 
 .primary {
@@ -1133,6 +1133,7 @@ body {
 }
 
 .headroom {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1149,10 +1150,6 @@ body {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-}
-
-.headroom--not-top {
-  position: fixed;
 }
 
 .headroom--pinned {

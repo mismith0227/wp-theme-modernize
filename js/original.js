@@ -5,12 +5,11 @@
       tablet: 1024
     }
 
-    var navdis = $('#site-navigation').offset().top;
-    var nav_height = $('#site-navigation').outerHeight;
+    var nav_height = $('.site-header').outerHeight(true);
 
     var myElement = document.querySelector(".site-header");
     var headroom  = new Headroom(myElement, {
-      offset : 300
+      offset : nav_height
     });
     headroom.init();
 
@@ -19,8 +18,10 @@
       var wW = $(window).width();
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
+        $('.site-content').css({'margin-top': 40 + 'px'});
       } else {
         $('.menu-all-pages-container').appendTo('#site-navigation');
+        $('.site-content').css({'margin-top': nav_height + 40 + 'px'});
       }
 
     	if ( $('#wpadminbar').length ) {
@@ -32,16 +33,6 @@
     headstyle();
     $(window).on('resize', function(){
       headstyle();
-    });
-
-    $(window).on('scroll', function(){
-      var scrval = $(window).scrollTop();
-      var nav_height = $('#site-navigation').outerHeight();
-      if(scrval > 300) {
-        $('#content').css({'margin-top': nav_height + 40 + 'px'});
-      } else {
-        $('#content').css({'margin-top': 40 + 'px'});
-      }
     });
 
     // zoom.js

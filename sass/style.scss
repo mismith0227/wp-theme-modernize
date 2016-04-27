@@ -14,18 +14,37 @@ body {
   display: table;
   max-width: 1000px;
   margin: 40px auto 0;
+  @media #{$tablet} {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.site-content-pad {
+  padding-top: 40px;
 }
 
 .primary {
   display: table-cell;
   padding-right: 40px;
   vertical-align: top;
+  @media #{$tablet} {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
 }
 
 .secondary {
   display: table-cell;
   width: 300px;
   vertical-align: top;
+  @media #{$tablet} {
+    display: block;
+    width: 90%;
+    margin: 40px auto 0;
+  }
 }
 
 .site {
@@ -223,6 +242,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: transform 200ms linear;
   transition: transform 200ms linear;
   z-index: 5;
   @media #{$tablet} {
@@ -361,6 +381,8 @@ body {
   .primary {
     display: block;
     float: inherit;
+    width: 100%;
+    margin: 0;
     padding: 0;
   }
   .secondary {
@@ -376,10 +398,16 @@ body {
   .entry-header {
     display: table;
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
     width: 100%;
     padding: 40px;
     background-color: #666;
+    @media #{$tablet} {
+      min-height: 400px;
+    }
+    @media #{$sp} {
+      min-height: 300px;
+    }
   }
   .entry-footer {
     @include postlayout(40px);
@@ -447,7 +475,7 @@ body {
   img {
     display: block;
     position: absolute;
-    max-width: 100%;
+    max-width: inherit;
     top: 50%;
     left: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);

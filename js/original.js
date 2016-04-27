@@ -18,7 +18,12 @@
       var wW = $(window).width();
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
-        $('.site-content').css({'padding-top': 40 + 'px'});
+        $('.site-content').addClass('site-content-pad');
+        if($('.single-post').length) {
+          $('.site-content').removeClass('site-content-pad');
+        } else {
+          $('.site-content').addClass('site-content-pad');
+        }
       } else {
         $('.menu-all-pages-container').appendTo('#site-navigation');
         $('.site-content').css({'padding-top': nav_height + 'px'});

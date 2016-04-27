@@ -13,7 +13,7 @@ body {
 .site-content {
   display: table;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .primary {
@@ -345,6 +345,7 @@ body {
 */
 
 @mixin postlayout($top: 0) {
+  display: block;
   width: 96%;
   max-width: 800px;
   margin: $top auto 0;
@@ -352,9 +353,15 @@ body {
 
 .single-post {
   .site-content {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    margin-top: 0;
   }
   .primary {
+    display: block;
     float: inherit;
+    padding: 0;
   }
   .secondary {
     @include postlayout(80px);

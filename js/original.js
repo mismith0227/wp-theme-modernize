@@ -18,10 +18,10 @@
       var wW = $(window).width();
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
-        $('.site-content').css({'margin-top': 40 + 'px'});
+        $('.site-content').css({'padding-top': 40 + 'px'});
       } else {
         $('.menu-all-pages-container').appendTo('#site-navigation');
-        $('.site-content').css({'margin-top': nav_height + 40 + 'px'});
+        $('.site-content').css({'padding-top': nav_height + 'px'});
       }
 
     	if ( $('#wpadminbar').length ) {

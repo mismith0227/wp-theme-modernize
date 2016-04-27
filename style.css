@@ -890,7 +890,7 @@ body {
 .site-content {
   display: table;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .primary {
@@ -1277,11 +1277,21 @@ body {
 /*
   記事一覧
 */
+.single-post .site-content {
+  display: block;
+  width: 100%;
+  max-width: inherit;
+  margin-top: 0;
+}
+
 .single-post .primary {
+  display: block;
   float: inherit;
+  padding: 0;
 }
 
 .single-post .secondary {
+  display: block;
   width: 96%;
   max-width: 800px;
   margin: 80px auto 0;
@@ -1293,6 +1303,7 @@ body {
 }
 
 .single-post .entry-content {
+  display: block;
   width: 96%;
   max-width: 800px;
   margin: 0 auto 0;
@@ -1303,12 +1314,14 @@ body {
 }
 
 .single-post .entry-footer {
+  display: block;
   width: 96%;
   max-width: 800px;
   margin: 40px auto 0;
 }
 
 .single-post .post-navigation {
+  display: block;
   width: 96%;
   max-width: 800px;
   margin: 40px auto 0;

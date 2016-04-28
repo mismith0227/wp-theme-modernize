@@ -101,8 +101,12 @@
     }
   }
   .sub-menu {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
     z-index: 5;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
     @media #{$tablet} {
       display: block;
     }
@@ -124,6 +128,7 @@
   .sub-menu {
     top: 0;
     left: 100%;
+    min-width: 100px;
     @media #{$tablet} {
       left: 0;
     }
@@ -137,13 +142,11 @@
 
 .menu-item-has-children {
   &:hover > .sub-menu {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   .menu-item-has-children {
     position: relative;
-    &:hover > .sub-menu {
-      display: block;
-    }
   }
 }
 

@@ -1123,8 +1123,12 @@ body {
 }
 
 .menu-all-pages-container .sub-menu {
-  display: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
   z-index: 5;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -1153,6 +1157,7 @@ body {
 .sub-menu .sub-menu {
   top: 0;
   left: 100%;
+  min-width: 100px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -1167,15 +1172,12 @@ body {
 }
 
 .menu-item-has-children:hover > .sub-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .menu-item-has-children .menu-item-has-children {
   position: relative;
-}
-
-.menu-item-has-children .menu-item-has-children:hover > .sub-menu {
-  display: block;
 }
 
 .headroom {

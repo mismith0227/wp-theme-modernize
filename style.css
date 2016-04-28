@@ -1401,6 +1401,7 @@ body {
   color: #fff;
 }
 
+.archive .post,
 .home .post {
   padding: 20px;
   border: 1px solid #eee;
@@ -1408,10 +1409,12 @@ body {
   background-color: #fff;
 }
 
+.archive .post .entry-title,
 .home .post .entry-title {
   margin: 0;
 }
 
+.archive .post .wrap-thumb + .entry-title,
 .home .post .wrap-thumb + .entry-title {
   margin-top: 16px;
 }

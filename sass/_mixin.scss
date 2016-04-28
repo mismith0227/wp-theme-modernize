@@ -1,3 +1,11 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
 @mixin postlayout($top: 0) {
   display: block;
   width: 96%;

@@ -891,7 +891,7 @@ body {
   background-color: #fff;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site-header {
     border-top: 1px solid #eee;
     border-bottom: none;
@@ -906,7 +906,7 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site-header-inner {
     padding: 0 8px;
   }
@@ -916,7 +916,7 @@ body {
   display: table-cell;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site-branding {
     padding-right: 60px;
     vertical-align: middle;
@@ -937,7 +937,7 @@ body {
   margin: 40px auto 0;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site-content {
     display: block;
     margin-top: 0;
@@ -954,7 +954,7 @@ body {
   vertical-align: top;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .primary {
     display: block;
     width: 90%;
@@ -969,7 +969,7 @@ body {
   vertical-align: top;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .secondary {
     display: block;
     width: 90%;
@@ -977,7 +977,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site {
     padding-bottom: 45px;
   }
@@ -998,12 +998,6 @@ body {
 /*
   header
 */
-.menu-all-pages-container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .primary-menu {
   float: right;
 }
@@ -1014,7 +1008,7 @@ body {
   clear: both;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .primary-menu {
     width: 100%;
     height: 100%;
@@ -1028,7 +1022,7 @@ body {
   font-size: 2.0rem;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site-title {
     display: inline-block;
   }
@@ -1039,7 +1033,7 @@ body {
   font-size: 1.2rem;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .site-description {
     display: inline-block;
   }
@@ -1050,7 +1044,7 @@ body {
   background: #fff;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .main-navigation {
     position: relative;
     height: 45px;
@@ -1062,7 +1056,7 @@ body {
   padding: 0 0 0 20px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .main-navigation li {
     float: inherit;
   }
@@ -1074,27 +1068,57 @@ body {
   color: #555;
 }
 
-@media only screen and (max-width: 1024px) {
+.menu-all-pages-container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
   .menu-all-pages-container {
     position: fixed;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    top: 0;
+    right: -50%;
+    z-index: 3;
+    width: 50%;
     height: 100%;
     overflow-y: scroll;
     background-color: #fff;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+@media only screen and (max-width: 1023px) and (max-width: 639px) {
+  .menu-all-pages-container {
+    right: -80%;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
   .menu-all-pages-container.open {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
   .menu-all-pages-container li {
-    margin-top: 80px;
+    border-top: 1px solid #eee;
+  }
+  .menu-all-pages-container a {
+    display: block;
+    padding: 10px;
+  }
+  .menu-all-pages-container .sub-menu li {
+    padding: 0;
+  }
+  .menu-all-pages-container .sub-menu a {
+    padding-left: 40px;
+  }
+  .menu-all-pages-container .sub-menu .sub-menu a {
+    padding-left: 70px;
   }
 }
 
@@ -1103,7 +1127,7 @@ body {
   z-index: 5;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .menu-all-pages-container .sub-menu {
     display: block;
   }
@@ -1120,7 +1144,7 @@ body {
   background-color: #fff;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .sub-menu {
     position: inherit;
   }
@@ -1131,7 +1155,7 @@ body {
   left: 100%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .sub-menu .sub-menu {
     left: 0;
   }
@@ -1164,7 +1188,7 @@ body {
   z-index: 5;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .headroom {
     position: fixed;
     top: 100%;
@@ -1176,30 +1200,34 @@ body {
 }
 
 .headroom--pinned {
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .headroom--pinned {
     position: fixed;
+    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
 }
 
 .headroom--unpinned {
-  transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, -100%, 0);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .headroom--unpinned {
     position: fixed;
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .headroom--bottom {
     position: fixed;
+    -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
 }
@@ -1214,8 +1242,17 @@ body {
   height: 40px;
   margin: auto;
   padding: 0;
+  box-shadow: none;
   border: none;
   background-color: inherit;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.modernize-toggle:focus {
+  box-shadow: none;
 }
 
 .modernize-toggle span {
@@ -1244,8 +1281,8 @@ body {
   top: 10px;
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
 }
 
 .modernize-toggle span::after {
@@ -1261,8 +1298,8 @@ body {
   bottom: 10px;
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
 }
 
 .modernize-toggle.toggle-open span {
@@ -1285,10 +1322,42 @@ body {
   transform: rotate(-45deg);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .modernize-toggle {
     display: block;
   }
+}
+
+.bg-ovly {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.bg-ovly::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.bg-ovly-show {
+  left: 0;
+  opacity: 1;
 }
 
 .bodyfixed {
@@ -1343,13 +1412,13 @@ body {
   background-color: #666;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .single-post .entry-header {
     min-height: 400px;
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 639px) {
   .single-post .entry-header {
     min-height: 300px;
   }
@@ -1490,13 +1559,13 @@ body {
   background-color: #666;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .page .entry-header {
     min-height: 400px;
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 639px) {
   .page .entry-header {
     min-height: 300px;
   }

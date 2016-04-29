@@ -90,6 +90,8 @@
     transition: opacity .3s;
     @media #{$tablet} {
       display: block;
+      visibility: visible;;
+      opacity: 1;
     }
   }
 }

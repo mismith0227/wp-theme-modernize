@@ -1,14 +1,14 @@
 .site-title {
   margin: 0;
-  font-size: 2.0rem;
+  font-size: $large;
   @media #{$tablet} {
     display: inline-block;
   }
 }
 
 .site-description {
-  margin-bottom: 0;
-  font-size: 1.2rem;
+  margin: 0;
+  font-size: $small;
   @media #{$tablet} {
     display: inline-block;
   }

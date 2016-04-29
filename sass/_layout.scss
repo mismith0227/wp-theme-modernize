@@ -1,15 +1,16 @@
-body {
-  background-color: #fafafa;
-}
-
 @import 'modules/site-meta';
 @import 'modules/entry-meta';
 @import 'modules/nav';
+@import 'modules/widget';
 @import 'modules/headroom';
 @import 'modules/drawer';
 
-
 @import 'layout/header';
+
+
+body {
+  background-color: #fafafa;
+}
 
 /*
   layout

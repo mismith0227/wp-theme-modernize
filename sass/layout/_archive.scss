@@ -51,10 +51,14 @@
 
 .archive .post,
 .home .post {
+  margin-top: 10px;
   padding: 20px;
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
   background-color: #fff;
+  &:first-child {
+    margin-top: 0;
+  }
   .entry-title {
     margin: 0;
   }
@@ -81,6 +85,7 @@
     display: block;
     position: absolute;
     max-width: inherit;
+    height: auto;
     top: 50%;
     left: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);

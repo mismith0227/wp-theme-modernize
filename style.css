@@ -482,13 +482,15 @@ li {
   /* Above WP toolbar. */
 }
 
-body {
-  background-color: #fafafa;
-}
-
+/*
+  break point
+*/
+/*
+  font-size
+*/
 .site-title {
   margin: 0;
-  font-size: 2.0rem;
+  font-size: 2.2rem;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -498,7 +500,7 @@ body {
 }
 
 .site-description {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 1.2rem;
 }
 
@@ -687,6 +689,8 @@ body {
 @media only screen and (max-width: 1023px) {
   .menu-all-pages-container .sub-menu {
     display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -727,6 +731,34 @@ body {
 
 .menu-item-has-children .menu-item-has-children {
   position: relative;
+}
+
+/*
+  searchform
+*/
+.widget {
+  margin-top: 6.0rem;
+}
+
+.widget:first-child {
+  margin-top: 0;
+}
+
+.widget li {
+  margin-top: .8rem;
+  padding-left: 1.2rem;
+}
+
+.widget li:first-child {
+  margin-top: 0;
+}
+
+.widget-title {
+  margin: 0 0 1.2rem 0;
+  padding: 0 0 .8rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 
 .headroom {
@@ -961,6 +993,10 @@ body {
   vertical-align: middle;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 /*
   layout
 */
@@ -1085,10 +1121,16 @@ body {
 
 .archive .post,
 .home .post {
+  margin-top: 10px;
   padding: 20px;
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+.archive .post:first-child,
+.home .post:first-child {
+  margin-top: 0;
 }
 
 .archive .post .entry-title,
@@ -1120,6 +1162,7 @@ body {
   display: block;
   position: absolute;
   max-width: inherit;
+  height: auto;
   top: 50%;
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);

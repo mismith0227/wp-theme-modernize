@@ -56,6 +56,11 @@
 
     var Drawer = (function() {
 
+      if(!$('.menu-all-pages-container').length) {
+        $('.js-toggle').remove();
+        return;
+      }
+
       var setting = {
         state: false,
         class: {

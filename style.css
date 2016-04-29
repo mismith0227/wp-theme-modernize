@@ -1164,6 +1164,7 @@ body {
 @media only screen and (max-width: 1023px) {
   .site-content {
     display: block;
+    width: 100%;
     margin-top: 0;
   }
 }
@@ -1181,7 +1182,7 @@ body {
 @media only screen and (max-width: 1023px) {
   .primary {
     display: block;
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
     padding-right: 0;
   }
@@ -1313,6 +1314,8 @@ body {
   color: #999;
   font-style: italic;
   font-size: 1.2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .archive .post .entry-footer,

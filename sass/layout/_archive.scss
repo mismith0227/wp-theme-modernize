@@ -75,6 +75,8 @@
     color: #999;
     font-style: italic;
     font-size: $small;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   .entry-footer {
     color: #999;

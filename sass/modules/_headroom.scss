@@ -1,0 +1,44 @@
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: transform 200ms linear;
+  transition: transform 200ms linear;
+  z-index: 5;
+  @media #{$tablet} {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.headroom--pinned {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  @media #{$tablet} {
+    position: fixed;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.headroom--unpinned {
+  -webkit-transform: translate3d(0, -100%, 0);
+  @media #{$tablet} {
+    position: fixed;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.headroom--bottom {
+  @media #{$tablet} {
+    position: fixed;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}

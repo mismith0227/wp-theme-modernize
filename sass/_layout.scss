@@ -2,6 +2,13 @@ body {
   background-color: #fafafa;
 }
 
+@import 'modules/site-meta';
+@import 'modules/entry-meta';
+@import 'modules/nav';
+@import 'modules/headroom';
+@import 'modules/drawer';
+
+
 @import 'layout/header';
 
 /*
@@ -43,6 +50,8 @@ body {
     margin: 40px auto 0;
   }
 }
+
+@import 'layout/archive';
 
 @import 'layout/comment';
 

@@ -1,0 +1,132 @@
+/*
+  記事一覧
+*/
+.single-post {
+  .site-content {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    margin-top: 0;
+  }
+  .primary {
+    display: block;
+    float: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .secondary {
+    @include postlayout(80px);
+    float: inherit;
+  }
+  .entry-content {
+    @include postlayout();
+  }
+  .entry-header {
+    display: table;
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    padding: 40px;
+    @media #{$tablet} {
+      min-height: 400px;
+    }
+    @media #{$sp} {
+      min-height: 300px;
+    }
+  }
+  .entry-footer {
+    @include postlayout(40px);
+  }
+  .post-navigation {
+    @include postlayout(40px);
+  }
+
+  .entry-info {
+    display: table-cell;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.archive .post,
+.home .post {
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background-color: #fff;
+  .entry-title {
+    margin: 0;
+  }
+  .wrap-thumb + .entry-title {
+    margin-top: 16px;
+  }
+}
+
+.entry-content {
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.wrap-thumb {
+  position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+    position: absolute;
+    max-width: inherit;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+/*
+  固定ページ
+*/
+.page {
+  .site-content {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    margin-top: 0;
+  }
+  .primary {
+    display: block;
+    float: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .secondary {
+    @include postlayout(80px);
+    float: inherit;
+  }
+  .entry-content {
+    @include postlayout();
+  }
+  .entry-header {
+    display: table;
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    padding: 40px;
+    background-color: #666;
+    @media #{$tablet} {
+      min-height: 400px;
+    }
+    @media #{$sp} {
+      min-height: 300px;
+    }
+  }
+  .entry-footer {
+    @include postlayout(40px);
+  }
+}

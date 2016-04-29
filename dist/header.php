@@ -50,7 +50,7 @@
 						 ) );
 					?>
 			<?php endif; ?>
-			<button class="modernize-toggle">
+			<button class="js-toggle">
 				<span></span>
 			</button>
 		</nav><!-- #site-navigation -->

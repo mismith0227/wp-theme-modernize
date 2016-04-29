@@ -53,7 +53,7 @@
       var setting = {
         state: false,
         class: {
-          toggle: 'modernize-toggle',
+          toggle: 'js-toggle',
           menu: 'menu-all-pages-container'
         }
       }

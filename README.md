@@ -20,6 +20,9 @@ Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/no
 
 ## == Changelog ==
 
+### = 1.1.1 =
+* bug fix
+
 ### = 1.1.0 =
 * edit style
 

@@ -431,9 +431,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-nav, ul, li,
+nav, ul, li, ol, dl, dt, dd,
 div, span,
-header, footer, article, section {
+header, footer, article, section,
+blockquote,
+table, tr, th, td,
+a, address, pre {
   box-sizing: border-box;
 }
 

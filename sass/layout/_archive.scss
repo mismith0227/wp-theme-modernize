@@ -20,7 +20,7 @@
     float: inherit;
   }
   .entry-content {
-    @include postlayout();
+    @include postlayout(80px);
   }
   .entry-header {
     display: table;
@@ -80,7 +80,7 @@
     color: #999;
     font-size: $small;
     a {
-      color: #00ab6b;
+      color: $link;
     }
   }
   .tags-links,
@@ -137,7 +137,7 @@
     float: inherit;
   }
   .entry-content {
-    @include postlayout();
+    @include postlayout(80px);
   }
   .entry-header {
     display: table;

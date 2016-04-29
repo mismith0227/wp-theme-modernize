@@ -5,44 +5,50 @@
       tablet: 1024
     }
 
-    var navdis = $('#site-navigation').offset().top;
-    var nav_height = $('#site-navigation').outerHeight;
+    var nav_height = $('.site-header').outerHeight(true);
 
-    var myElement = document.querySelector(".main-navigation");
+    var myElement = document.querySelector(".site-header");
     var headroom  = new Headroom(myElement, {
-      offset : 300
+      offset : nav_height
     });
     headroom.init();
 
     // headerstyle
     function headstyle() {
       var wW = $(window).width();
-
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
+        $('.primary-menu').css({'padding-bottom': nav_height + 10 + 'px'});
+        $('.site').css({'padding-bottom': nav_height + 'px'});
+        if($('.single-post').length || $('.page').length) {
+          $('.site-content').css({'padding-top': 0 + 'px'});
+        } else {
+          $('.site-content').css({'padding-top': 40 + 'px'});
+        }
+
+        if ( $('#wpadminbar').length ) {
+          var bar_height = $('#wpadminbar').height();
+          $('.headroom').css({'top': 100 + '%'});
+      	}
+
       } else {
         $('.menu-all-pages-container').appendTo('#site-navigation');
+        $('.site-content').css({'padding-top': nav_height + 'px'});
+        $('.primary-menu').css({'padding-bottom': 0 + 'px'});
+        $('.site').css({'padding-bottom': 0 + 'px'});
+        if ( $('#wpadminbar').length ) {
+          var bar_height = $('#wpadminbar').height();
+          $('.headroom').css({'top': bar_height + 'px'});
+      	}
       }
 
-    	if ( $('#wpadminbar').length ) {
 
-    	}
 
     }
 
     headstyle();
     $(window).on('resize', function(){
       headstyle();
-    });
-
-    $(window).on('scroll', function(){
-      var scrval = $(window).scrollTop();
-      var nav_height = $('#site-navigation').outerHeight();
-      if(scrval > 300) {
-        $('#content').css({'margin-top': nav_height + 40 + 'px'});
-      } else {
-        $('#content').css({'margin-top': 40 + 'px'});
-      }
     });
 
     // zoom.js
@@ -54,11 +60,19 @@
         state: false,
         class: {
           toggle: 'js-toggle',
-          menu: 'menu-all-pages-container'
+          menu: 'menu-all-pages-container',
+          ovly: 'bg-ovly'
         }
       }
 
       var nowScroll;
+
+      function _init() {
+        var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
+        $('body').append(ovly);
+      }
+
+      _init();
 
       function _toggle() {
         $('.' + setting.class.toggle).on('click',function(){
@@ -77,17 +91,19 @@
       function _open() {
         $('.' + setting.class.menu).addClass('open');
         $('.' + setting.class.toggle).addClass('toggle-open');
+        $('.' + setting.class.ovly).addClass('bg-ovly-show');
         setting.state = true;
       }
 
       function _close() {
         $('.' + setting.class.menu).removeClass('open');
         $('.' + setting.class.toggle).removeClass('toggle-open');
+        $('.' + setting.class.ovly).removeClass('bg-ovly-show');
         setting.state = false;
       }
 
       return {
-        toggle: _toggle // 公開する機能のみ返す
+        toggle: _toggle
       }
     })();
 

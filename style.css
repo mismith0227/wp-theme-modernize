@@ -432,9 +432,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-nav, ul, li,
+nav, ul, li, ol, dl, dt, dd,
 div, span,
-header, footer, article, section {
+header, footer, article, section,
+blockquote,
+table, tr, th, td,
+a, address, pre {
   box-sizing: border-box;
 }
 
@@ -488,6 +491,9 @@ li {
 */
 /*
   font-size
+*/
+/*
+  link color
 */
 .site-title {
   margin: 0;
@@ -1118,7 +1124,7 @@ body {
   display: block;
   width: 96%;
   max-width: 800px;
-  margin: 0 auto 0;
+  margin: 80px auto 0;
 }
 
 .single-post .entry-header {
@@ -1210,7 +1216,7 @@ body {
 
 .archive .post .entry-footer a,
 .home .post .entry-footer a {
-  color: #00ab6b;
+  color: #20b2aa;
 }
 
 .archive .post .tags-links,
@@ -1276,7 +1282,7 @@ body {
   display: block;
   width: 96%;
   max-width: 800px;
-  margin: 0 auto 0;
+  margin: 80px auto 0;
 }
 
 .page .entry-header {
@@ -1332,4 +1338,123 @@ body {
 
 .site-footer a {
   color: #fff;
+}
+
+.entry-content h1 {
+  font-size: 3.0rem;
+}
+
+.entry-content h2 {
+  font-size: 2.4rem;
+}
+
+.entry-content h3 {
+  font-size: 2.0rem;
+}
+
+.entry-content h4 {
+  font-size: 1.8rem;
+}
+
+.entry-content h5 {
+  font-size: 1.6rem;
+}
+
+.entry-content h6 {
+  font-size: 1.4rem;
+}
+
+.entry-content blockquote {
+  position: relative;
+  display: block;
+  width: 96%;
+  padding: 2.0rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 5px;
+  font-size: .875rem;
+  background-color: #eee;
+}
+
+.entry-content blockquote::before {
+  content: "“";
+  font-size: 5.0rem;
+  line-height: 1em;
+  font-family: 'ＭＳ Ｐゴシック',sans-serif;
+  color: #fff;
+  position: absolute;
+  left: 1.0rem;
+  top: 1.0rem;
+}
+
+.entry-content table {
+  width: 96%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.entry-content th,
+.entry-content td {
+  padding: 1.0rem;
+  border: 1px solid #ccc;
+}
+
+.entry-content th {
+  background-color: #eee;
+}
+
+.entry-content dl {
+  font-size: 1.6rem;
+}
+
+.entry-content dt {
+  margin-top: 2.0rem;
+}
+
+.entry-content dd {
+  margin-left: 2.0rem;
+}
+
+.entry-content ul {
+  padding-left: 2.0rem;
+}
+
+.entry-content ul li {
+  margin-top: .8rem;
+  list-style: disc;
+  font-size: 1.6rem;
+}
+
+.entry-content ol {
+  padding-left: 2.0rem;
+}
+
+.entry-content ol li {
+  margin-top: .8rem;
+  list-style: decimal;
+  font-size: 1.6rem;
+}
+
+.entry-content p {
+  font-size: 1.6rem;
+}
+
+.entry-content a {
+  padding-bottom: .4rem;
+  border-bottom: 1px dashed #ccc;
+  color: #20b2aa;
+}
+
+.entry-content pre {
+  display: block;
+  width: 96%;
+  margin: 0 auto;
+  padding: 1.6rem;
+  border-radius: 1.0rem;
+  background-color: #3d3d3d;
+  font-size: 1.4rem;
+  color: #f5f5f5;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: auto;
 }

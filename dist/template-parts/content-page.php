@@ -11,7 +11,30 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+			if ( has_post_thumbnail() ) {
+				if ( is_single() ) {
+		?>
+		<div class="wrap-thumb">
+			<?php the_post_thumbnail(); ?>
+		</div>
+		<?php
+			} else {
+		?>
+
+			<div class="wrap-thumb">
+				<a href="<?php echo get_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+				</a>
+			</div>
+		<?php
+				}
+			}
+		?>
+		<div class="entry-info">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

@@ -977,12 +977,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1023px) {
-  .site {
-    padding-bottom: 45px;
-  }
-}
-
 .comments-area {
   width: 96%;
   max-width: 800px;

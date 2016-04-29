@@ -44,12 +44,6 @@ body {
   }
 }
 
-.site {
-  @media #{$tablet} {
-    padding-bottom: 45px;
-  }
-}
-
 @import 'layout/comment';
 
 @import 'layout/footer';

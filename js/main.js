@@ -19,21 +19,30 @@
       if(wW < setting.tablet) {
         $('.menu-all-pages-container').appendTo('body');
         $('.primary-menu').css({'padding-bottom': nav_height + 10 + 'px'});
+        $('.site').css({'padding-bottom': nav_height + 'px'});
         if($('.single-post').length || $('.page').length) {
           $('.site-content').css({'padding-top': 0 + 'px'});
         } else {
           $('.site-content').css({'padding-top': 40 + 'px'});
         }
 
+        if ( $('#wpadminbar').length ) {
+          var bar_height = $('#wpadminbar').height();
+          $('.headroom').css({'top': 100 + '%'});
+      	}
+
       } else {
         $('.menu-all-pages-container').appendTo('#site-navigation');
         $('.site-content').css({'padding-top': nav_height + 'px'});
         $('.primary-menu').css({'padding-bottom': 0 + 'px'});
+        $('.site').css({'padding-bottom': 0 + 'px'});
+        if ( $('#wpadminbar').length ) {
+          var bar_height = $('#wpadminbar').height();
+          $('.headroom').css({'top': bar_height + 'px'});
+      	}
       }
 
-    	if ( $('#wpadminbar').length ) {
 
-    	}
 
     }
 

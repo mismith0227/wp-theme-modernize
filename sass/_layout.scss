@@ -21,7 +21,7 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 40px auto 0;
-  @media #{$tablet} {
+  @media #{$sp} {
     display: block;
     width: 100%;
     margin-top: 0;
@@ -36,7 +36,7 @@ body {
   display: table-cell;
   padding-right: 40px;
   vertical-align: top;
-  @media #{$tablet} {
+  @media #{$sp} {
     display: block;
     width: 96%;
     margin: 0 auto;
@@ -49,6 +49,9 @@ body {
   width: 300px;
   vertical-align: top;
   @media #{$tablet} {
+    width: 200px;
+  }
+  @media #{$sp} {
     display: block;
     width: 90%;
     margin: 40px auto 0;

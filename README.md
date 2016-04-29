@@ -13,3 +13,7 @@ Source : [https://raw.githubusercontent.com/twbs/bootstrap/master/js/transition.
 Headroom.js  
 License: MIT
 Source : [http://wicky.nillia.ms/headroom.js/](http://wicky.nillia.ms/headroom.js/)
+
+Normalize.css  
+License: MIT  
+Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)

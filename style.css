@@ -1136,11 +1136,46 @@ body {
 .archive .post .entry-title,
 .home .post .entry-title {
   margin: 0;
+  font-size: 2.2rem;
 }
 
-.archive .post .wrap-thumb + .entry-title,
-.home .post .wrap-thumb + .entry-title {
-  margin-top: 16px;
+.archive .post .wrap-thumb + .entry-info,
+.home .post .wrap-thumb + .entry-info {
+  margin-top: 1.6rem;
+}
+
+.archive .post .entry-meta,
+.archive .post .entry-content,
+.archive .post .entry-footer,
+.home .post .entry-meta,
+.home .post .entry-content,
+.home .post .entry-footer {
+  margin-top: .8rem;
+}
+
+.archive .post .entry-content,
+.home .post .entry-content {
+  color: #999;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.archive .post .entry-footer,
+.home .post .entry-footer {
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.archive .post .entry-footer a,
+.home .post .entry-footer a {
+  color: #00ab6b;
+}
+
+.archive .post .tags-links,
+.archive .post .edit-link,
+.home .post .tags-links,
+.home .post .edit-link {
+  margin-left: 1.0rem;
 }
 
 .entry-content p {

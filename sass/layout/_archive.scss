@@ -61,9 +61,31 @@
   }
   .entry-title {
     margin: 0;
+    font-size: $large;
   }
-  .wrap-thumb + .entry-title {
-    margin-top: 16px;
+  .wrap-thumb + .entry-info {
+    margin-top: 1.6rem;
+  }
+  .entry-meta,
+  .entry-content,
+  .entry-footer {
+    margin-top: .8rem;
+  }
+  .entry-content {
+    color: #999;
+    font-style: italic;
+    font-size: $small;
+  }
+  .entry-footer {
+    color: #999;
+    font-size: $small;
+    a {
+      color: #00ab6b;
+    }
+  }
+  .tags-links,
+  .edit-link {
+    margin-left: 1.0rem;
   }
 }
 

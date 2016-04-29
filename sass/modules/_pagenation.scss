@@ -1,0 +1,35 @@
+.posts-navigation {
+  margin-top: 4.0rem;
+}
+
+.nav-links {
+  @include clearfix();
+}
+
+.nav-previous {
+  float: right;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: solid #888;
+    border-width: 1px 1px 0 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.nav-next {
+  float: left;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: solid #888;
+    border-width: 1px 0 0 1px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}

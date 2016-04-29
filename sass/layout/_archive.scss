@@ -157,3 +157,9 @@
     @include postlayout(40px);
   }
 }
+
+.page-header {
+  .page-title {
+    margin: 0;
+  }
+}

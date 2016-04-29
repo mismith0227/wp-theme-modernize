@@ -433,7 +433,8 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 nav, ul, li,
-div {
+div, span,
+header, footer, article, section {
   box-sizing: border-box;
 }
 
@@ -761,6 +762,46 @@ li {
   font-weight: normal;
 }
 
+.posts-navigation {
+  margin-top: 4.0rem;
+}
+
+.nav-links::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.nav-previous {
+  float: right;
+}
+
+.nav-previous::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: solid #888;
+  border-width: 1px 1px 0 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav-next {
+  float: left;
+}
+
+.nav-next::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: solid #888;
+  border-width: 1px 0 0 1px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 .headroom {
   position: fixed;
   top: 0;
@@ -1002,6 +1043,7 @@ body {
 */
 .site-content {
   display: table;
+  width: 90%;
   max-width: 1000px;
   margin: 40px auto 0;
 }
@@ -1263,6 +1305,10 @@ body {
   width: 96%;
   max-width: 800px;
   margin: 40px auto 0;
+}
+
+.page-header .page-title {
+  margin: 0;
 }
 
 .comments-area {

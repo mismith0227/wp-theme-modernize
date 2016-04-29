@@ -432,7 +432,8 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 nav, ul, li,
-div {
+div, span,
+header, footer, article, section {
   box-sizing: border-box;
 }
 

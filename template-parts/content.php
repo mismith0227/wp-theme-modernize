@@ -17,7 +17,7 @@
 				if ( is_single() ) {
 		?>
 		<div class="wrap-thumb">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('full'); ?>
 		</div>
 		<?php
 			} else {

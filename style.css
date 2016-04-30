@@ -5,7 +5,11 @@ Theme URI:
 Author: Takuma Misumi
 Author URI: http://blog.mismithportfolio.com/
 Description: Modernize is a modernized take on an ever-popular WordPress layout
+<<<<<<< HEAD
+Version: 1.1.1
+=======
 Version: 1.2.0
+>>>>>>> issues#26
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: modernize
@@ -1254,7 +1258,9 @@ body {
 }
 
 .archive .post,
-.home .post {
+.home .post,
+.search .post,
+.search .page {
   margin-top: 10px;
   padding: 20px;
   border: 1px solid #eee;
@@ -1264,24 +1270,32 @@ body {
 
 @media only screen and (max-width: 639px) {
   .archive .post,
-  .home .post {
+  .home .post,
+  .search .post,
+  .search .page {
     padding: 10px;
   }
 }
 
 .archive .post:first-child,
-.home .post:first-child {
+.home .post:first-child,
+.search .post:first-child,
+.search .page:first-child {
   margin-top: 0;
 }
 
 .archive .post .entry-title,
-.home .post .entry-title {
+.home .post .entry-title,
+.search .post .entry-title,
+.search .page .entry-title {
   margin: 0;
   font-size: 2.2rem;
 }
 
 .archive .post .wrap-thumb + .entry-info,
-.home .post .wrap-thumb + .entry-info {
+.home .post .wrap-thumb + .entry-info,
+.search .post .wrap-thumb + .entry-info,
+.search .page .wrap-thumb + .entry-info {
   margin-top: 1.6rem;
 }
 
@@ -1290,12 +1304,20 @@ body {
 .archive .post .entry-footer,
 .home .post .entry-meta,
 .home .post .entry-content,
-.home .post .entry-footer {
+.home .post .entry-footer,
+.search .post .entry-meta,
+.search .post .entry-content,
+.search .post .entry-footer,
+.search .page .entry-meta,
+.search .page .entry-content,
+.search .page .entry-footer {
   margin-top: .8rem;
 }
 
 .archive .post .entry-content,
-.home .post .entry-content {
+.home .post .entry-content,
+.search .post .entry-content,
+.search .page .entry-content {
   color: #999;
   font-style: italic;
   font-size: 1.2rem;
@@ -1304,20 +1326,28 @@ body {
 }
 
 .archive .post .entry-footer,
-.home .post .entry-footer {
+.home .post .entry-footer,
+.search .post .entry-footer,
+.search .page .entry-footer {
   color: #999;
   font-size: 1.2rem;
 }
 
 .archive .post .entry-footer a,
-.home .post .entry-footer a {
+.home .post .entry-footer a,
+.search .post .entry-footer a,
+.search .page .entry-footer a {
   color: #20b2aa;
 }
 
 .archive .post .tags-links,
 .archive .post .edit-link,
 .home .post .tags-links,
-.home .post .edit-link {
+.home .post .edit-link,
+.search .post .tags-links,
+.search .post .edit-link,
+.search .page .tags-links,
+.search .page .edit-link {
   margin-left: 1.0rem;
 }
 

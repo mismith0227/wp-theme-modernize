@@ -128,6 +128,20 @@ function modernize_make_excerpt($content){
     return $content;
 }
 
+/* zoom.js setup */
+function modernize_add_zoomjs_property( $content ) {
+  if ( false !== strpos( $content, 'data-action="zoom"' ) )
+     return $content;
+
+  $content = preg_replace(
+    '/<img /i',
+    '<img data-action="zoom" ',
+    $content );
+
+  return $content;
+}
+add_filter( 'the_content', 'modernize_add_zoomjs_property' );
+
 /**
  * Enqueue scripts and styles.
  */

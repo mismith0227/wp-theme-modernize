@@ -23,10 +23,10 @@
       }
 
       if(wW < setting.tablet) {
-        $('.menu-all-pages-container').appendTo('body');
+        $('.main-navigation').appendTo('body');
         $('.primary-menu').css({'padding-top': nav_height + 10 + 'px'});
       } else {
-        $('.menu-all-pages-container').appendTo('#site-navigation');
+        $('.main-navigation').appendTo('.site-header-inner');
         $('.primary-menu').css({'padding-top': 0 + 'px'});
       }
     }

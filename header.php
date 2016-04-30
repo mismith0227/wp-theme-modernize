@@ -42,6 +42,10 @@
 				endif; ?>
 			</div><!-- .site-branding -->
 
+			<button class="toggle-btn js-toggle">
+				<span></span>
+			</button>
+
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<?php
@@ -51,10 +55,8 @@
 							 ) );
 						?>
 				<?php endif; ?>
-				<button class="toggle-btn js-toggle">
-					<span></span>
-				</button>
 			</nav><!-- #site-navigation -->
+
 		</div><!-- .site-header-inner -->
 	</header><!-- #masthead -->
 

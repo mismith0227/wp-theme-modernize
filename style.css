@@ -730,7 +730,9 @@ li {
 
 @media only screen and (max-width: 1023px) {
   .main-navigation li {
+    display: block;
     float: inherit;
+    width: 100%;
   }
 }
 

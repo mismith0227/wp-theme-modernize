@@ -5,17 +5,12 @@
       tablet: 1024
     }
 
-    var nav_height = $('.site-header').outerHeight(true);
-
-    var myElement = document.querySelector(".site-header");
-    var headroom  = new Headroom(myElement, {
-      offset : nav_height
-    });
-    headroom.init();
+    var nav_height;
 
     // headerstyle
     function headstyle() {
       var wW = $(window).width();
+      var nav_height = $('.site-header').outerHeight(true);
       $('.site-content').css({'margin-top': nav_height + 'px'});
       if ( $('#wpadminbar').length ) {
         var bar_height = $('#wpadminbar').height();
@@ -36,6 +31,12 @@
       headstyle();
     });
 
+    var myElement = document.querySelector(".site-header");
+    var headroom  = new Headroom(myElement, {
+      offset : 100
+    });
+    headroom.init();
+
     // zoom.js
     $('.single-post .entry-content img').attr('data-action', 'zoom');
 
@@ -45,7 +46,7 @@
         state: false,
         class: {
           toggle: 'js-toggle',
-          menu: 'menu-all-pages-container',
+          menu: 'main-navigation',
           ovly: 'bg-ovly'
         }
       }
@@ -56,7 +57,7 @@
         var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
         $('body').append(ovly);
 
-        if($('.menu-all-pages-container').length) {
+        if($('.main-navigation li').length) {
           $('.js-toggle').show();
         }
       }

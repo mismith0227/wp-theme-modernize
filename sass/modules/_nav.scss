@@ -37,7 +37,7 @@
   }
 }
 
-.menu-all-pages-container {
+.main-navigation {
   @include clearfix();
   @media #{$tablet} {
     position: fixed;

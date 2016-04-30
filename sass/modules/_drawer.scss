@@ -15,6 +15,7 @@
   -webkit-appearance: button;
   appearance: button;
   outline: none;
+  visibility: hidden;
   &:focus {
     box-shadow: none;
   }
@@ -66,7 +67,7 @@
     }
   }
   @media #{$tablet} {
-    display: block;
+    visibility: visible;
   }
 }
 

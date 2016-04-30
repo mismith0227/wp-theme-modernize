@@ -41,11 +41,6 @@
 
     var Drawer = (function() {
 
-      if(!$('.menu-all-pages-container').length) {
-        $('.js-toggle').remove();
-        return;
-      }
-
       var setting = {
         state: false,
         class: {
@@ -60,6 +55,10 @@
       function _init() {
         var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
         $('body').append(ovly);
+
+        if($('.menu-all-pages-container').length) {
+          $('.js-toggle').show();
+        }
       }
 
       _init();

@@ -606,6 +606,7 @@ li {
 .site-title {
   margin: 0;
   font-size: 2.2rem;
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -955,6 +956,7 @@ li {
   -webkit-appearance: button;
   appearance: button;
   outline: none;
+  visibility: hidden;
 }
 
 .toggle-btn:focus {
@@ -1030,7 +1032,7 @@ li {
 
 @media only screen and (max-width: 1023px) {
   .toggle-btn {
-    display: block;
+    visibility: visible;
   }
 }
 

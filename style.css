@@ -457,6 +457,11 @@ li {
   list-style: none;
 }
 
+input,
+textarea {
+  max-width: 100%;
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -1550,4 +1555,8 @@ body {
   word-break: break-all;
   word-wrap: break-word;
   overflow: auto;
+}
+
+.entry-content img {
+  max-width: 96%;
 }

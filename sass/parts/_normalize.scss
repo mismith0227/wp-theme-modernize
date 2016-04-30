@@ -436,7 +436,8 @@ div, span,
 header, footer, article, section,
 blockquote,
 table, tr, th, td,
-a, address, pre {
+a, address, pre,
+textarea, input, label {
   box-sizing: border-box;
 }
 
@@ -453,6 +454,11 @@ ul {
 
 li {
   list-style: none;
+}
+
+input,
+textarea {
+  max-width: 100%;
 }
 
 /* Text meant only for screen readers. */

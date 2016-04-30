@@ -5,7 +5,7 @@ Theme URI:
 Author: Takuma Misumi
 Author URI: http://blog.mismithportfolio.com/
 Description: Modernize is a modernized take on an ever-popular WordPress layout
-Version: 1.1.1
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: modernize
@@ -437,7 +437,8 @@ div, span,
 header, footer, article, section,
 blockquote,
 table, tr, th, td,
-a, address, pre {
+a, address, pre,
+textarea, input, label {
   box-sizing: border-box;
 }
 
@@ -454,6 +455,11 @@ ul {
 
 li {
   list-style: none;
+}
+
+input,
+textarea {
+  max-width: 100%;
 }
 
 /* Text meant only for screen readers. */
@@ -605,6 +611,7 @@ li {
 .site-title {
   margin: 0;
   font-size: 2.2rem;
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -680,6 +687,8 @@ li {
   display: table-cell;
   position: relative;
   z-index: 1;
+  padding: 4.0rem;
+  background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   vertical-align: middle;
   text-align: center;
@@ -703,7 +712,6 @@ li {
   .primary-menu {
     width: 100%;
     height: 100%;
-    padding: 0 0 60px 0;
     overflow-y: auto;
   }
 }
@@ -727,7 +735,9 @@ li {
 
 @media only screen and (max-width: 1023px) {
   .main-navigation li {
+    display: block;
     float: inherit;
+    width: 100%;
   }
 }
 
@@ -737,14 +747,14 @@ li {
   color: #555;
 }
 
-.menu-all-pages-container::after {
+.main-navigation::after {
   content: "";
   clear: both;
   display: block;
 }
 
 @media only screen and (max-width: 1023px) {
-  .menu-all-pages-container {
+  .main-navigation {
     position: fixed;
     top: 0;
     right: -50%;
@@ -762,36 +772,38 @@ li {
 }
 
 @media only screen and (max-width: 1023px) and (max-width: 639px) {
-  .menu-all-pages-container {
+  .main-navigation {
     right: -80%;
     width: 80%;
   }
 }
 
 @media only screen and (max-width: 1023px) {
-  .menu-all-pages-container.open {
+  .main-navigation.open {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-  .menu-all-pages-container li {
-    border-top: 1px solid #eee;
+  .main-navigation li {
+    border-bottom: 1px solid #eee;
   }
-  .menu-all-pages-container a {
+  .main-navigation a {
     display: block;
     padding: 10px;
   }
-  .menu-all-pages-container .sub-menu li {
+  .main-navigation .sub-menu li {
     padding: 0;
+    border-top: 1px solid #eee;
+    border-bottom: none;
   }
-  .menu-all-pages-container .sub-menu a {
+  .main-navigation .sub-menu a {
     padding-left: 40px;
   }
-  .menu-all-pages-container .sub-menu .sub-menu a {
+  .main-navigation .sub-menu .sub-menu a {
     padding-left: 70px;
   }
 }
 
-.menu-all-pages-container .sub-menu {
+.main-navigation .sub-menu {
   display: block;
   visibility: hidden;
   opacity: 0;
@@ -801,7 +813,7 @@ li {
 }
 
 @media only screen and (max-width: 1023px) {
-  .menu-all-pages-container .sub-menu {
+  .main-navigation .sub-menu {
     display: block;
     visibility: visible;
     opacity: 1;
@@ -920,20 +932,9 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-transition: transform 200ms linear;
-  transition: transform 200ms linear;
+  -webkit-transition: transform .2s;
+  transition: transform .2s;
   z-index: 5;
-}
-
-@media only screen and (max-width: 1023px) {
-  .headroom {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
 }
 
 .headroom--pinned {
@@ -941,32 +942,8 @@ li {
   transform: translate3d(0, 0, 0);
 }
 
-@media only screen and (max-width: 1023px) {
-  .headroom--pinned {
-    position: fixed;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-}
-
 .headroom--unpinned {
   -webkit-transform: translate3d(0, -100%, 0);
-}
-
-@media only screen and (max-width: 1023px) {
-  .headroom--unpinned {
-    position: fixed;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  .headroom--bottom {
-    position: fixed;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
 }
 
 .toggle-btn {
@@ -986,6 +963,7 @@ li {
   -webkit-appearance: button;
   appearance: button;
   outline: none;
+  visibility: hidden;
 }
 
 .toggle-btn:focus {
@@ -1061,7 +1039,7 @@ li {
 
 @media only screen and (max-width: 1023px) {
   .toggle-btn {
-    display: block;
+    visibility: visible;
   }
 }
 
@@ -1110,14 +1088,6 @@ li {
   background-color: #fff;
 }
 
-@media only screen and (max-width: 1023px) {
-  .site-header {
-    border-top: 1px solid #eee;
-    border-bottom: none;
-    box-shadow: 0px 15px 20px 12px rgba(0, 0, 0, 0.4);
-  }
-}
-
 .site-header-inner {
   display: table;
   width: 100%;
@@ -1158,10 +1128,11 @@ body {
   display: table;
   width: 90%;
   max-width: 1000px;
-  margin: 40px auto 0;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 639px) {
   .site-content {
     display: block;
     width: 100%;
@@ -1179,7 +1150,7 @@ body {
   vertical-align: top;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 639px) {
   .primary {
     display: block;
     width: 96%;
@@ -1196,6 +1167,12 @@ body {
 
 @media only screen and (max-width: 1023px) {
   .secondary {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .secondary {
     display: block;
     width: 90%;
     margin: 40px auto 0;
@@ -1209,7 +1186,7 @@ body {
   display: block;
   width: 100%;
   max-width: inherit;
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .single-post .primary {
@@ -1240,7 +1217,6 @@ body {
   position: relative;
   min-height: 500px;
   width: 100%;
-  padding: 40px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -1273,6 +1249,8 @@ body {
   display: table-cell;
   position: relative;
   z-index: 1;
+  padding: 4.0rem;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .archive .post,
@@ -1282,6 +1260,13 @@ body {
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+@media only screen and (max-width: 639px) {
+  .archive .post,
+  .home .post {
+    padding: 10px;
+  }
 }
 
 .archive .post:first-child,
@@ -1354,7 +1339,7 @@ body {
 .wrap-thumb img {
   display: block;
   position: absolute;
-  max-width: inherit;
+  max-width: 100%;
   height: auto;
   top: 50%;
   left: 50%;
@@ -1369,7 +1354,7 @@ body {
   display: block;
   width: 100%;
   max-width: inherit;
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .page .primary {
@@ -1400,7 +1385,6 @@ body {
   position: relative;
   min-height: 500px;
   width: 100%;
-  padding: 40px;
   background-color: #666;
 }
 
@@ -1431,6 +1415,10 @@ body {
   width: 96%;
   max-width: 800px;
   margin: 40px auto 0;
+}
+
+.comments-area textarea {
+  width: 100%;
 }
 
 .comment-list {
@@ -1567,4 +1555,9 @@ body {
   word-break: break-all;
   word-wrap: break-word;
   overflow: auto;
+}
+
+.entry-content img {
+  max-width: 96%;
+  height: auto;
 }

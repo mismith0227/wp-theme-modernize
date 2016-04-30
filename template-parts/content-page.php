@@ -24,7 +24,7 @@
 
 			<div class="wrap-thumb">
 				<a href="<?php echo get_permalink(); ?>">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('full'); ?>
 				</a>
 			</div>
 		<?php

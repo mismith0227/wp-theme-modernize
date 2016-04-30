@@ -39,6 +39,7 @@
 
     // zoom.js
     $('.single-post .entry-content img').attr('data-action', 'zoom');
+    $('.single-post .entry-content div[class*="gallery"] img').attr('data-action', '');
 
     var Drawer = (function() {
 

@@ -1,0 +1,40 @@
+.single {
+  .entry-footer {
+    .cat-links {
+      display: block;
+      a {
+        display: inline-block;
+        padding: .5rem 1.0rem;
+        border-radius: .2rem;
+        background-color: #eee;
+      }
+    }
+    .tags-links {
+      margin-top: 4.0rem;
+      a {
+        display: inline-block;
+        margin-right: .5rem;
+        padding: .5rem 1.0rem;
+        border-radius: .2rem;
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+.entry-footer{
+  .post-categories {
+    display: inline-block;
+    li {
+      display: inline-block;
+    }
+  }
+  .tags-links {
+    display: block;
+    margin-left: 0;
+    a {
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+}

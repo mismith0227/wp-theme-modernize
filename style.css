@@ -668,6 +668,15 @@ textarea {
   color: #fff;
 }
 
+.single-post .posted-on {
+  display: block;
+}
+
+.single-post .byline {
+  display: block;
+  margin-top: 1.0rem;
+}
+
 .page .wrap-thumb {
   position: absolute;
   top: 0;
@@ -700,6 +709,47 @@ textarea {
 
 .page .entry-info a {
   color: #fff;
+}
+
+.single .entry-footer .cat-links {
+  display: block;
+}
+
+.single .entry-footer .cat-links a {
+  display: inline-block;
+  padding: .5rem 1.0rem;
+  border-radius: .2rem;
+  background-color: #eee;
+}
+
+.single .entry-footer .tags-links {
+  margin-top: 4.0rem;
+}
+
+.single .entry-footer .tags-links a {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .5rem 1.0rem;
+  border-radius: .2rem;
+  background-color: #eee;
+}
+
+.entry-footer .post-categories {
+  display: inline-block;
+}
+
+.entry-footer .post-categories li {
+  display: inline-block;
+}
+
+.entry-footer .tags-links {
+  display: block;
+  margin-left: 0;
+}
+
+.entry-footer .tags-links a {
+  display: inline-block;
+  margin-right: .5rem;
 }
 
 .primary-menu {
@@ -1378,13 +1428,9 @@ body {
   color: #20b2aa;
 }
 
-.archive .post .tags-links,
 .archive .post .edit-link,
-.home .post .tags-links,
 .home .post .edit-link,
-.search .post .tags-links,
 .search .post .edit-link,
-.search .page .tags-links,
 .search .page .edit-link {
   margin-left: 1.0rem;
 }

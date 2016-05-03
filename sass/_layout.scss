@@ -3,6 +3,7 @@
 @import 'modules/entry-footer';
 @import 'modules/nav';
 @import 'modules/widget';
+@import 'modules/form';
 @import 'modules/pagenation';
 @import 'modules/headroom';
 @import 'modules/drawer';
@@ -12,6 +13,7 @@
 
 body {
   background-color: #fafafa;
+  color: #666;
 }
 
 /*

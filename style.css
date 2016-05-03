@@ -941,6 +941,31 @@ textarea {
   font-weight: normal;
 }
 
+.comment-respond input, .comment-respond button, .comment-respond textarea, .comment-respond select {
+  margin: 0;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.comment-respond textarea {
+  padding: .4rem;
+  border: 1px solid #ccc;
+  border-radius: .3rem;
+}
+
+.comment-respond input {
+  padding: .4rem;
+  border: 1px solid #ccc;
+  border-radius: .3rem;
+}
+
+.comment-respond input[name="submit"] {
+  display: inline-block;
+  padding: .4rem .8rem;
+}
+
 .posts-navigation {
   margin-top: 4.0rem;
 }
@@ -1211,6 +1236,7 @@ textarea {
 
 body {
   background-color: #fafafa;
+  color: #666;
 }
 
 /*

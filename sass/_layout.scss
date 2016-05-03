@@ -13,7 +13,12 @@
 
 body {
   background-color: #fafafa;
-  color: #666;
+  color: $default;
+}
+
+a,
+a:visited {
+  color: $default;
 }
 
 /*

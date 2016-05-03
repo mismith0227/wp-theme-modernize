@@ -1,7 +1,8 @@
 /*
   記事一覧
 */
-.single-post {
+.single-post,
+.page {
   .site-content {
     display: block;
     width: 100%;
@@ -96,12 +97,6 @@
   }
 }
 
-.entry-content {
-  p {
-    font-size: 1.6rem;
-  }
-}
-
 .wrap-thumb {
   position: relative;
   height: 0;
@@ -119,48 +114,6 @@
     left: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
-  }
-}
-
-/*
-  固定ページ
-*/
-.page {
-  .site-content {
-    display: block;
-    width: 100%;
-    max-width: inherit;
-    padding-top: 0;
-  }
-  .primary {
-    display: block;
-    float: inherit;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .secondary {
-    @include postlayout(80px);
-    float: inherit;
-  }
-  .entry-content {
-    @include postlayout(80px);
-  }
-  .entry-header {
-    display: table;
-    position: relative;
-    min-height: 500px;
-    width: 100%;
-    background-color: #666;
-    @media #{$tablet} {
-      min-height: 400px;
-    }
-    @media #{$sp} {
-      min-height: 300px;
-    }
-  }
-  .entry-footer {
-    @include postlayout(40px);
   }
 }
 

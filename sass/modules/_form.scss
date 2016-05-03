@@ -21,3 +21,30 @@
     padding: .4rem .8rem;
   }
 }
+
+.widget_search {
+  .search-form {
+    position: relative;
+  }
+  label {
+    display: block;
+    width: 100%;
+  }
+  .search-field {
+    display: block;
+    width: calc(100% - 60px);
+    height: 30px;
+    border: 1px solid #eee;
+    border-right: none;
+  }
+  .search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #eee;
+    background-color: #fff;
+  }
+}

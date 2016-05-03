@@ -5,7 +5,7 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,7 +47,6 @@ modernize includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-<<<<<<< HEAD
 ### = 1.1.1 =
 * bug fix
 
@@ -59,7 +58,6 @@ modernize includes support for Infinite Scroll in Jetpack.
 * edit bug fixed
 
 = 1.1.0 =
->>>>>>> issues#26
 * edit style
 
 = 1.0 - May 12 2015 =

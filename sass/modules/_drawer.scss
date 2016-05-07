@@ -1,3 +1,16 @@
+.main-navigation {
+  @media #{$tablet} {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    &.open {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+}
+
 .toggle-btn {
   display: none;
   position: absolute;

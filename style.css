@@ -784,10 +784,6 @@ textarea {
     height: 100%;
     overflow-y: scroll;
     background-color: #fff;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition: transform .4s;
-    transition: transform .4s;
     -webkit-overflow-scrolling: touch;
   }
 }
@@ -800,10 +796,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1023px) {
-  .main-navigation.open {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
   .main-navigation li {
     border-bottom: 1px solid #eee;
   }
@@ -1056,6 +1048,20 @@ textarea {
 
 .headroom--unpinned {
   -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+@media only screen and (max-width: 1023px) {
+  .main-navigation {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+  }
+  .main-navigation.open {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 .toggle-btn {

@@ -429,6 +429,7 @@ html {
 
 body {
   font-size: 1.4rem;
+  line-height: 1.57;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -1418,6 +1419,13 @@ a:visited {
   font-size: 2.2rem;
 }
 
+.archive .post .entry-title a:hover,
+.home .post .entry-title a:hover,
+.search .post .entry-title a:hover,
+.search .page .entry-title a:hover {
+  color: #20b2aa;
+}
+
 .archive .post .wrap-thumb + .entry-info,
 .home .post .wrap-thumb + .entry-info,
 .search .post .wrap-thumb + .entry-info,
@@ -1482,6 +1490,11 @@ a:visited {
 
 .wrap-thumb a {
   display: block;
+  padding-bottom: 40%;
+}
+
+.wrap-thumb a:hover {
+  opacity: .8;
 }
 
 .wrap-thumb img {

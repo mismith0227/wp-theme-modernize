@@ -69,6 +69,9 @@
   .entry-title {
     margin: 0;
     font-size: $large;
+    a:hover {
+      color: $link;
+    }
   }
   .wrap-thumb + .entry-info {
     margin-top: 1.6rem;
@@ -104,6 +107,10 @@
   overflow: hidden;
   a {
     display: block;
+    padding-bottom: 40%;
+    &:hover {
+      opacity: .8;
+    }
   }
   img {
     display: block;

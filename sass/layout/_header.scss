@@ -6,7 +6,8 @@
 }
 
 .site-header-inner {
-  display: table;
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -16,7 +17,6 @@
 }
 
 .site-branding {
-  display: table-cell;
   @media #{$tablet} {
     padding-right: 60px;
     vertical-align: middle;
@@ -24,6 +24,10 @@
 }
 
 .main-navigation {
-  display: table-cell;
-  vertical-align: middle;
+  margin-left: auto;
+}
+
+.primary-menu {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -19,10 +19,7 @@
     position: relative;
     height: 45px;
   }
-  ul {
-  }
   li {
-    float: left;
     padding: 0 0 0 20px;
     @media #{$tablet} {
       display: block;

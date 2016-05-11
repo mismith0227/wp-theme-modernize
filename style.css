@@ -746,7 +746,6 @@ textarea {
 }
 
 .main-navigation li {
-  float: left;
   padding: 0 0 0 20px;
 }
 
@@ -1203,7 +1202,8 @@ textarea {
 }
 
 .site-header-inner {
-  display: table;
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -1215,10 +1215,6 @@ textarea {
   }
 }
 
-.site-branding {
-  display: table-cell;
-}
-
 @media only screen and (max-width: 1023px) {
   .site-branding {
     padding-right: 60px;
@@ -1227,8 +1223,12 @@ textarea {
 }
 
 .main-navigation {
-  display: table-cell;
-  vertical-align: middle;
+  margin-left: auto;
+}
+
+.primary-menu {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body {

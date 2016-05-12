@@ -1246,7 +1246,7 @@ a:visited {
   layout
 */
 .site-content {
-  display: table;
+  display: flex;
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
@@ -1266,7 +1266,7 @@ a:visited {
 }
 
 .primary {
-  display: table-cell;
+  flex: 1;
   padding-right: 40px;
   vertical-align: top;
 }
@@ -1281,7 +1281,6 @@ a:visited {
 }
 
 .secondary {
-  display: table-cell;
   width: 300px;
   vertical-align: top;
 }
@@ -1339,7 +1338,9 @@ a:visited {
 
 .single-post .entry-header,
 .page .entry-header {
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   min-height: 500px;
   width: 100%;
@@ -1377,11 +1378,9 @@ a:visited {
 
 .single-post .entry-info,
 .page .entry-info {
-  display: table-cell;
   position: relative;
   z-index: 1;
   padding: 4.0rem;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .archive .post,
@@ -1506,6 +1505,11 @@ a:visited {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
+  -webkit-filter: brightness(0.8);
+  -moz-filter: brightness(0.8);
+  -o-filter: brightness(0.8);
+  -ms-filter: brightness(0.8);
+  filter: brightness(0.8);
 }
 
 .home .wrap-thumb img {

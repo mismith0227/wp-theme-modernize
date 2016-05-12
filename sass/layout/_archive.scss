@@ -24,7 +24,9 @@
     @include postlayout(80px);
   }
   .entry-header {
-    display: table;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     min-height: 500px;
     width: 100%;
@@ -43,11 +45,9 @@
   }
 
   .entry-info {
-    display: table-cell;
     position: relative;
     z-index: 1;
     padding: 4.0rem;
-    background-color: rgba(0, 0, 0, .3);
   }
 }
 
@@ -121,6 +121,11 @@
     left: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
+    -webkit-filter: brightness(.8);
+    -moz-filter: brightness(.8);
+    -o-filter: brightness(.8);
+    -ms-filter: brightness(.8);
+    filter: brightness(.8);
   }
 }
 

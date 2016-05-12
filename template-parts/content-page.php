@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php
 			if ( has_post_thumbnail() ) {
-				if ( is_single() ) {
+				if ( is_single() || is_page() ) {
 		?>
 		<div class="wrap-thumb">
 			<?php the_post_thumbnail('full'); ?>

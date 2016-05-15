@@ -47,11 +47,11 @@ modernize includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-### = 1.1.1 =
-* bug fix
+= 1.3.0 =
+* edit style
+* edit layout
+* edit bug fixed
 
-### = 1.1.0 =
-=======
 = 1.2.0 =
 * edit style
 * edit layout

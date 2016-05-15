@@ -1518,7 +1518,8 @@ a:visited {
   transform: translate3d(-50%, -50%, 0);
 }
 
-.home .wrap-thumb img {
+.home .wrap-thumb img,
+.archive .wrap-thumb img {
   max-width: 100%;
 }
 

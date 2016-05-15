@@ -1,24 +1,34 @@
+@mixin sentencemargin() {
+  margin-top: 4rem;
+}
+
 .entry-content {
   h1 {
+    margin-top: 16rem;
     font-size: 3.0rem;
   }
 
   h2 {
+    margin-top: 16rem;
     font-size: 2.4rem;
   }
 
   h3 {
+    margin-top: 8rem;
     font-size: 2.0rem;
   }
 
   h4 {
+    @include sentencemargin();
     font-size: 1.8rem;
   }
 
   h5 {
+    @include sentencemargin();
     font-size: 1.6rem;
   }
   h6 {
+    @include sentencemargin();
     font-size: 1.4rem;
   }
 
@@ -27,9 +37,10 @@
     display: block;
     width: 96%;
     padding: 2.0rem;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto;
     border-radius: 5px;
     font-size: .875rem;
+    @include sentencemargin();
     background-color: #eee;
     &::before {
       content: "“";
@@ -41,8 +52,12 @@
       left: 1.0rem;
       top: 1.0rem;
     }
+    p {
+      margin: 0;
+    }
   }
   table {
+    @include sentencemargin();
     width: 96%;
     margin: 0 auto;
     border-collapse: collapse;
@@ -58,6 +73,7 @@
   }
 
   dl {
+    @include sentencemargin();
     font-size: 1.6rem;
   }
 
@@ -69,6 +85,7 @@
   }
 
   ul {
+    @include sentencemargin();
     padding-left: 2.0rem;
     li {
       margin-top: .8rem;
@@ -78,6 +95,7 @@
   }
 
   ol {
+    @include sentencemargin();
     padding-left: 2.0rem;
     li {
       margin-top: .8rem;
@@ -87,6 +105,7 @@
   }
 
   p {
+    @include sentencemargin();
     font-size: 1.6rem;
   }
 

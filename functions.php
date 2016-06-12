@@ -128,40 +128,17 @@ function modernize_make_excerpt($content){
     return $content;
 }
 
-/* zoom.js setup */
-function modernize_add_zoomjs_property( $content ) {
-  if ( false !== strpos( $content, 'data-action="zoom"' ) )
-     return $content;
-
-  $content = preg_replace(
-    '/<img /i',
-    '<img data-action="zoom" ',
-    $content );
-
-  return $content;
-}
-add_filter( 'the_content', 'modernize_add_zoomjs_property' );
-
 /**
  * Enqueue scripts and styles.
  */
 function modernize_scripts() {
 	$url = get_template_directory_uri();
 
-	wp_enqueue_style(
-		'modernize-style-zoom',
-		$url . '/css/lib/zoom.css'
-	);
-
 	wp_enqueue_style( 'modernize-style', get_stylesheet_uri() );
 
 	// wp_enqueue_script( 'modernize-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'modernize-headroom', get_template_directory_uri() . '/js/lib/headroom.min.js', array(), '1.0.0', true );
-
-	wp_enqueue_script( 'modernize-transition', get_template_directory_uri() . '/js/lib/transition.js', array('jquery'), '1.0.0', true );
-
-	wp_enqueue_script( 'modernize-zoom', get_template_directory_uri() . '/js/lib/zoom.min.js', array('jquery'), '1.0.0', true );
 
 	wp_enqueue_script( 'modernize-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

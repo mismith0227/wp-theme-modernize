@@ -37,9 +37,6 @@
     });
     headroom.init();
 
-    // zoom.js
-    $('.single-post .entry-content div[class*="gallery"] img').attr('data-action', '');
-
     var Drawer = (function() {
 
       var setting = {

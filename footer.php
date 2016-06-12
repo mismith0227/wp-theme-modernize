@@ -20,7 +20,7 @@
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'modernize' ), 'modernize', '<a href="https://profiles.wordpress.org/mismith227" rel="designer">mismith227</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 

@@ -1,4 +1,4 @@
-.main-navigation {
+.main-nav {
   @media #{$tablet} {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -60,7 +60,7 @@
       transition: transform .3s;
     }
   }
-  &.toggle-open {
+  &.toggle-btn_open {
     span {
       background-color: rgba(0, 0, 0, 0);
       &::before {

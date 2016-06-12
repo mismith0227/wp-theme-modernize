@@ -10,7 +10,7 @@
     // headerstyle
     function headstyle() {
       var wW = $(window).width();
-      var nav_height = $('.site-header').outerHeight(true);
+      var nav_height = $('.header').outerHeight(true);
       $('.site-content').css({'margin-top': nav_height + 'px'});
       if ( $('#wpadminbar').length ) {
         var bar_height = $('#wpadminbar').height();
@@ -18,10 +18,10 @@
       }
 
       if(wW < setting.tablet) {
-        $('.main-navigation').appendTo('body');
+        $('.main-nav').appendTo('body');
         $('.primary-menu').css({'padding-top': nav_height + 10 + 'px'});
       } else {
-        $('.main-navigation').appendTo('.site-header-inner');
+        $('.main-nav').appendTo('.header__inner');
         $('.primary-menu').css({'padding-top': 0 + 'px'});
       }
     }
@@ -31,7 +31,7 @@
       headstyle();
     });
 
-    var myElement = document.querySelector(".site-header");
+    var myElement = document.querySelector(".header");
     var headroom  = new Headroom(myElement, {
       offset : 100
     });
@@ -43,8 +43,11 @@
         state: false,
         class: {
           toggle: 'js-toggle',
-          menu: 'main-navigation',
-          ovly: 'bg-ovly'
+          menu: 'main-nav',
+          ovly: 'bg-ovly',
+          open: 'open',
+          toggleopen: 'toggle-btn_open',
+          bgshow: 'bg-ovly-show'
         }
       }
 
@@ -54,7 +57,7 @@
         var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
         $('body').append(ovly);
 
-        if($('.main-navigation li').length) {
+        if($('.main-nav li').length) {
           $('.js-toggle').show();
         }
       }
@@ -76,16 +79,16 @@
       }
 
       function _open() {
-        $('.' + setting.class.menu).addClass('open');
-        $('.' + setting.class.toggle).addClass('toggle-open');
-        $('.' + setting.class.ovly).addClass('bg-ovly-show');
+        $('.' + setting.class.menu).addClass(setting.class.open);
+        $('.' + setting.class.toggle).addClass(setting.class.toggleopen);
+        $('.' + setting.class.ovly).addClass(setting.class.bgshow);
         setting.state = true;
       }
 
       function _close() {
-        $('.' + setting.class.menu).removeClass('open');
-        $('.' + setting.class.toggle).removeClass('toggle-open');
-        $('.' + setting.class.ovly).removeClass('bg-ovly-show');
+        $('.' + setting.class.menu).removeClass(setting.class.open);
+        $('.' + setting.class.toggle).removeClass(setting.class.toggleopen);
+        $('.' + setting.class.ovly).removeClass(setting.class.bgshow);
         setting.state = false;
       }
 

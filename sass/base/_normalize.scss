@@ -427,6 +427,9 @@ html {
 }
 
 body {
+  background-color: #fafafa;
+  color: $default;
+  font-family: "メイリオ",sans-serif;
   font-size: 1.4rem;
   line-height: 1.57;
 }
@@ -444,7 +447,7 @@ textarea, input, label {
 
 a,
 a:visited {
-  color: #555;
+  color: $default;
   text-decoration: none;
 }
 

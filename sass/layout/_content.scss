@@ -1,27 +1,3 @@
-@import 'modules/site-meta';
-@import 'modules/entry-meta';
-@import 'modules/entry-footer';
-@import 'modules/nav';
-@import 'modules/widget';
-@import 'modules/form';
-@import 'modules/pagenation';
-@import 'modules/headroom';
-@import 'modules/drawer';
-
-@import 'layout/header';
-
-
-body {
-  background-color: #fafafa;
-  color: $default;
-  font-family: "メイリオ",sans-serif;
-}
-
-a,
-a:visited {
-  color: $default;
-}
-
 /*
   layout
 */
@@ -66,9 +42,3 @@ a:visited {
     margin: 40px auto 0;
   }
 }
-
-@import 'layout/archive';
-
-@import 'layout/comment';
-
-@import 'layout/footer';

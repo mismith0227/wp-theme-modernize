@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area primary">
+	<div class="primary">
 		<main id="main" class="site-main" role="main">
 
 		<?php

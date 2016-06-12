@@ -1,0 +1,21 @@
+.site-branding {
+  @media #{$tablet} {
+    padding-right: 60px;
+    vertical-align: middle;
+  }
+  &__title {
+    margin: 0;
+    font-size: $large;
+    font-weight: normal;
+    @media #{$tablet} {
+      display: inline-block;
+    }
+  }
+  &__description {
+    margin: 0;
+    font-size: $small;
+    @media #{$tablet} {
+      display: inline-block;
+    }
+  }
+}

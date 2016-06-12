@@ -1,8 +1,23 @@
 // include
-@import "parts/theme-info";
-@import "parts/normalize";
-@import "parts/variable";
+@import "base/theme-info";
+@import "base/variable";
+@import "base/normalize";
 
 @import "mixin";
-@import "layout";
-@import "content";
+
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/archive';
+@import 'layout/comment';
+@import 'layout/footer';
+
+@import 'modules/site-branding';
+@import 'modules/entry-meta';
+@import 'modules/entry-footer';
+@import 'modules/nav';
+@import 'modules/widget';
+@import 'modules/form';
+@import 'modules/pagenation';
+@import 'modules/headroom';
+@import 'modules/drawer';
+@import 'modules/entry';

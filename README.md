@@ -2,14 +2,6 @@
 
 ## == Third-party resources ==
 
-zoom.js  
-License: MIT  
-Source : [https://github.com/fat/zoom.js](https://github.com/fat/zoom.js)
-
-Bootstrap: transition.js  
-License: MIT  
-Source : [https://raw.githubusercontent.com/twbs/bootstrap/master/js/transition.js](https://raw.githubusercontent.com/twbs/bootstrap/master/js/transition.js)
-
 Headroom.js  
 License: MIT
 Source : [http://wicky.nillia.ms/headroom.js/](http://wicky.nillia.ms/headroom.js/)
@@ -19,6 +11,11 @@ License: MIT
 Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
 
 ## == Changelog ==
+
+### = 1.4.0 =
+* edit style
+* delete zoom.js
+* edit bug fixed
 
 ### = 1.3.0 =
 * edit style

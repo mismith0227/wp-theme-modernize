@@ -23,14 +23,6 @@ Hi. I'm a starter theme called modernize, or underscores, if you like. I'm a the
 
 == Third-party resources ==
 
-zoom.js
-License: MIT
-Source : https://github.com/fat/zoom.js
-
-Bootstrap: transition.js
-License: MIT
-Source : https://raw.githubusercontent.com/twbs/bootstrap/master/js/transition.js
-
 Headroom.js
 License: MIT
 Source : http://wicky.nillia.ms/headroom.js/
@@ -46,6 +38,11 @@ Source : https://necolas.github.io/normalize.css/
 modernize includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+
+= 1.4.0 =
+* edit style
+* delete zoom.js
+* edit bug fixed
 
 = 1.3.0 =
 * edit style

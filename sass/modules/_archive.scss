@@ -77,6 +77,9 @@
       min-height: 300px;
     }
   }
+  .entry__title {
+    font-size: 3.0rem;
+  }
   .entry__footer {
     @include postlayout(40px);
   }

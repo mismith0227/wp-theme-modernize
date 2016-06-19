@@ -1117,6 +1117,11 @@ textarea {
   }
 }
 
+.single-post .entry__title,
+.page .entry__title {
+  font-size: 3.0rem;
+}
+
 .single-post .entry__footer,
 .page .entry__footer {
   display: block;

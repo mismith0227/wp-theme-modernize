@@ -1167,6 +1167,11 @@ textarea {
   transform: translate3d(-50%, -50%, 0);
 }
 
+.home .entry__thumb img,
+.archive .entry__thumb img {
+  max-width: 100%;
+}
+
 .comment-respond input, .comment-respond button, .comment-respond textarea, .comment-respond select {
   margin: 0;
   background: none;

@@ -21,3 +21,10 @@
     transform: translate3d(-50%, -50%, 0);
   }
 }
+
+.home,
+.archive {
+  .entry__thumb img {
+    max-width: 100%;
+  }
+}

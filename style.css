@@ -1075,8 +1075,8 @@ textarea {
 /*
   投稿ページ
 */
-.single-post .post,
-.page .post {
+.single-post .entry,
+.page .entry {
   padding: 0;
   box-shadow: none;
   border: none;

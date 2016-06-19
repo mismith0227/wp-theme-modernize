@@ -54,7 +54,7 @@ function modernize_setup() {
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
-		'comment-list',
+		'comments__list',
 		'gallery',
 		'caption',
 	) );
@@ -104,7 +104,7 @@ function modernize_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'modernize' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
 }

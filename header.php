@@ -46,7 +46,7 @@
 				<span></span>
 			</button>
 
-			<nav id="site-navigation" class="main-nav" role="navigation">
+			<nav id="site-navigation" class="gnav" role="navigation">
 				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<?php
 							wp_nav_menu( array(

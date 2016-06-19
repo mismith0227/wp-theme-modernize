@@ -6,6 +6,13 @@
   &:first-child {
     margin-top: 0;
   }
+  &__title {
+    margin: 0 0 1.2rem 0;
+    padding: 0 0 .8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
   li {
     margin-top: .8rem;
     padding-left: 1.2rem;
@@ -13,11 +20,4 @@
       margin-top: 0;
     }
   }
-}
-.widget-title {
-  margin: 0 0 1.2rem 0;
-  padding: 0 0 .8rem 0;
-  border-bottom: 1px solid #eee;
-  font-size: 1.4rem;
-  font-weight: normal;
 }

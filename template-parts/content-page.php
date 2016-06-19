@@ -9,20 +9,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+	<header class="entry__header">
 		<?php
 			if ( has_post_thumbnail() ) {
 				if ( is_single() || is_page() ) {
 		?>
-		<div class="wrap-thumb">
+		<div class="entry__thumb">
 			<?php the_post_thumbnail('full'); ?>
 		</div>
 		<?php
 			} else {
 		?>
 
-			<div class="wrap-thumb">
+			<div class="entry__thumb">
 				<a href="<?php echo get_permalink(); ?>">
 				<?php the_post_thumbnail('full'); ?>
 				</a>
@@ -31,13 +31,13 @@
 				}
 			}
 		?>
-		<div class="entry-info">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<div class="entry__info">
+			<?php the_title( '<h1 class="entry__title">', '</h1>' ); ?>
 		</div>
 
-	</header><!-- .entry-header -->
+	</header><!-- .entry__header -->
 
-	<div class="entry-content">
+	<div class="entry__content">
 		<?php
 			the_content();
 
@@ -46,9 +46,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry__content -->
 
-	<footer class="entry-footer">
+	<footer class="entry__footer">
 		<?php
 			edit_post_link(
 				sprintf(
@@ -56,9 +56,9 @@
 					esc_html__( 'Edit %s', 'modernize' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
-				'<span class="edit-link">',
+				'<span class="edit__link">',
 				'</span>'
 			);
 		?>
-	</footer><!-- .entry-footer -->
+	</footer><!-- .entry__footer -->
 </article><!-- #post-## -->

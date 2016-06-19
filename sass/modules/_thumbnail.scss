@@ -1,0 +1,24 @@
+.entry__thumb {
+  position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+  a {
+    display: block;
+    padding-bottom: 40%;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  img {
+    display: block;
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}

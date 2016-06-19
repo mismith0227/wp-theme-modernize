@@ -14,10 +14,6 @@
   }
 }
 
-.site-content-pad {
-  padding-top: 40px;
-}
-
 .primary {
   flex: 1;
   padding-right: 40px;
@@ -40,5 +36,26 @@
     display: block;
     width: 90%;
     margin: 40px auto 0;
+  }
+}
+
+.single-post,
+.page {
+  .site-content {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    padding-top: 0;
+  }
+  .primary {
+    display: block;
+    float: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .secondary {
+    @include postlayout(80px);
+    float: inherit;
   }
 }

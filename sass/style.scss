@@ -1,5 +1,5 @@
 // include
-@import "base/theme-info";
+@import "base/themeinfo";
 @import "base/variable";
 @import "base/normalize";
 
@@ -7,15 +7,16 @@
 
 @import 'layout/header';
 @import 'layout/content';
-@import 'layout/archive';
 @import 'layout/comment';
 @import 'layout/footer';
 
-@import 'modules/site-branding';
-@import 'modules/entry-meta';
-@import 'modules/entry-footer';
+@import 'modules/sitebranding';
+@import 'modules/entrymeta';
+@import 'modules/entryfooter';
 @import 'modules/nav';
 @import 'modules/widget';
+@import 'modules/archive';
+@import 'modules/thumbnail';
 @import 'modules/form';
 @import 'modules/pagenation';
 @import 'modules/headroom';

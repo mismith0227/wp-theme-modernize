@@ -1,11 +1,10 @@
-.comments-area {
+.comments {
   @include postlayout(40px);
   textarea {
     width: 100%;
   }
-}
-
-.comment-list {
-  margin-left: 0;
-  padding: 0;
+  &__list {
+    margin-left: 0;
+    padding: 0;
+  }
 }

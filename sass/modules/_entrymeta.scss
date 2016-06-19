@@ -1,9 +1,9 @@
 .single-post,
 .page {
-  .entry-header {
+  .entry__header {
     background-color: #666;
   }
-  .wrap-thumb {
+  .entry__thumb {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
       filter: brightness(.8);
     }
   }
-  .entry-info {
+  .entry__info {
     color: #fff;
     vertical-align: middle;
     text-align: center;

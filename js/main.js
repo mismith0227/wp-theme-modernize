@@ -18,10 +18,10 @@
       }
 
       if(wW < setting.tablet) {
-        $('.main-nav').appendTo('body');
+        $('.gnav').appendTo('body');
         $('.primary-menu').css({'padding-top': nav_height + 10 + 'px'});
       } else {
-        $('.main-nav').appendTo('.header__inner');
+        $('.gnav').appendTo('.header__inner');
         $('.primary-menu').css({'padding-top': 0 + 'px'});
       }
     }
@@ -43,7 +43,7 @@
         state: false,
         class: {
           toggle: 'js-toggle',
-          menu: 'main-nav',
+          menu: 'gnav',
           ovly: 'bg-ovly',
           open: 'open',
           toggleopen: 'toggle-btn_open',
@@ -57,7 +57,7 @@
         var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
         $('body').append(ovly);
 
-        if($('.main-nav li').length) {
+        if($('.gnav li').length) {
           $('.js-toggle').show();
         }
       }

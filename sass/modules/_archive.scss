@@ -1,0 +1,91 @@
+/*
+  記事一覧
+*/
+.entry {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background-color: #fff;
+  @media #{$sp} {
+    padding: 10px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &__title {
+    margin: 0;
+    font-size: $large;
+    a:hover {
+      color: $link;
+    }
+  }
+  .entry__thumb + .entry__info {
+    margin-top: 1.6rem;
+  }
+  &__meta,
+  &__content,
+  &__footer {
+    margin-top: .8rem;
+  }
+  &__content {
+    color: #999;
+    font-style: italic;
+    font-size: $small;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  &__footer {
+    color: #999;
+    font-size: $small;
+    a {
+      color: $link;
+    }
+  }
+  .edit__link {
+    margin-left: 1.0rem;
+  }
+}
+
+/*
+  投稿ページ
+*/
+.single-post,
+.page {
+  .post {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background-color: #fafafa;
+  }
+  .entry__content {
+    @include postlayout(80px);
+    color: $default;
+    font-style: normal;
+  }
+  .entry__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    @media #{$tablet} {
+      min-height: 400px;
+    }
+    @media #{$sp} {
+      min-height: 300px;
+    }
+  }
+  .entry__footer {
+    @include postlayout(40px);
+  }
+  .post-navigation {
+    @include postlayout(40px);
+  }
+  .entry__info {
+    position: relative;
+    z-index: 1;
+    padding: 4.0rem;
+  }
+}

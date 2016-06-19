@@ -47,7 +47,8 @@
           ovly: 'bg-ovly',
           open: 'open',
           toggleopen: 'toggle-btn_open',
-          bgshow: 'bg-ovly-show'
+          bgshow: 'bg-ovly-show',
+          fixed: 'bodyfixed'
         }
       }
 
@@ -57,8 +58,8 @@
         var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
         $('body').append(ovly);
 
-        if($('.gnav li').length) {
-          $('.js-toggle').show();
+        if($('.' + setting.class.menu).find('li').length) {
+          $('.' + setting.class.toggle).show();
         }
       }
 
@@ -67,12 +68,12 @@
       function _toggle() {
         $('.' + setting.class.toggle).on('click',function(){
           if (setting.state == true) {
-            $('body').removeClass('bodyfixed').css({'top': 'inherit'});
+            $('body').removeClass(setting.class.fixed).css({'top': 'inherit'});
             window.scrollTo( 0 , -nowScroll );
             _close();
           } else {
             nowScroll = $(window).scrollTop() * -1;
-            $('body').addClass('bodyfixed').css({'top': nowScroll});
+            $('body').addClass(setting.class.fixed).css({'top': nowScroll});
             _open();
           }
         });

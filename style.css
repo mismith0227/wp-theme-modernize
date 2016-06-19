@@ -1362,6 +1362,10 @@ textarea {
   box-shadow: none;
 }
 
+.toggle-btn:hover {
+  cursor: pointer;
+}
+
 .toggle-btn span {
   display: block;
   position: absolute;

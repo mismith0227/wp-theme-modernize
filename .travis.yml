@@ -1,19 +1,17 @@
 language: php
-
 sudo: false
-
 php:
-  - "5.6"
-
+- '5.6'
 before_script:
-  - nvm install 4.2
-  - npm install
-
+- nvm install 4.2
+- npm install
 script:
-  # Search for PHP syntax errors.
-  - find . \( -name '*.php' \) -exec php -lf {} \;
-
-
+- find . \( -name '*.php' \) -exec php -lf {} \;
 after_success:
-  # Run npm build task.
-  - run npm build
+- run npm build
+- bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/mismith0227/wp-theme-modernize.git
+  - secure: XuTBXRdzCHIFldNgwduJivwfbcLSchpAI5Py/4sgzw9EV2IR4f2a30tCEii0ZRyHf9vPa+jRQnbqZpyWhQ2Q+0FtMwLZABBE5qGNGj4He3aVmdlJuliOOeSNbq+QnQVZ0MOarRnmSL70CNyknm5W5kTyMmjqRJK3iAQJqLNem2fRgob1cL/Vf0S2JkPPCY5e5/TLOcYC/2Sr73n2sdkxotZv3F2ICIKoIwrR07r6m6D/mB2EBgvDDZ5l6FrS5WJlT9hjkWDfEZXrZkUe+CaXXhEE0sZrW2ZeO07vdOE2TernkMexIszwr+MGwcH3lg3vGy2LR3PVFAN8V+wLatUEXVbFt7Gm4sYT9j9Ic1YwhK8zoNHu2yY8Um6BHRD3LuU9oKE35W56fpXXmMdesU6zehXkxBQy4IXJYG1Wh2CjZfLo4h6Xkk1KBLrDNnhd8/Q1fezJf5haTdNcxjGyjNDddag8NmNDtOennMUVVxEJhamB4DRtMDolGO/XEK/7VW2hJzZrnz9NAi3T9M+IbVFFL3RAonOrhD0E2Ck9Hiurwh3ugrDG3EVbAfn74/AFwb0PiDbvccedp7TdZeYB4YyNOV9UPBRAB2ZFuEp0GCijk9r55IxdCFzr4Az9i+a8KdUZUUi6E1jFf7lqfZxFaZBxlCq9osTu/ceSRQyraSafazk=

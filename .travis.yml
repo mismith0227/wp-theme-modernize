@@ -1,0 +1,18 @@
+language: php
+
+sudo: false
+
+php:
+- '5.6'
+
+before_script: bash ./bin/build.sh
+
+script:
+- find . \( -name '*.php' \) -exec php -lf {} \;
+
+after_success: bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/mismith0227/wp-theme-modernize.git
+  - secure: "nilT+NZaXEdJCVACi2TVfs83Ce9ACsLKE0DUNHWKaqVLCjYg89yKDq5HtRB+1BBC5fKs0CJn5dVRe8+POSp3vM+OmDby6bAfRbUQ4U0LPlrvMlmZSj2hZSsHl2bIlMZFSxPoOg/PjbG0aUSoVjNKkVpT4MAkd9h2sxnVqEJaU9POhjMVbVIjzdF94+Lwl25rqzy+EMQp2Cm3/cFkxsAeir8jwdCdQ6dkt7CmN/UGeLpugeEAKREnAALORQblXJdTlWUDvumXd+incxXRGgl+NVzGH2hm3HTP5ySWQ1AfXY0RO7sgPQw9hBVBJEPylu+vetdodI5NnIJoxkpqOqM/hxxRDsSVGvoI1Rg6wxw9+yGDmwA0Gqlm1ZIkb4+G4tqQGuJ49VSn666X1mUHmn2x425BkwYw9+XTqRFa6Ou8tDtpyGLds7gMAfghxEaCbqaLNGIX/RLI/eu6DPGFs+yQ2bduLxQvF0KzbANTTgCQldIHVFrMqEgNqLxPLCby/6y++p/LN5aCYDPGtr262C1uNWW1u2655EDplF//safbXgqKVtf1SuDm7k2T1P00/vZ/18P8giQF0KSHWlvAPdyueCTxZePUrtr6VDtZ9ygCYPBnDEP6lSFkwbPQqYz7FzEd7H1vnhcBxegaD6FK+lA0Z6cGHjaQbIhtKLcZ7ceEnL8="

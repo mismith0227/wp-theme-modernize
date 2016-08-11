@@ -12,14 +12,24 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
+rm -rf .git
+rm -r .gitignore
 
-git clone -b dist --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" dist
+echo ".bowerrc
+.editorconfig
+.travis.yml
+README.md
+bin
+bower.json
+gulpfile.js
+node_modules
+package.json
+tests
+tmp" > .gitignore
 
-npm run dist
-
-cd dist
-rm vendor -rf
-
-git add -A
-git commit -m "Update from travis $TRAVIS_COMMIT"
-git push --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" dist 2> /dev/null
+git init
+git config user.name "Travis CI"
+git config user.email "travis@example.com"
+git add .
+git commit --quiet -m "Deploy from travis"
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1

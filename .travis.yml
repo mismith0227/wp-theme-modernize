@@ -8,7 +8,6 @@ before_script:
 script:
 - find . \( -name '*.php' \) -exec php -lf {} \;
 after_success:
-- run npm build
 - bash ./bin/deploy.sh
 
 env:

@@ -35,4 +35,4 @@ git commit --quiet -m "Deploy from travis"
 git clean -fdx
 git rm -fr .gitignore
 git commit --quiet -m "Deploy from travis"
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" travis_test:release

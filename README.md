@@ -2,7 +2,7 @@
 
 ## == Third-party resources ==
 
-iScroll
+iScroll  
 License: MIT
 Source : [http://iscrolljs.com/](http://iscrolljs.com/)
 

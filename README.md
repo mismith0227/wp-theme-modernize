@@ -2,6 +2,10 @@
 
 ## == Third-party resources ==
 
+iScroll
+License: MIT
+Source : [http://iscrolljs.com/](http://iscrolljs.com/)
+
 Headroom.js  
 License: MIT
 Source : [http://wicky.nillia.ms/headroom.js/](http://wicky.nillia.ms/headroom.js/)
@@ -11,6 +15,10 @@ License: MIT
 Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
 
 ## == Changelog ==
+
+### = 1.5.0 =
+
+* add iScroll
 
 ### = 1.4.0 =
 * edit style

@@ -41,6 +41,7 @@
       mouseWheel: true,
       scrollbars: false
     });
+    myScroll.disable();
 
     var Drawer = (function() {
 

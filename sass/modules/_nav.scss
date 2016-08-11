@@ -8,9 +8,8 @@
     z-index: 3;
     width: 50%;
     height: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
     background-color: #fff;
-    -webkit-overflow-scrolling: touch;
     li {
       border-bottom: 1px solid #eee;
     }
@@ -41,8 +40,6 @@
 .primary-menu {
   @media #{$tablet} {
     width: 100%;
-    height: 100%;
-    overflow-y: auto;
   }
 }
 

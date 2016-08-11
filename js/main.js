@@ -37,6 +37,11 @@
     });
     headroom.init();
 
+    var myScroll = new IScroll('#site-navigation', {
+      mouseWheel: true,
+      scrollbars: false
+    });
+
     var Drawer = (function() {
 
       var setting = {
@@ -52,8 +57,6 @@
         }
       }
 
-      var nowScroll;
-
       function _init() {
         var ovly = '<div class="'+ setting.class.ovly + " " + setting.class.toggle + '"></div>';
         $('body').append(ovly);
@@ -68,18 +71,17 @@
       function _toggle() {
         $('.' + setting.class.toggle).on('click',function(){
           if (setting.state == true) {
-            $('body').removeClass(setting.class.fixed).css({'top': 'inherit'});
-            window.scrollTo( 0 , -nowScroll );
+            $('body').removeClass(setting.class.fixed);
             _close();
           } else {
-            nowScroll = $(window).scrollTop() * -1;
-            $('body').addClass(setting.class.fixed).css({'top': nowScroll});
+            $('body').addClass(setting.class.fixed);
             _open();
           }
         });
       }
 
       function _open() {
+        myScroll.enable();
         $('.' + setting.class.menu).addClass(setting.class.open);
         $('.' + setting.class.toggle).addClass(setting.class.toggleopen);
         $('.' + setting.class.ovly).addClass(setting.class.bgshow);
@@ -87,6 +89,7 @@
       }
 
       function _close() {
+        myScroll.disable();
         $('.' + setting.class.menu).removeClass(setting.class.open);
         $('.' + setting.class.toggle).removeClass(setting.class.toggleopen);
         $('.' + setting.class.ovly).removeClass(setting.class.bgshow);

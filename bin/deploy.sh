@@ -28,8 +28,8 @@ tests
 tmp" > .gitignore
 
 git init
-git config user.name "mismith0227"
-git config user.email "doraepon2216@gmail.com"
+git config user.name "Travis CI"
+git config user.email "travis@example.com"
 git add .
 git commit --quiet -m "Deploy from travis"
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" travis_test:release

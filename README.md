@@ -19,6 +19,7 @@ Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/no
 ### = 1.5.0 =
 
 * add iScroll
+* Travis
 
 ### = 1.4.0 =
 * edit style

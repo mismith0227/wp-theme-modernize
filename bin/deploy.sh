@@ -27,6 +27,7 @@ package.json
 tests
 gulp
 sass
+dist
 tmp" > .gitignore
 
 git init

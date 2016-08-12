@@ -25,6 +25,8 @@ gulpfile.js
 node_modules
 package.json
 tests
+gulp
+sass
 tmp" > .gitignore
 
 git init

@@ -5,7 +5,7 @@ var config = require('../config');
 
 // リリースフォルダ内のファイル削除
 gulp.task('clean', function() {
-  return del('./**/*.*');
+  return del(config.dist + '**/*');
 });
 
 // コピー（リリースフォルダ内を削除してコピー）
@@ -21,7 +21,7 @@ gulp.task('copy', ['clean'], function() {
   ],
   { base: './' }
   )
-  .pipe(gulp.dest(config.theme));
+  .pipe(gulp.dest(config.dist));
 });
 
 // リリースファイルのビルド

@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize)
-
 === modernize ===
 
 Contributors: automattic

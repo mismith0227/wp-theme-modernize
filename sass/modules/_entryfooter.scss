@@ -2,21 +2,14 @@
   .entry__footer {
     .cat-links {
       display: block;
-      a {
-        display: inline-block;
-        padding: .5rem 1.0rem;
-        border-radius: .2rem;
-        background-color: #eee;
+      li {
+        margin: .5rem .5rem 0 0;
       }
     }
     .tags-links {
       margin-top: 4.0rem;
       a {
-        display: inline-block;
-        margin-right: .5rem;
-        padding: .5rem 1.0rem;
-        border-radius: .2rem;
-        background-color: #eee;
+        margin: .5rem .5rem 0 0;
       }
     }
   }

@@ -18,6 +18,9 @@ rm -r .gitignore
 echo ".bowerrc
 .editorconfig
 .travis.yml
+.gitignore
+.jscsrc
+.jshintignore
 README.md
 bin
 bower.json

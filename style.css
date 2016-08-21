@@ -647,8 +647,7 @@ textarea {
 */
 .site-content {
   display: flex;
-  width: 90%;
-  max-width: 1000px;
+  width: 96%;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -661,8 +660,16 @@ textarea {
   }
 }
 
+.grid-1 {
+  max-width: 620px;
+}
+
+.grid-2 {
+  max-width: 820px;
+}
+
 .primary {
-  flex: 1;
+  display: flex;
   padding-right: 40px;
   vertical-align: top;
 }
@@ -695,16 +702,11 @@ textarea {
   }
 }
 
-.single-post .site-content,
-.page .site-content {
+.site-content {
   display: block;
-  width: 100%;
-  max-width: inherit;
-  padding-top: 0;
 }
 
-.single-post .primary,
-.page .primary {
+.primary {
   display: block;
   float: inherit;
   width: 100%;
@@ -712,13 +714,19 @@ textarea {
   padding: 0;
 }
 
-.single-post .secondary,
-.page .secondary {
+.secondary {
   display: block;
   width: 96%;
   max-width: 620px;
   margin: 80px auto 0;
   float: inherit;
+}
+
+.single-post .site-content,
+.page .site-content {
+  width: 100%;
+  max-width: inherit;
+  padding-top: 0;
 }
 
 .comments {

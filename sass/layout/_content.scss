@@ -3,8 +3,7 @@
 */
 .site-content {
   display: flex;
-  width: 90%;
-  max-width: 1000px;
+  width: 96%;
   margin: 0 auto;
   padding-top: 20px;
   @media #{$sp} {
@@ -14,8 +13,16 @@
   }
 }
 
+.grid-1 {
+  max-width: 620px;
+}
+
+.grid-2 {
+  max-width: 820px;
+}
+
 .primary {
-  flex: 1;
+  display: flex;
   padding-right: 40px;
   vertical-align: top;
   @media #{$sp} {
@@ -39,23 +46,26 @@
   }
 }
 
+.site-content {
+  display: block;
+}
+.primary {
+  display: block;
+  float: inherit;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.secondary {
+  @include postlayout(80px);
+  float: inherit;
+}
+
 .single-post,
 .page {
   .site-content {
-    display: block;
     width: 100%;
     max-width: inherit;
     padding-top: 0;
-  }
-  .primary {
-    display: block;
-    float: inherit;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .secondary {
-    @include postlayout(80px);
-    float: inherit;
   }
 }

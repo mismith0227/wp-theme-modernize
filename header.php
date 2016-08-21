@@ -60,4 +60,4 @@
 		</div><!-- .header__inner -->
 	</header><!-- .header -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content grid-1">

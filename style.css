@@ -646,8 +646,8 @@ textarea {
   layout
 */
 .site-content {
-  display: flex;
   width: 96%;
+  max-width: 620px;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -660,16 +660,7 @@ textarea {
   }
 }
 
-.grid-1 {
-  max-width: 620px;
-}
-
-.grid-2 {
-  max-width: 820px;
-}
-
 .primary {
-  display: flex;
   padding-right: 40px;
   vertical-align: top;
 }
@@ -727,6 +718,10 @@ textarea {
   width: 100%;
   max-width: inherit;
   padding-top: 0;
+}
+
+.page-header {
+  width: 100%;
 }
 
 .comments {
@@ -1015,7 +1010,7 @@ textarea {
   記事一覧
 */
 .entry {
-  margin-top: 10px;
+  margin-top: 24px;
   padding: 20px;
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);

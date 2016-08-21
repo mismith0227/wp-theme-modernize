@@ -2,8 +2,8 @@
   layout
 */
 .site-content {
-  display: flex;
   width: 96%;
+  max-width: 620px;
   margin: 0 auto;
   padding-top: 20px;
   @media #{$sp} {
@@ -13,16 +13,7 @@
   }
 }
 
-.grid-1 {
-  max-width: 620px;
-}
-
-.grid-2 {
-  max-width: 820px;
-}
-
 .primary {
-  display: flex;
   padding-right: 40px;
   vertical-align: top;
   @media #{$sp} {
@@ -68,4 +59,8 @@
     max-width: inherit;
     padding-top: 0;
   }
+}
+
+.page-header {
+  width: 100%;
 }

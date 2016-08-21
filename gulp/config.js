@@ -3,6 +3,7 @@ var root = path.resolve(__dirname + '/..');
 
 module.exports = {
   theme: './',
+  js: 'js',
   sass: 'sass',
   dist: 'dist',
   sassOptions: {

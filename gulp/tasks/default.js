@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
+var webpackConfig = require('../../webpack.config.js');
 
 var config = require('../config');
 
@@ -29,7 +32,17 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(config.theme));
 });
 
+// webpack
+gulp.task('webpack', function() {
+  return gulp
+    .src(config.js + '/main.js')
+    .pipe(plumber())
+    .pipe(webpackStream(webpackConfig, webpack))
+    .pipe(gulp.dest(config.theme))
+});
+
 var defaultTask = function(callback) {
+  gulp.watch([config.js + '/**/*.js'], ['webpack'], ['bs-reload']);
   gulp.watch([config.sass + '/**/*.scss'], ['sass'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.css'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.js'], ['bs-reload']);

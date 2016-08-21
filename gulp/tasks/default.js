@@ -41,13 +41,13 @@ gulp.task('webpack', function() {
     .pipe(gulp.dest(config.theme))
 });
 
-var defaultTask = function(callback) {
+gulp.task('watch', function(callback) {
   gulp.watch([config.js + '/**/*.js'], ['webpack'], ['bs-reload']);
   gulp.watch([config.sass + '/**/*.scss'], ['sass'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.css'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.js'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.php'], ['bs-reload']);
   callback();
-}
+});
 
-gulp.task('default', ['browser-sync'], defaultTask);
+gulp.task('default', ['sass', 'webpack']);

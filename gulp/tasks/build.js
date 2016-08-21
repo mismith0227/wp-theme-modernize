@@ -25,4 +25,4 @@ gulp.task('copy', ['clean'], function() {
 });
 
 // リリースファイルのビルド
-gulp.task('build', ['copy']);
+gulp.task('default', ['copy']);

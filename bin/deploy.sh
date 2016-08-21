@@ -21,6 +21,8 @@ echo ".bowerrc
 .gitignore
 .jscsrc
 .jshintignore
+.babelrc
+webpack.config.js
 README.md
 bin
 bower.json

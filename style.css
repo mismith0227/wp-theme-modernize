@@ -646,9 +646,8 @@ textarea {
   layout
 */
 .site-content {
-  display: flex;
-  width: 90%;
-  max-width: 1000px;
+  width: 96%;
+  max-width: 620px;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -661,10 +660,15 @@ textarea {
   }
 }
 
+.single-post .site-content,
+.page .site-content {
+  width: 100%;
+  max-width: inherit;
+  padding-top: 0;
+}
+
 .primary {
-  flex: 1;
-  padding-right: 40px;
-  vertical-align: top;
+  width: 100%;
 }
 
 @media only screen and (max-width: 639px) {
@@ -677,14 +681,10 @@ textarea {
 }
 
 .secondary {
-  width: 300px;
-  vertical-align: top;
-}
-
-@media only screen and (max-width: 1023px) {
-  .secondary {
-    width: 200px;
-  }
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  margin: 80px auto 0;
 }
 
 @media only screen and (max-width: 639px) {
@@ -695,35 +695,9 @@ textarea {
   }
 }
 
-.single-post .site-content,
-.page .site-content {
-  display: block;
-  width: 100%;
-  max-width: inherit;
-  padding-top: 0;
-}
-
-.single-post .primary,
-.page .primary {
-  display: block;
-  float: inherit;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.single-post .secondary,
-.page .secondary {
-  display: block;
-  width: 96%;
-  max-width: 620px;
-  margin: 80px auto 0;
-  float: inherit;
-}
-
 .comments {
   display: block;
-  width: 96%;
+  width: 100%;
   max-width: 620px;
   margin: 40px auto 0;
 }
@@ -1007,7 +981,7 @@ textarea {
   記事一覧
 */
 .entry {
-  margin-top: 10px;
+  margin-top: 24px;
   padding: 20px;
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -1076,7 +1050,7 @@ textarea {
 .single-post .entry__content,
 .page .entry__content {
   display: block;
-  width: 96%;
+  width: 100%;
   max-width: 620px;
   margin: 80px auto 0;
   color: #555;
@@ -1115,7 +1089,7 @@ textarea {
 .single-post .entry__footer,
 .page .entry__footer {
   display: block;
-  width: 96%;
+  width: 100%;
   max-width: 620px;
   margin: 40px auto 0;
 }
@@ -1123,7 +1097,7 @@ textarea {
 .single-post .post-navigation,
 .page .post-navigation {
   display: block;
-  width: 96%;
+  width: 100%;
   max-width: 620px;
   margin: 40px auto 0;
 }

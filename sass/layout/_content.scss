@@ -2,9 +2,8 @@
   layout
 */
 .site-content {
-  display: flex;
-  width: 90%;
-  max-width: 1000px;
+  width: 96%;
+  max-width: 620px;
   margin: 0 auto;
   padding-top: 20px;
   @media #{$sp} {
@@ -14,10 +13,17 @@
   }
 }
 
+.single-post,
+.page {
+  .site-content {
+    width: 100%;
+    max-width: inherit;
+    padding-top: 0;
+  }
+}
+
 .primary {
-  flex: 1;
-  padding-right: 40px;
-  vertical-align: top;
+  width: 100%;
   @media #{$sp} {
     display: block;
     width: 96%;
@@ -27,35 +33,10 @@
 }
 
 .secondary {
-  width: 300px;
-  vertical-align: top;
-  @media #{$tablet} {
-    width: 200px;
-  }
+  @include postlayout(80px);
   @media #{$sp} {
     display: block;
     width: 90%;
     margin: 40px auto 0;
-  }
-}
-
-.single-post,
-.page {
-  .site-content {
-    display: block;
-    width: 100%;
-    max-width: inherit;
-    padding-top: 0;
-  }
-  .primary {
-    display: block;
-    float: inherit;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .secondary {
-    @include postlayout(80px);
-    float: inherit;
   }
 }

@@ -11,7 +11,7 @@ $(function(){
   var nav_height;
 
   // headerstyle
-  function headstyle() {
+  var headstyle = () => {
     var wW = $(window).width();
     var nav_height = $('.header').outerHeight(true);
     $('.site-content').css({'margin-top': nav_height + 'px'});
@@ -47,10 +47,10 @@ $(function(){
   myScroll.disable();
 
   var Drawer = (function() {
-  var myScroll = new IScroll('#site-navigation', {
-    mouseWheel: true,
-    scrollbars: false
-  });
+    var myScroll = new IScroll('#site-navigation', {
+      mouseWheel: true,
+      scrollbars: false
+    });
 
     var setting = {
       state: false,
@@ -77,7 +77,7 @@ $(function(){
     _init();
 
     function _toggle() {
-      $('.' + setting.class.toggle).on('click',function(){
+      $('.' + setting.class.toggle).on('click', () => {
         if (setting.state == true) {
           $('body').removeClass(setting.class.fixed);
           _close();

@@ -35,14 +35,14 @@ gulp.task('sass', function() {
 // webpack
 gulp.task('webpack', function() {
   return gulp
-    .src(config.js + '/main.js')
+    .src(config.src + '/js/main.js')
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig, webpack))
-    .pipe(gulp.dest(config.theme))
+    .pipe(gulp.dest(config.js))
 });
 
-gulp.task('watch', function(callback) {
-  gulp.watch([config.js + '/**/*.js'], ['webpack'], ['bs-reload']);
+gulp.task('watch', ['browser-sync'], function(callback) {
+  gulp.watch([config.src + '/js/**/*.js'], ['webpack'], ['bs-reload']);
   gulp.watch([config.sass + '/**/*.scss'], ['sass'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.css'], ['bs-reload']);
   gulp.watch([config.theme + '/**/*.js'], ['bs-reload']);

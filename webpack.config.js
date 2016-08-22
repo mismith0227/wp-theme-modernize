@@ -7,7 +7,7 @@ module.exports = {
   debug: true,
   devtool: '',
   entry: {
-    main: path.join(__dirname, config.js + '/main.js'),
+    main: path.join(__dirname, config.src + '/js/main.js'),
   },
   output: {
     path: path.join(__dirname, config.theme),

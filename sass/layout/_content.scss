@@ -13,45 +13,6 @@
   }
 }
 
-.primary {
-  padding-right: 40px;
-  vertical-align: top;
-  @media #{$sp} {
-    display: block;
-    width: 96%;
-    margin: 0 auto;
-    padding-right: 0;
-  }
-}
-
-.secondary {
-  width: 300px;
-  vertical-align: top;
-  @media #{$tablet} {
-    width: 200px;
-  }
-  @media #{$sp} {
-    display: block;
-    width: 90%;
-    margin: 40px auto 0;
-  }
-}
-
-.site-content {
-  display: block;
-}
-.primary {
-  display: block;
-  float: inherit;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.secondary {
-  @include postlayout(80px);
-  float: inherit;
-}
-
 .single-post,
 .page {
   .site-content {
@@ -61,6 +22,21 @@
   }
 }
 
-.page-header {
+.primary {
   width: 100%;
+  @media #{$sp} {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+}
+
+.secondary {
+  @include postlayout(80px);
+  @media #{$sp} {
+    display: block;
+    width: 90%;
+    margin: 40px auto 0;
+  }
 }

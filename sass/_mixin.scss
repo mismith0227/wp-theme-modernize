@@ -8,7 +8,7 @@
 
 @mixin postlayout($top: 0) {
   display: block;
-  width: 96%;
+  width: 100%;
   max-width: 620px;
   margin: $top auto 0;
 }

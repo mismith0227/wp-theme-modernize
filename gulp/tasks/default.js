@@ -67,9 +67,7 @@ gulp.task('webpack', function() {
 gulp.task('watch', ['browser-sync'], function(callback) {
   gulp.watch([config.src + '/js/**/*.js'], ['webpack'], ['bs-reload']);
   gulp.watch([config.sass + '/**/*.scss'], ['sass'], ['bs-reload']);
-  gulp.watch([config.theme + '/**/*.css'], ['bs-reload']);
-  gulp.watch([config.theme + '/**/*.js'], ['bs-reload']);
-  gulp.watch([config.theme + '/**/*.php'], ['bs-reload']);
+  gulp.watch([config.theme + '**/*.{css,js,php}'], ['bs-reload']);
   callback();
 });
 

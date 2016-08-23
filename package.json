@@ -22,8 +22,11 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2",
+    "svgpack": "^2.1.0",
     "webpack": "^1.13.2",
     "webpack-stream": "^3.2.0"
   }

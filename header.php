@@ -22,6 +22,8 @@
 
 <body <?php body_class(); ?>>
 
+	<?php get_template_part('template-parts/svgpack-sprite'); ?>
+
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'modernize' ); ?></a>
 
 	<header class="header" role="banner">

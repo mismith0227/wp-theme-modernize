@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
+var rename = require('gulp-rename');
+var runSequence = require('run-sequence');
+var Svgpack = require('svgpack');
 var webpack = require('webpack');
 var webpackStream = require('webpack-stream');
 var webpackConfig = require('../../webpack.config.js');
@@ -32,6 +35,26 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(config.theme));
 });
 
+// SVG
+gulp.task('svg', function () {
+  var svg = new Svgpack(config.src + '/svg/*.svg', config.theme + 'svgpack')
+  return svg.init()
+})
+
+gulp.task('svg:spriteRename', function () {
+  return gulp
+    .src(config.theme + 'svgpack/svgpack-sprite.svg')
+    .pipe(rename('svgpack-sprite.php'))
+    .pipe(gulp.dest(config.theme + 'template-parts'))
+})
+
+gulp.task('svg:cssRename', function () {
+  return gulp
+    .src(config.theme + 'svgpack/svgpack.css')
+    .pipe(rename('_svgpack.scss'))
+    .pipe(gulp.dest(config.sass + '/modules'))
+})
+
 // webpack
 gulp.task('webpack', function() {
   return gulp
@@ -50,4 +73,26 @@ gulp.task('watch', ['browser-sync'], function(callback) {
   callback();
 });
 
-gulp.task('default', ['sass', 'webpack']);
+
+// Default
+// =====================================================
+gulp.task('default', function (cb) {
+  return runSequence(
+    ['build'],
+    'watch',
+    'browser-sync',
+    cb
+  )
+})
+
+// Build
+// =====================================================
+gulp.task('build', function (cb) {
+  return runSequence(
+    ['svg'],
+    'svg:spriteRename',
+    'svg:cssRename',
+    ['sass', 'webpack'],
+    cb
+  )
+})

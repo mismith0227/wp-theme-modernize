@@ -30,6 +30,7 @@ gulpfile.js
 node_modules
 package.json
 tests
+svgpack
 gulp
 sass
 dist

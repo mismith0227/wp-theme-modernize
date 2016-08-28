@@ -7,6 +7,7 @@ var runSequence = require('run-sequence');
 var Svgpack = require('svgpack');
 var webpack = require('webpack');
 var uglify = require('gulp-uglify');
+var cssmin = require('gulp-cssmin');
 var webpackStream = require('webpack-stream');
 var webpackConfig = require('../../webpack.config.js');
 
@@ -33,7 +34,13 @@ gulp.task('sass', function() {
           }
         }))
         .pipe(sass(config.sassOptions))
-        .pipe(gulp.dest(config.theme));
+        .pipe(gulp.dest(config.theme))
+        .on('end', function(){
+          gulp.src( [ config.theme + 'style.css'] )
+    				.pipe( cssmin() )
+            .pipe( rename( { suffix: '.min' } ) )
+    				.pipe( gulp.dest(config.theme) );
+        });
 });
 
 // SVG

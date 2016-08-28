@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 var Svgpack = require('svgpack');
 var webpack = require('webpack');
+var uglify = require('gulp-uglify');
 var webpackStream = require('webpack-stream');
 var webpackConfig = require('../../webpack.config.js');
 
@@ -13,8 +14,8 @@ var config = require('../config');
 
 // browserSync
 gulp.task('browser-sync', function() {
-  browserSync({
-    proxy: "http://192.168.33.10/"
+  browserSync.init({
+    proxy: "vccw.dev"
   });
 });
 
@@ -62,6 +63,18 @@ gulp.task('webpack', function() {
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(gulp.dest(config.js))
+    .on('end', function(){
+      gulp.src( [ config.js + '/bundle.js'] )
+				.pipe( uglify() )
+        .pipe( rename( { suffix: '.min' } ) )
+				.pipe( gulp.dest(config.js) );
+    });
+});
+
+gulp.task('uglify', function(){
+  gulp.src(config.js + '/bundle.js')
+    .pipe(uglify('bundle.min.js'))
+    .pipe(gulp.dest(config.js));
 });
 
 gulp.task('watch', ['browser-sync'], function(callback) {

@@ -29,7 +29,6 @@ module.exports = {
       jquery: 'jquery',
       IScroll: 'iscroll',
     }),
-    new webpack.optimize.UglifyJsPlugin(),
   ],
   externals: {
     jquery: 'window.jQuery',

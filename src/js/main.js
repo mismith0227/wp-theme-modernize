@@ -2,7 +2,7 @@ require('iscroll')
 require('./skip-link-focus-fix.js')
 const Headroom = require('headroom.js')
 
-$(function(){
+$(() => {
 
   var setting = {
     tablet: 1024
@@ -46,7 +46,7 @@ $(function(){
   });
   myScroll.disable();
 
-  var Drawer = (function() {
+  var Drawer = (() => {
     var myScroll = new IScroll('#site-navigation', {
       mouseWheel: true,
       scrollbars: false

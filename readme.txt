@@ -18,6 +18,8 @@ Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/no
 
 ## == Changelog ==
 
+### = 1.6.0 =
+
 ### = 1.5.0 =
 
 * add iScroll

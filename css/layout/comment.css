@@ -1,5 +1,8 @@
 .comments {
-  @include postlayout(40px);
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  margin: 40px auto 0;
   textarea {
     width: 100%;
   }

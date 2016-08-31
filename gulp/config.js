@@ -5,7 +5,7 @@ module.exports = {
   theme: './',
   src: 'src',
   js: 'js',
-  sass: 'sass',
+  css: 'css',
   dist: 'dist',
   sassOptions: {
     includePaths: ['node_modules/'],

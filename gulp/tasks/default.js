@@ -1,6 +1,6 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var postcss = require('gulp-postcss');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
@@ -24,23 +24,24 @@ gulp.task('bs-reload', function() {
   browserSync.reload();
 });
 
-// sass
-gulp.task('sass', function() {
-    return gulp.src(config.sass + '/!(_)*.{scss,sass}')
-        .pipe(plumber({
-          errorHandler: function(err) {
-            console.log(err.messageFormatted);
-            this.emit('end');
-          }
-        }))
-        .pipe(sass(config.sassOptions))
-        .pipe(gulp.dest(config.theme))
-        .on('end', function(){
-          gulp.src( [ config.theme + 'style.css'] )
-    				.pipe( cssmin() )
-            .pipe( rename( { suffix: '.min' } ) )
-    				.pipe( gulp.dest(config.theme) );
-        });
+// css
+gulp.task("css", function() {
+  return gulp.src(config.css + '/style.css')
+    .pipe(postcss([
+      require('postcss-import'),
+      require('postcss-nested'),
+      require('postcss-css-variables'),
+      require('postcss-custom-media'),
+      require('postcss-flexbugs-fixes'),
+      require('autoprefixer')
+    ]))
+    .pipe(gulp.dest(config.theme))
+    .on('end', function(){
+      gulp.src( [ config.theme + 'style.css'] )
+        .pipe( cssmin() )
+        .pipe( rename( { suffix: '.min' } ) )
+        .pipe( gulp.dest(config.theme) );
+    });
 });
 
 // SVG
@@ -86,7 +87,7 @@ gulp.task('uglify', function(){
 
 gulp.task('watch', ['browser-sync'], function(callback) {
   gulp.watch([config.src + '/js/**/*.js'], ['webpack'], ['bs-reload']);
-  gulp.watch([config.sass + '/**/*.scss'], ['sass'], ['bs-reload']);
+  gulp.watch([config.css + '/**/*.css'], ['css'], ['bs-reload']);
   gulp.watch([config.theme + '**/*.{css,js,php}'], ['bs-reload']);
   callback();
 });
@@ -110,7 +111,7 @@ gulp.task('build', function (cb) {
     ['svg'],
     'svg:spriteRename',
     'svg:cssRename',
-    ['sass', 'webpack'],
+    ['css', 'webpack'],
     cb
   )
 })

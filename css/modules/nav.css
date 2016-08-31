@@ -1,7 +1,7 @@
 .gnav {
   position: relative;
   background: #fff;
-  @media #{$tablet} {
+  @media (--tablet) {
     position: fixed;
     top: 0;
     right: -50%;
@@ -18,13 +18,13 @@
       padding: 10px;
     }
   }
-  @media #{$sp} {
+  @media (--sp) {
     right: -80%;
     width: 80%;
   }
   li {
     padding: 0 0 0 20px;
-    @media #{$tablet} {
+    @media (--tablet) {
       display: block;
       float: inherit;
       width: 100%;
@@ -38,7 +38,7 @@
 }
 
 .primary-menu {
-  @media #{$tablet} {
+  @media (--tablet) {
     width: 100%;
   }
 }
@@ -52,13 +52,12 @@
   margin: 0;
   padding: 0;
   background-color: #fff;
-  -webkit-transition: opacity .3s;
   transition: opacity .3s;
   li {
     float: inherit;
     padding: 0 20px;
   }
-  @media #{$tablet} {
+  @media (--tablet) {
     position: inherit;
     display: block;
     visibility: visible;;
@@ -81,7 +80,7 @@
     top: 0;
     left: 100%;
     min-width: 100px;
-    @media #{$tablet} {
+    @media (--tablet) {
       left: 0;
     }
   }

@@ -7,7 +7,7 @@
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
   background-color: #fff;
-  @media #{$sp} {
+  @media (--sp) {
     padding: 10px;
   }
   &:first-child {
@@ -15,9 +15,9 @@
   }
   &__title {
     margin: 0;
-    font-size: $large;
+    font-size: var(--fs-large);
     a:hover {
-      color: $link;
+      color: var(--link-color);
     }
   }
   .entry__thumb + .entry__info {
@@ -31,15 +31,15 @@
   &__content {
     color: #999;
     font-style: italic;
-    font-size: $small;
+    font-size: var(--fs-small);
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
   &__footer {
     color: #999;
-    font-size: $small;
+    font-size: var(--fs-small);
     a {
-      color: $link;
+      color: var(--link-color);
     }
   }
   .edit__link {
@@ -59,8 +59,11 @@
     background-color: #fafafa;
   }
   .entry__content {
-    @include postlayout(80px);
-    color: $default;
+    display: block;
+    width: 96%;
+    max-width: 620px;
+    margin: 80px auto 0;
+    color: var(--default-color);
     font-style: normal;
   }
   .entry__header {
@@ -70,10 +73,10 @@
     position: relative;
     min-height: 500px;
     width: 100%;
-    @media #{$tablet} {
+    @media (--tablet) {
       min-height: 400px;
     }
-    @media #{$sp} {
+    @media (--sp) {
       min-height: 300px;
     }
   }
@@ -81,10 +84,16 @@
     font-size: 3.0rem;
   }
   .entry__footer {
-    @include postlayout(40px);
+    display: block;
+    width: 96%;
+    max-width: 620px;
+    margin: 40px auto 0;
   }
   .post-navigation {
-    @include postlayout(40px);
+    display: block;
+    width: 96%;
+    max-width: 620px;
+    margin: 40px auto 0;
   }
   .entry__info {
     position: relative;

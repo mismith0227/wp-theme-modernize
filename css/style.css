@@ -1,0 +1,38 @@
+/*
+Theme Name: modernize
+Theme URI:
+Author: Takuma Misumi
+Author URI: http://blog.mismithportfolio.com/
+Description: Modernize is a modernized take on an ever-popular WordPress layout
+Version: 1.5.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: modernize
+Tags: one-column, blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "base/var.css";
+@import "base/normalize.css";
+
+@import "layout/header.css";
+@import "layout/content.css";
+@import "layout/comment.css";
+@import "layout/footer.css";
+
+
+@import "modules/sitebranding.css";
+@import "modules/entrymeta.css";
+@import "modules/entryfooter.css";
+@import "modules/nav.css";
+@import "modules/widget.css";
+@import "modules/archive.css";
+@import "modules/thumbnail.css";
+@import "modules/form.css";
+@import "modules/pagenation.css";
+@import "modules/headroom.css";
+@import "modules/drawer.css";
+@import "modules/entry.css";
+@import "modules/svgpack.css";

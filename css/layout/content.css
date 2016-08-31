@@ -1,12 +1,9 @@
-/*
-  layout
-*/
 .site-content {
   width: 96%;
   max-width: 620px;
   margin: 0 auto;
   padding-top: 20px;
-  @media #{$sp} {
+  @media (--sp) {
     display: block;
     width: 100%;
     margin-top: 0;
@@ -20,11 +17,16 @@
     max-width: inherit;
     padding-top: 0;
   }
+  .primary {
+    @media (--sp) {
+      width: 100%;
+    }
+  }
 }
 
 .primary {
   width: 100%;
-  @media #{$sp} {
+  @media (--sp) {
     display: block;
     width: 96%;
     margin: 0 auto;
@@ -33,10 +35,13 @@
 }
 
 .secondary {
-  @include postlayout(80px);
-  @media #{$sp} {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  margin: 80px auto 0;
+  @media (--sp) {
     display: block;
-    width: 90%;
+    width: 96%;
     margin: 40px auto 0;
   }
 }

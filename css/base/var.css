@@ -1,0 +1,10 @@
+@custom-media --tablet (max-width:1023px);
+@custom-media --sp (max-width:639px);
+
+:root {
+    --default-color: #555;
+    --link-color: #20b2aa;
+    --fs-large: 2.2rem;
+    --fs-middle: 1.4rem;
+    --fs-small: 1.2rem;
+}

@@ -61,7 +61,7 @@ gulp.task('svg:cssRename', function () {
   return gulp
     .src(config.theme + 'svgpack/svgpack.css')
     .pipe(rename('_svgpack.scss'))
-    .pipe(gulp.dest(config.sass + '/modules'))
+    .pipe(gulp.dest(config.css + '/modules'))
 })
 
 // webpack

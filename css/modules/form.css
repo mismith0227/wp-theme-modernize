@@ -1,41 +1,41 @@
 .comment-respond {
-  input, button, textarea, select {
+  & input, & button, & textarea, & select {
   	margin: 0;
   	background: none;
   	appearance: none;
   }
-  textarea {
+  & textarea {
     padding: .4rem;
     border: 1px solid #ccc;
     border-radius: .3rem;
   }
-  input {
+  & input {
     padding: .4rem;
     border: 1px solid #ccc;
     border-radius: .3rem;
   }
-  input[name="submit"] {
+  & input[name="submit"] {
     display: inline-block;
     padding: .4rem .8rem;
   }
 }
 
 .widget_search {
-  .search-form {
+  & .search-form {
     position: relative;
   }
-  label {
+  & label {
     display: block;
     width: 100%;
   }
-  .search-field {
+  & .search-field {
     display: block;
     width: calc(100% - 60px);
     height: 30px;
     border: 1px solid #eee;
     border-right: none;
   }
-  .search-submit {
+  & .search-submit {
     position: absolute;
     top: 0;
     right: 0;

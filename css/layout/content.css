@@ -12,12 +12,12 @@
 
 .single-post,
 .page {
-  .site-content {
+  & .site-content {
     width: 100%;
     max-width: inherit;
     padding-top: 0;
   }
-  .primary {
+  & .primary {
     @media (--sp) {
       width: 100%;
     }

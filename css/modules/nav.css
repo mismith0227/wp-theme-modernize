@@ -10,10 +10,10 @@
     height: 100%;
     overflow: hidden;
     background-color: #fff;
-    li {
+    & li {
       border-bottom: 1px solid #eee;
     }
-    a {
+    & a {
       display: block;
       padding: 10px;
     }
@@ -22,7 +22,7 @@
     right: -80%;
     width: 80%;
   }
-  li {
+  & li {
     padding: 0 0 0 20px;
     @media (--tablet) {
       display: block;
@@ -30,7 +30,7 @@
       width: 100%;
     }
   }
-  a {
+  & a {
     display: block;
     padding: 10px 0;
     color: #555;
@@ -53,7 +53,7 @@
   padding: 0;
   background-color: #fff;
   transition: opacity .3s;
-  li {
+  & li {
     float: inherit;
     padding: 0 20px;
   }
@@ -62,21 +62,21 @@
     display: block;
     visibility: visible;;
     opacity: 1;
-    li {
+    & li {
       padding: 0;
       border-top: 1px solid #eee;
       border-bottom: none;
     }
-    a {
+    & a {
       padding-left: 40px;
     }
-    .sub-menu {
-      a {
+    & .sub-menu {
+      & a {
         padding-left: 70px;
       }
     }
   }
-  .sub-menu {
+  & .sub-menu {
     top: 0;
     left: 100%;
     min-width: 100px;
@@ -92,7 +92,7 @@
     visibility: visible;
     opacity: 1;
   }
-  .menu-item-has-children {
+  & .menu-item-has-children {
     position: relative;
   }
 }

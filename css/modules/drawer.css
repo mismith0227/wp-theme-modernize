@@ -32,7 +32,7 @@
   &:hover {
     cursor: pointer;
   }
-  span {
+  & span {
     display: block;
     position: absolute;
     top: 0;
@@ -73,7 +73,7 @@
     }
   }
   &.toggle-btn_open {
-    span {
+    & span {
       background-color: rgba(0, 0, 0, 0);
       &::before {
         top: 0;

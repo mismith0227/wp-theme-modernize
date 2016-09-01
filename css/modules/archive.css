@@ -20,7 +20,7 @@
       color: var(--link-color);
     }
   }
-  .entry__thumb + .entry__info {
+  & .entry__thumb + .entry__info {
     margin-top: 1.6rem;
   }
   &__meta,
@@ -38,11 +38,11 @@
   &__footer {
     color: #999;
     font-size: var(--fs-small);
-    a {
+    & a {
       color: var(--link-color);
     }
   }
-  .edit__link {
+  & .edit__link {
     margin-left: 1.0rem;
   }
 }
@@ -52,13 +52,13 @@
 */
 .single-post,
 .page {
-  .entry {
+  & .entry {
     padding: 0;
     box-shadow: none;
     border: none;
     background-color: #fafafa;
   }
-  .entry__content {
+  & .entry__content {
     display: block;
     width: 96%;
     max-width: 620px;
@@ -66,7 +66,7 @@
     color: var(--default-color);
     font-style: normal;
   }
-  .entry__header {
+  & .entry__header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,22 +80,22 @@
       min-height: 300px;
     }
   }
-  .entry__title {
+  & .entry__title {
     font-size: 3.0rem;
   }
-  .entry__footer {
+  & .entry__footer {
     display: block;
     width: 96%;
     max-width: 620px;
     margin: 40px auto 0;
   }
-  .post-navigation {
+  & .post-navigation {
     display: block;
     width: 96%;
     max-width: 620px;
     margin: 40px auto 0;
   }
-  .entry__info {
+  & .entry__info {
     position: relative;
     z-index: 1;
     padding: 4.0rem;

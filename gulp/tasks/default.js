@@ -29,8 +29,8 @@ gulp.task("css", function() {
   return gulp.src(config.css + '/style.css')
     .pipe(postcss([
       require('postcss-import'),
-      require('postcss-nested'),
-      require('postcss-css-variables'),
+      require('postcss-custom-properties'),
+      require('postcss-nesting'),
       require('postcss-custom-media'),
       require('postcss-flexbugs-fixes'),
       require('autoprefixer')
@@ -60,7 +60,6 @@ gulp.task('svg:spriteRename', function () {
 gulp.task('svg:cssRename', function () {
   return gulp
     .src(config.theme + 'svgpack/svgpack.css')
-    .pipe(rename('_svgpack.scss'))
     .pipe(gulp.dest(config.css + '/modules'))
 })
 

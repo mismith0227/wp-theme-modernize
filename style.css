@@ -461,11 +461,7 @@ textarea, input, label {
   box-sizing: border-box;
 }
 
-a {
-  color: #555;
-  text-decoration: none;
-}
-
+a,
 a:visited {
   color: #555;
   text-decoration: none;
@@ -632,7 +628,7 @@ textarea {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
   box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
-  background-color: #fff;
+  background-color: #fff
 }
 
 .header__inner {
@@ -670,7 +666,7 @@ textarea {
   width: 96%;
   max-width: 620px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 20px
 }
 
 @media (max-width:639px) {
@@ -680,12 +676,19 @@ textarea {
     width: 100%;
     margin-top: 0;
   }
+  }
+
+.single-post,
+.page {
 }
 
 .single-post .site-content, .page .site-content {
   width: 100%;
   max-width: inherit;
   padding-top: 0;
+}
+
+.single-post .primary, .page .primary {
 }
 
 @media (max-width:639px) {
@@ -696,7 +699,7 @@ textarea {
 }
 
 .primary {
-  width: 100%;
+  width: 100%
 }
 
 @media (max-width:639px) {
@@ -707,13 +710,13 @@ textarea {
     margin: 0 auto;
     padding-right: 0;
   }
-}
+  }
 
 .secondary {
   display: block;
   width: 100%;
   max-width: 620px;
-  margin: 80px auto 0;
+  margin: 80px auto 0
 }
 
 @media (max-width:639px) {
@@ -723,13 +726,13 @@ textarea {
     width: 96%;
     margin: 40px auto 0;
   }
-}
+  }
 
 .comments {
   display: block;
   width: 100%;
   max-width: 620px;
-  margin: 40px auto 0;
+  margin: 40px auto 0
 }
 
 .comments textarea {
@@ -746,11 +749,14 @@ textarea {
   padding: 100px 0;
   background-color: #020733;
   color: #fff;
-  text-align: center;
+  text-align: center
 }
 
 .footer a {
   color: #fff;
+}
+
+.site-branding {
 }
 
 @media (max-width:1023px) {
@@ -759,7 +765,7 @@ textarea {
     padding-right: 60px;
     vertical-align: middle;
   }
-}
+  }
 
 .site-branding__title {
   margin: 0;
@@ -784,6 +790,10 @@ textarea {
   .site-branding__description {
     display: inline-block;
   }
+}
+
+.single-post,
+.page {
 }
 
 .single-post .entry__header, .page .entry__header {
@@ -816,6 +826,9 @@ textarea {
   color: #fff;
 }
 
+.single-post {
+}
+
 .single-post .posted-on {
   display: block;
 }
@@ -823,6 +836,12 @@ textarea {
 .single-post .byline {
   display: block;
   margin-top: 1.0rem;
+}
+
+.single {
+}
+
+.single .entry__footer {
 }
 
 .single .entry__footer .cat-links {
@@ -839,6 +858,9 @@ textarea {
 
 .single .entry__footer .tags-links a {
   margin: .5rem .5rem 0 0;
+}
+
+.entry__footer{
 }
 
 .entry__footer .post-categories {
@@ -861,7 +883,7 @@ textarea {
 
 .gnav {
   position: relative;
-  background: #fff;
+  background: #fff
 }
 
 @media (max-width:1023px) {
@@ -885,7 +907,7 @@ textarea {
     display: block;
     padding: 10px;
   }
-}
+  }
 
 @media (max-width:639px) {
 
@@ -893,7 +915,7 @@ textarea {
     right: -80%;
     width: 80%;
   }
-}
+  }
 
 .gnav li {
   padding: 0 0 0 20px;
@@ -914,12 +936,15 @@ textarea {
   color: #555;
 }
 
+.primary-menu {
+}
+
 @media (max-width:1023px) {
 
   .primary-menu {
     width: 100%;
   }
-}
+  }
 
 .sub-menu {
   display: block;
@@ -931,7 +956,7 @@ textarea {
   padding: 0;
   background-color: #fff;
   -webkit-transition: opacity .3s;
-  transition: opacity .3s;
+  transition: opacity .3s
 }
 
 .sub-menu li {
@@ -958,10 +983,13 @@ textarea {
     padding-left: 40px;
   }
 
+  .sub-menu .sub-menu {
+}
+
   .sub-menu .sub-menu a {
     padding-left: 70px;
   }
-}
+  }
 
 .sub-menu .sub-menu {
   top: 0;
@@ -976,6 +1004,9 @@ textarea {
   }
 }
 
+.menu-item-has-children {
+}
+
 .menu-item-has-children:hover > .sub-menu {
   visibility: visible;
   opacity: 1;
@@ -986,7 +1017,7 @@ textarea {
 }
 
 .widget {
-  margin-top: 6.0rem;
+  margin-top: 6.0rem
 }
 
 .widget:first-child {
@@ -1019,7 +1050,7 @@ textarea {
   padding: 20px;
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  background-color: #fff;
+  background-color: #fff
 }
 
 @media (max-width:639px) {
@@ -1027,7 +1058,7 @@ textarea {
   .entry {
     padding: 10px;
   }
-}
+  }
 
 .entry:first-child {
   margin-top: 0;
@@ -1036,10 +1067,10 @@ textarea {
 .entry__title {
   margin: 0;
   font-size: 2.2rem;
-}
 
-.entry__title a:hover {
-  color: #20b2aa;
+  a:hover {
+    color: #20b2aa;
+  }
 }
 
 .entry .entry__thumb + .entry__info {
@@ -1077,6 +1108,10 @@ textarea {
   投稿ページ
 */
 
+.single-post,
+.page {
+}
+
 .single-post .entry, .page .entry {
   padding: 0;
   box-shadow: none;
@@ -1084,16 +1119,7 @@ textarea {
   background-color: #fafafa;
 }
 
-.single-post .entry__content {
-  display: block;
-  width: 96%;
-  max-width: 620px;
-  margin: 80px auto 0;
-  color: #555;
-  font-style: normal;
-}
-
-.page .entry__content {
+.single-post .entry__content, .page .entry__content {
   display: block;
   width: 96%;
   max-width: 620px;
@@ -1159,7 +1185,7 @@ textarea {
   position: relative;
   height: 0;
   padding-bottom: 40%;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .entry__thumb a {
@@ -1182,8 +1208,15 @@ textarea {
           transform: translate3d(-50%, -50%, 0);
 }
 
+.home,
+.archive {
+}
+
 .home .entry__thumb img, .archive .entry__thumb img {
   max-width: 100%;
+}
+
+.comment-respond {
 }
 
 .comment-respond input, .comment-respond button, .comment-respond textarea, .comment-respond select {
@@ -1209,6 +1242,9 @@ textarea {
 .comment-respond input[name="submit"] {
   display: inline-block;
   padding: .4rem .8rem;
+}
+
+.widget_search {
 }
 
 .widget_search .search-form {
@@ -1254,7 +1290,7 @@ textarea {
   min-height: 8rem;
   padding: .8rem 0;
   border-top: 1px solid #e1e5e7;
-  border-bottom: 1px solid #e1e5e7;
+  border-bottom: 1px solid #e1e5e7
 }
 
 .nav-links::after {
@@ -1279,7 +1315,7 @@ textarea {
   display: flex;
   width: 50%;
   vertical-align: middle;
-  text-align: left;
+  text-align: left
 }
 
 .nav-previous a {
@@ -1308,7 +1344,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  vertical-align: middle;
+  vertical-align: middle
 }
 
 .nav-next a {
@@ -1353,6 +1389,9 @@ textarea {
           transform: translate3d(0, -100%, 0);
 }
 
+.gnav {
+}
+
 @media (max-width:1023px) {
 
   .gnav {
@@ -1366,7 +1405,7 @@ textarea {
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
   }
-}
+  }
 
 .toggle-btn {
   display: none;
@@ -1386,7 +1425,7 @@ textarea {
   -moz-appearance: button;
        appearance: button;
   outline: none;
-  visibility: hidden;
+  visibility: hidden
 }
 
 .toggle-btn:focus {
@@ -1448,6 +1487,9 @@ textarea {
   transition: transform .3s, -webkit-transform .3s;
 }
 
+.toggle-btn.toggle-btn_open {
+}
+
 .toggle-btn.toggle-btn_open span {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -1473,7 +1515,7 @@ textarea {
   .toggle-btn {
     visibility: visible;
   }
-}
+  }
 
 .bg-ovly {
   display: block;
@@ -1486,7 +1528,7 @@ textarea {
   background-color: rgba(0,0,0,.6);
   opacity: 0;
   -webkit-transition: opacity .3s;
-  transition: opacity .3s;
+  transition: opacity .3s
 }
 
 .bg-ovly::before {
@@ -1508,6 +1550,9 @@ textarea {
 
 .bodyfixed {
   overflow: hidden;
+}
+
+.entry__content {
 }
 
 .entry__content h1 {

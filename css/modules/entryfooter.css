@@ -1,14 +1,14 @@
 .single {
-  .entry__footer {
-    .cat-links {
+  & .entry__footer {
+    & .cat-links {
       display: block;
-      li {
+      & li {
         margin: .5rem .5rem 0 0;
       }
     }
-    .tags-links {
+    & .tags-links {
       margin-top: 4.0rem;
-      a {
+      & a {
         margin: .5rem .5rem 0 0;
       }
     }
@@ -16,16 +16,16 @@
 }
 
 .entry__footer{
-  .post-categories {
+  & .post-categories {
     display: inline-block;
-    li {
+    & li {
       display: inline-block;
     }
   }
-  .tags-links {
+  & .tags-links {
     display: block;
     margin-left: 0;
-    a {
+    & a {
       display: inline-block;
       margin-right: .5rem;
     }

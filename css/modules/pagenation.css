@@ -15,7 +15,7 @@
     clear: both;
     display: block;
   }
-  a {
+  & a {
     display: block;
     position: relative;
     width: 100%;
@@ -30,7 +30,7 @@
   width: 50%;
   vertical-align: middle;
   text-align: left;
-  a {
+  & a {
     border-right: 1px solid #e1e5e7;
     padding: 0 1.0rem 0 1.5rem;
     &::before {
@@ -55,7 +55,7 @@
   display: flex;
   width: 50%;
   vertical-align: middle;
-  a {
+  & a {
     padding: 0 1.5rem 0 1.0rem;
     &::after {
       content: "";

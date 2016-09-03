@@ -922,7 +922,6 @@ textarea {
   }
 
 .gnav li {
-  padding: 0 0 0 20px;
 }
 
 @media (max-width:1023px) {
@@ -934,10 +933,18 @@ textarea {
   }
 }
 
+.gnav li.current-menu-item > a {
+  color: #20b2aa;
+}
+
 .gnav a {
   display: block;
-  padding: 10px 0;
+  padding: 10px 10px;
   color: #555;
+}
+
+.gnav a:hover {
+  color: #20b2aa;
 }
 
 .primary-menu {

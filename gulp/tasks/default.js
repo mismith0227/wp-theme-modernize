@@ -30,6 +30,7 @@ gulp.task("css", function() {
     .pipe(postcss([
       require('postcss-import'),
       require('postcss-custom-properties'),
+      require('postcss-apply'),
       require('postcss-nesting'),
       require('postcss-custom-media'),
       require('postcss-flexbugs-fixes'),

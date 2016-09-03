@@ -664,7 +664,7 @@ textarea {
 
 .site-content {
   width: 96%;
-  max-width: 620px;
+  max-width: 700px;
   margin: 0 auto;
   padding-top: 20px
 }
@@ -675,6 +675,35 @@ textarea {
     display: block;
     width: 100%;
     margin-top: 0;
+  }
+  }
+
+.primary {
+  width: 100%
+}
+
+@media (max-width:639px) {
+
+  .primary {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  }
+
+.secondary {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0
+}
+
+@media (max-width:639px) {
+
+  .secondary {
+    display: block;
+    width: 96%;
+    margin: 40px auto 0;
   }
   }
 
@@ -698,35 +727,10 @@ textarea {
   }
 }
 
-.primary {
-  width: 100%
+.single-post .secondary, .page .secondary {
+  width: 96%;
+  max-width: 700px;
 }
-
-@media (max-width:639px) {
-
-  .primary {
-    display: block;
-    width: 96%;
-    margin: 0 auto;
-    padding-right: 0;
-  }
-  }
-
-.secondary {
-  display: block;
-  width: 100%;
-  max-width: 620px;
-  margin: 80px auto 0
-}
-
-@media (max-width:639px) {
-
-  .secondary {
-    display: block;
-    width: 96%;
-    margin: 40px auto 0;
-  }
-  }
 
 .comments {
   display: block;
@@ -1122,7 +1126,7 @@ textarea {
 .single-post .entry__content, .page .entry__content {
   display: block;
   width: 96%;
-  max-width: 620px;
+  max-width: 700px;
   margin: 80px auto 0;
   color: #555;
   font-style: normal;
@@ -1164,14 +1168,14 @@ textarea {
 .single-post .entry__footer, .page .entry__footer {
   display: block;
   width: 96%;
-  max-width: 620px;
+  max-width: 700px;
   margin: 40px auto 0;
 }
 
 .single-post .post-navigation, .page .post-navigation {
   display: block;
   width: 96%;
-  max-width: 620px;
+  max-width: 700px;
   margin: 40px auto 0;
 }
 

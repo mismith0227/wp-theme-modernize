@@ -60,8 +60,7 @@
   }
   & .entry__content {
     display: block;
-    width: 96%;
-    max-width: 620px;
+    @apply --theme-width;
     margin: 80px auto 0;
     color: var(--default-color);
     font-style: normal;
@@ -85,14 +84,12 @@
   }
   & .entry__footer {
     display: block;
-    width: 96%;
-    max-width: 620px;
+    @apply --theme-width;
     margin: 40px auto 0;
   }
   & .post-navigation {
     display: block;
-    width: 96%;
-    max-width: 620px;
+    @apply --theme-width;
     margin: 40px auto 0;
   }
   & .entry__info {

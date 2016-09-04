@@ -88,8 +88,19 @@ $(() => {
       });
     }
 
+    function _no_scroll(){
+      $(document).on('touchmove.noScroll', (e) => {
+        e.preventDefault();
+      });
+    }
+
+    function _return_scroll(){
+      $(document).off('.noScroll');
+    }
+
     function _open() {
       myScroll.enable();
+      _no_scroll();
       $('.' + setting.class.menu).addClass(setting.class.open);
       $('.' + setting.class.toggle).addClass(setting.class.toggleopen);
       $('.' + setting.class.ovly).addClass(setting.class.bgshow);
@@ -98,6 +109,7 @@ $(() => {
 
     function _close() {
       myScroll.disable();
+      _return_scroll();
       $('.' + setting.class.menu).removeClass(setting.class.open);
       $('.' + setting.class.toggle).removeClass(setting.class.toggleopen);
       $('.' + setting.class.ovly).removeClass(setting.class.bgshow);

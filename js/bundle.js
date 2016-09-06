@@ -44,11 +44,12 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($, IScroll) {'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	__webpack_require__(2);
 	__webpack_require__(3);
-	var Headroom = __webpack_require__(4);
+
+	var Headroom = __webpack_require__(5);
 
 	$(function () {
 
@@ -87,91 +88,8 @@
 	    offset: 100
 	  });
 	  headroom.init();
-
-	  var myScroll = new IScroll('#site-navigation', {
-	    mouseWheel: true,
-	    scrollbars: false
-	  });
-	  myScroll.disable();
-
-	  var Drawer = function () {
-	    var myScroll = new IScroll('#site-navigation', {
-	      mouseWheel: true,
-	      scrollbars: false
-	    });
-
-	    var setting = {
-	      state: false,
-	      class: {
-	        toggle: 'js-toggle',
-	        menu: 'gnav',
-	        ovly: 'bg-ovly',
-	        open: 'open',
-	        toggleopen: 'toggle-btn_open',
-	        bgshow: 'bg-ovly-show',
-	        fixed: 'bodyfixed'
-	      }
-	    };
-
-	    function _init() {
-	      var ovly = '<div class="' + setting.class.ovly + " " + setting.class.toggle + '"></div>';
-	      $('body').append(ovly);
-
-	      if ($('.' + setting.class.menu).find('li').length) {
-	        $('.' + setting.class.toggle).show();
-	      }
-	    }
-
-	    _init();
-
-	    function _toggle() {
-	      $('.' + setting.class.toggle).on('click', function () {
-	        if (setting.state == true) {
-	          $('body').removeClass(setting.class.fixed);
-	          _close();
-	        } else {
-	          $('body').addClass(setting.class.fixed);
-	          _open();
-	        }
-	      });
-	    }
-
-	    function _no_scroll() {
-	      $(document).on('touchmove.noScroll', function (e) {
-	        e.preventDefault();
-	      });
-	    }
-
-	    function _return_scroll() {
-	      $(document).off('.noScroll');
-	    }
-
-	    function _open() {
-	      myScroll.enable();
-	      _no_scroll();
-	      $('.' + setting.class.menu).addClass(setting.class.open);
-	      $('.' + setting.class.toggle).addClass(setting.class.toggleopen);
-	      $('.' + setting.class.ovly).addClass(setting.class.bgshow);
-	      setting.state = true;
-	    }
-
-	    function _close() {
-	      myScroll.disable();
-	      _return_scroll();
-	      $('.' + setting.class.menu).removeClass(setting.class.open);
-	      $('.' + setting.class.toggle).removeClass(setting.class.toggleopen);
-	      $('.' + setting.class.ovly).removeClass(setting.class.bgshow);
-	      setting.state = false;
-	    }
-
-	    return {
-	      toggle: _toggle
-	    };
-	  }();
-
-	  Drawer.toggle();
 	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
 /* 1 */
@@ -181,6 +99,136 @@
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * File skip-link-focus-fix.js.
+	 *
+	 * Helps with accessibility for keyboard only users.
+	 *
+	 * Learn more: https://git.io/vWdr2
+	 */
+	(function () {
+		var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
+		    isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
+		    isIe = navigator.userAgent.toLowerCase().indexOf('msie') > -1;
+
+		if ((isWebkit || isOpera || isIe) && document.getElementById && window.addEventListener) {
+			window.addEventListener('hashchange', function () {
+				var id = location.hash.substring(1),
+				    element;
+
+				if (!/^[A-z0-9_-]+$/.test(id)) {
+					return;
+				}
+
+				element = document.getElementById(id);
+
+				if (element) {
+					if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+						element.tabIndex = -1;
+					}
+
+					element.focus();
+				}
+			}, false);
+		}
+	})();
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(IScroll, $) {'use strict';
+
+	__webpack_require__(4);
+
+	var myScroll = new IScroll('#site-navigation', {
+	  mouseWheel: true,
+	  scrollbars: false
+	});
+	myScroll.disable();
+
+	var Drawer = function () {
+	  var myScroll = new IScroll('#site-navigation', {
+	    mouseWheel: true,
+	    scrollbars: false
+	  });
+
+	  var setting = {
+	    class: {
+	      toggle: 'js-toggle',
+	      menu: 'gnav',
+	      ovly: 'bg-ovly',
+	      open: 'open',
+	      toggleopen: 'toggle-btn_open',
+	      bgshow: 'bg-ovly-show',
+	      fixed: 'bodyfixed'
+	    }
+	  };
+
+	  function _init() {
+	    var ovly = '<div class="' + setting.class.ovly + " " + setting.class.toggle + '"></div>';
+	    $('body').append(ovly);
+
+	    if ($('.' + setting.class.menu).find('li').length) {
+	      $('.' + setting.class.toggle).show();
+	    }
+	  }
+
+	  _init();
+
+	  function _toggle() {
+	    $('.' + setting.class.toggle).on('click', function () {
+	      if ($('.' + setting.class.menu).attr('aria-expanded') == "true") {
+	        $('body').removeClass(setting.class.fixed);
+	        _close();
+	      } else {
+	        $('body').addClass(setting.class.fixed);
+	        _open();
+	      }
+	    });
+	  }
+
+	  function _no_scroll() {
+	    $(document).on('touchmove.noScroll', function (e) {
+	      e.preventDefault();
+	    });
+	  }
+
+	  function _return_scroll() {
+	    $(document).off('.noScroll');
+	  }
+
+	  function _open() {
+	    myScroll.enable();
+	    _no_scroll();
+	    $('.' + setting.class.toggle).addClass(setting.class.toggleopen);
+	    $('.' + setting.class.ovly).addClass(setting.class.bgshow);
+	    $('.' + setting.class.menu).addClass(setting.class.open).attr('aria-expanded', "true");
+	  }
+
+	  function _close() {
+	    myScroll.disable();
+	    _return_scroll();
+
+	    $('.' + setting.class.toggle).removeClass(setting.class.toggleopen);
+	    $('.' + setting.class.ovly).removeClass(setting.class.bgshow);
+	    $('.' + setting.class.menu).removeClass(setting.class.open).attr('aria-expanded', "false");
+	  }
+
+	  return {
+	    toggle: _toggle
+	  };
+	}();
+
+	Drawer.toggle();
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(1)))
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! iScroll v5.2.0 ~ (c) 2008-2016 Matteo Spinelli ~ http://cubiq.org/license */
@@ -2277,47 +2325,7 @@
 
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * File skip-link-focus-fix.js.
-	 *
-	 * Helps with accessibility for keyboard only users.
-	 *
-	 * Learn more: https://git.io/vWdr2
-	 */
-	(function () {
-		var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
-		    isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
-		    isIe = navigator.userAgent.toLowerCase().indexOf('msie') > -1;
-
-		if ((isWebkit || isOpera || isIe) && document.getElementById && window.addEventListener) {
-			window.addEventListener('hashchange', function () {
-				var id = location.hash.substring(1),
-				    element;
-
-				if (!/^[A-z0-9_-]+$/.test(id)) {
-					return;
-				}
-
-				element = document.getElementById(id);
-
-				if (element) {
-					if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
-						element.tabIndex = -1;
-					}
-
-					element.focus();
-				}
-			}, false);
-		}
-	})();
-
-/***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

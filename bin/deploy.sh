@@ -23,6 +23,7 @@ echo ".bowerrc
 .jshintignore
 .babelrc
 webpack.config.js
+webpack.config.babel.js
 README.md
 bin
 bower.json

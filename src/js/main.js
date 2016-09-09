@@ -45,14 +45,14 @@ $(() => {
 
   var myScroll = new IScroll('#site-navigation', {
     mouseWheel: true,
-    scrollbars: false
+    preventDefault: false
   });
   myScroll.disable();
 
   var Drawer = (() => {
     var myScroll = new IScroll('#site-navigation', {
       mouseWheel: true,
-      scrollbars: false
+      preventDefault: false
     });
 
     var setting = {

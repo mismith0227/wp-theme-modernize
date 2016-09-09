@@ -1,4 +1,3 @@
-require( 'babel-register' );
 import browserSync, {reload, stream} from 'browser-sync'
 import chalk from 'chalk'
 import config from './config'

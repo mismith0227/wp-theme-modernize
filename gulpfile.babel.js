@@ -70,6 +70,7 @@ gulp.task('css', () => {
     .pipe(gulpIf(!production, sourcemaps.init()))
     .pipe(postcss(processors))
     .pipe(gulpIf(!production, sourcemaps.write()))
+    .pipe(rename('bundle.css'))
     .pipe(gulp.dest(config.dest.css))
     .pipe(stream())
 })
@@ -83,7 +84,7 @@ gulp.task('webpack', () => {
     webpackConfig.devtool = 'source-map'
   }
   return gulp
-    .src(`${source}/js/main.js`)
+    .src(`${source}/js/app.js`)
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(gulp.dest(config.dest.js))

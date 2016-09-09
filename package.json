@@ -41,6 +41,8 @@
     "postcss-reporter": "^1.4.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
+    "standard": "^8.0.0",
+    "standard-loader": "^5.0.0",
     "svgpack": "^2.1.0",
     "webpack": "^1.13.2",
     "webpack-stream": "^3.2.0"

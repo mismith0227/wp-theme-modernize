@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp build --env production",
     "dev": "gulp",
     "prod": "gulp --env production",
     "test": "echo \"Error: no test specified\" && exit 1"

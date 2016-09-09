@@ -98,7 +98,7 @@ gulp.task('svg', () => {
 
 gulp.task('svg:rename', () => {
   return gulp
-    .src(`${config.dest.svgpack}svgpack-sprite.svg`)
+    .src(`${config.dest.svgpack}/svgpack-sprite.svg`)
     .pipe(rename('svgpack-sprite.php'))
     .pipe(gulp.dest('./template-parts'))
 })

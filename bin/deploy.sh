@@ -27,13 +27,10 @@ README.md
 bin
 bower.json
 gulpfile.js
+config.js
 node_modules
 package.json
-tests
 svgpack
-gulp
-sass
-dist
 tmp" > .gitignore
 
 git init

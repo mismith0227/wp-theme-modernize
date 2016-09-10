@@ -19,8 +19,6 @@ echo ".bowerrc
 .editorconfig
 .travis.yml
 .gitignore
-.jscsrc
-.jshintignore
 .babelrc
 webpack.config.js
 webpack.config.babel.js

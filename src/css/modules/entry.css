@@ -3,22 +3,18 @@
     margin-top: 16rem;
     font-size: 3.0rem;
   }
-
   & h2 {
     margin-top: 16rem;
     font-size: 2.4rem;
   }
-
   & h3 {
     margin-top: 8rem;
     font-size: 2.0rem;
   }
-
   & h4 {
     margin-top: 4rem;
     font-size: 1.8rem;
   }
-
   & h5 {
     margin-top: 4rem;
     font-size: 1.6rem;
@@ -28,6 +24,88 @@
     font-size: 1.6rem;
   }
 
+  & table {
+    margin-top: 4rem;
+    width: 96%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  & th, & td {
+    padding: 1.0rem;
+    border: 1px solid #ccc;
+  }
+  & th {
+    background-color: #eee;
+  }
+  & dl {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+  }
+  & dt {
+    margin-top: 2.0rem;
+  }
+  & dd {
+    margin-left: 2.0rem;
+  }
+  & ul {
+    margin-top: 4rem;
+    padding-left: 2.0rem;
+    & li {
+      margin-top: .8rem;
+      list-style: disc;
+      font-size: 1.6rem;
+    }
+  }
+  & ol {
+    margin-top: 4rem;
+    padding-left: 2.0rem;
+    & li {
+      margin-top: .8rem;
+      list-style: decimal;
+      font-size: 1.6rem;
+    }
+  }
+  & p {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+  }
+  & a {
+    padding-bottom: .4rem;
+    border-bottom: 1px dashed #ccc;
+    color: var(--link-color);
+  }
+  & pre {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+    padding: 1.6rem;
+    border-radius: 1.0rem;
+    background-color: #3d3d3d;
+    font-size: var(--fs-middle);
+    color: #f5f5f5;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+  }
+  & figure {
+    margin: 4rem 0 0 0;
+    & ol, & ul {
+      margin-top: 2rem;
+      padding-left: 3rem;
+    }
+  }
+  & figcaption {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  & img {
+    max-width: 96%;
+    height: auto;
+    & + figcaption {
+      font-weight: normal;
+    }
+  }
   & blockquote {
     position: relative;
     display: block;
@@ -48,85 +126,15 @@
       left: 1.0rem;
       top: 1.0rem;
     }
-    & p {
+    & p, & h1, & h2, & h3, & h4, & h5, & h6, & ul, & ol, & dl, & table {
       margin: 0;
     }
-  }
-  & table {
-    margin-top: 4rem;
-    width: 96%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  & th,
-  & td {
-    padding: 1.0rem;
-    border: 1px solid #ccc;
-  }
-  & th {
-    background-color: #eee;
-  }
-
-  & dl {
-    margin-top: 4rem;
-    font-size: 1.6rem;
-  }
-
-  & dt {
-    margin-top: 2.0rem;
-  }
-  & dd {
-    margin-left: 2.0rem;
-  }
-
-  & ul {
-    margin-top: 4rem;
-    padding-left: 2.0rem;
-    & li {
-      margin-top: .8rem;
-      list-style: disc;
-      font-size: 1.6rem;
+    & + figcaption {
+      width: 96%;
+      margin: 0 auto;
+      text-align: right;
+      font-weight: normal;
+      font-style: italic;
     }
-  }
-
-  & ol {
-    margin-top: 4rem;
-    padding-left: 2.0rem;
-    & li {
-      margin-top: .8rem;
-      list-style: decimal;
-      font-size: 1.6rem;
-    }
-  }
-
-  & p {
-    margin-top: 4rem;
-    font-size: 1.6rem;
-  }
-
-  & a {
-    padding-bottom: .4rem;
-    border-bottom: 1px dashed #ccc;
-    color: var(--link-color);
-  }
-
-  & pre {
-    display: block;
-    width: 96%;
-    margin: 0 auto;
-    padding: 1.6rem;
-    border-radius: 1.0rem;
-    background-color: #3d3d3d;
-    font-size: var(--fs-middle);
-    color: #f5f5f5;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: auto;
-  }
-
-  & img {
-    max-width: 96%;
-    height: auto;
   }
 }

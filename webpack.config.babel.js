@@ -12,6 +12,13 @@ export default {
     filename: 'bundle.js'
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'standard'
+      }
+    ],
     loaders: [
       {
         test: /\.js$/,

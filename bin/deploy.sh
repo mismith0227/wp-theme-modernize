@@ -25,7 +25,7 @@ webpack.config.babel.js
 README.md
 bin
 bower.json
-gulpfile.js
+gulpfile.babel.js
 config.js
 node_modules
 package.json

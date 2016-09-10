@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize)
 
+[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+
 # WordPress theme
 
 ## == Third-party resources ==

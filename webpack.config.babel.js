@@ -5,7 +5,7 @@ import webpack from 'webpack'
 export default {
   devtool: '',
   entry: [
-    path.join(__dirname, `${config.src}/js/main.js`)
+    path.join(__dirname, `${config.src}/js/app.js`)
   ],
   output: {
     path: path.join(__dirname, './'),

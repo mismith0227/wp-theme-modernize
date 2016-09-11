@@ -15,15 +15,15 @@ Modernize is a modernized take on an ever-popular WordPress layout
 
 1. Make WordPress environment.
 
-2. Install some dependencies, and set your hostname.Default is ` modernize.dev `.
+1. Install some dependencies, and set your hostname.Default is ` modernize.dev `.
 
-3. Install Node modules
+1. Install Node modules
 
 ```shell
 $ npm install
 ```
 
-4. Run gulp
+1. Run gulp
 
 ```shell
 // Development

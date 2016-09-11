@@ -1,6 +1,4 @@
-# Modernize [![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize)
-
-[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+# Modernize [![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize) [![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
 
 Modernize is a modernized take on an ever-popular WordPress layout
 
@@ -21,9 +19,9 @@ Modernize is a modernized take on an ever-popular WordPress layout
 
 3. Install Node modules
 
- ```shell
- $ npm install
- ```
+```shell
+$ npm install
+```
 
 4. Run gulp
 

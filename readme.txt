@@ -19,22 +19,18 @@ Modernize is a modernized take on an ever-popular WordPress layout
 
 1. Install Node modules
 
-```shell
-$ npm install
-```
+        $ npm install
 
 1. Run gulp
 
-```shell
-// Development
-$ npm run dev
+        // Development
+        $ npm run dev
 
-// Production (compress)
-$ npm run prod
+        // Production (compress)
+        $ npm run prod
 
-// Build
-$ npm run build
-```
+        // Build
+        $ npm run build
 
 ## Third-party resources
 

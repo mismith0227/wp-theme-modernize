@@ -23,6 +23,7 @@
     width: 80%;
   }
   & li {
+    position: relative;
     @media (--tablet) {
       display: block;
       float: inherit;
@@ -53,6 +54,8 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  top: 100%;
+  left: 0;
   z-index: 5;
   margin: 0;
   padding: 0;
@@ -60,7 +63,8 @@
   transition: opacity .3s;
   & li {
     float: inherit;
-    padding: 0 20px;
+    width: 220px;
+    padding: 0 10px;
   }
   @media (--tablet) {
     position: inherit;
@@ -84,7 +88,7 @@
   & .sub-menu {
     top: 0;
     left: 100%;
-    min-width: 100px;
+    width: 100%;
     @media (--tablet) {
       left: 0;
     }

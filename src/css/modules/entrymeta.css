@@ -27,8 +27,24 @@
 }
 
 .single-post {
-  & .posted-on {
+  & .posted--on {
     display: block;
+  }
+  & .publised--label, & .update--label {
+    & time {
+      margin-left: .4rem;
+    }
+  }
+  & .update--label {
+    margin-left: .8rem;
+  }
+  @media (--sp) {
+    & .publised--label, & .update--label {
+      display: block;
+    }
+    & .update--label {
+      margin-left: 0;
+    }
   }
   & .byline {
     display: block;

@@ -5,9 +5,9 @@ Modernize is an modern, white, clean, beautiful WordPress theme
 ## Features
 
 * gulp
+* webpack
 * PostCSS
 * Babel
-* webpack
 * SVG Sprite
 * Standard
 

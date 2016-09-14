@@ -2,9 +2,10 @@
 /**
  * modernize functions and definitions.
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package modernize
+ * @author mismith227
+ * @link http://blog.mismithportfolio.com/
+ * @license GPLv2 or later
  */
 
 if ( ! function_exists( 'modernize_setup' ) ) :
@@ -19,8 +20,6 @@ function modernize_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on modernize, use a find and replace
-	 * to change 'modernize' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'modernize', get_template_directory() . '/languages' );
 
@@ -37,12 +36,12 @@ function modernize_setup() {
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	/*
+	 * This theme uses wp_nav_menu() in one location.
+	 */
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'modernize' ),
 	) );
@@ -61,7 +60,6 @@ function modernize_setup() {
 
 	/*
 	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside',
@@ -85,7 +83,6 @@ add_action( 'after_setup_theme', 'modernize_setup' );
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @global int $content_width
  */
 function modernize_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'modernize_content_width', 640 );
@@ -94,8 +91,6 @@ add_action( 'after_setup_theme', 'modernize_content_width', 0 );
 
 /**
  * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function modernize_widgets_init() {
 	register_sidebar( array(

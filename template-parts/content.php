@@ -16,13 +16,10 @@
 			if ( has_post_thumbnail() ) {
 				if ( is_single() ) {
 		?>
-		<div class="entry__thumb">
-			<?php the_post_thumbnail('full'); ?>
-		</div>
-		<?php
-			} else {
-		?>
-
+				<div class="entry__thumb">
+					<?php the_post_thumbnail('full'); ?>
+				</div>
+		<?php } else { ?>
 			<div class="entry__thumb">
 				<a href="<?php echo get_permalink(); ?>">
 					<?php the_post_thumbnail('full'); ?>
@@ -32,6 +29,7 @@
 				}
 			}
 		?>
+
 		<div class="entry__info">
 			<?php
 				if ( is_single() ) {
@@ -44,10 +42,8 @@
 			<div class="entry__meta">
 				<?php modernize_posted_on(); ?>
 			</div><!-- .entry__meta -->
+			<?php endif; ?>
 		</div>
-
-		<?php
-		endif; ?>
 
 	</header><!-- .entry__header -->
 

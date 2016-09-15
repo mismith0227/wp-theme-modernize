@@ -11,13 +11,24 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
 	<header class="entry__header">
-		<?php the_title( sprintf( '<h2 class="entry__title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php modernize_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<div class="entry__thumb">
+				<a href="<?php echo get_permalink(); ?>">
+					<?php the_post_thumbnail('full'); ?>
+				</a>
+			</div>
+		<?php } ?>
+
+		<div class="entry__info">
+			<?php the_title( sprintf( '<h2 class="entry__title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<?php if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php modernize_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</div>
 	</header><!-- .entry__header -->
 
 	<div class="entry-summary">

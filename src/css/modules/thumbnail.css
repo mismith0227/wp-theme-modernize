@@ -22,7 +22,8 @@
 }
 
 .home,
-.archive {
+.archive,
+.search {
   & .entry__thumb img {
     max-width: 100%;
   }

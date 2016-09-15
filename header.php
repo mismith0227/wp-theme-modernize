@@ -62,4 +62,12 @@
 		</div><!-- .header__inner -->
 	</header><!-- .header -->
 
+	<?php if ( is_home() ) : ?>
+		<?php if ( get_header_image() ) : ?>
+		<div class="main-visual">
+			<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="" class="main-visual__img">
+		</div>
+		<?php endif; ?>
+	<?php endif; ?>
+
 	<div id="content" class="site-content">

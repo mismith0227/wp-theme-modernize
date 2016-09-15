@@ -1,7 +1,6 @@
 .site-content {
   @apply --theme-width;
-  margin: 0 auto;
-  padding-top: 20px;
+  margin: 80px auto 0;
   @media (--sp) {
     display: block;
     width: 100%;
@@ -35,6 +34,7 @@
   & .site-content {
     width: 100%;
     max-width: inherit;
+    margin-top: 0;
     padding-top: 0;
   }
   & .primary {

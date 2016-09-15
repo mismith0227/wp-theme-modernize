@@ -12,7 +12,7 @@ $(() => {
   var headstyle = () => {
     var wW = $(window).width()
     var navHeight = $('.header').outerHeight(true)
-    $('.site-content').css({'margin-top': navHeight + 'px'})
+    $('body').css({'padding-top': navHeight + 'px'})
     if ($('#wpadminbar').length) {
       var barHeight = $('#wpadminbar').height()
       $('.headroom').css({'top': barHeight + 'px'})

@@ -4,26 +4,13 @@ const $ = window.jQuery
 const Headroom = require('headroom.js')
 
 $(() => {
-  var setting = {
-    tablet: 1024
-  }
-
   // headerstyle
   var headstyle = () => {
-    var wW = $(window).width()
     var navHeight = $('.header').outerHeight(true)
     $('body').css({'padding-top': navHeight + 'px'})
     if ($('#wpadminbar').length) {
       var barHeight = $('#wpadminbar').height()
       $('.headroom').css({'top': barHeight + 'px'})
-    }
-
-    if (wW < setting.tablet) {
-      $('.gnav').appendTo('body')
-      $('.primary-menu').css({'padding-top': navHeight + 10 + 'px'})
-    } else {
-      $('.gnav').appendTo('.header__inner')
-      $('.primary-menu').css({'padding-top': 0 + 'px'})
     }
   }
 
@@ -69,12 +56,6 @@ $(() => {
     offset: 100
   })
   headroom.init()
-
-  var myScroll = new IScroll('#site-navigation', {
-    mouseWheel: true,
-    preventDefault: false
-  })
-  myScroll.disable()
 
   var Drawer = (() => {
     var myScroll = new IScroll('#site-navigation', {

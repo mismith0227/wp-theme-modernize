@@ -1,21 +1,23 @@
 .site-branding {
+  margin-left: .8rem;
+  padding: .8rem 0;
   @media (--tablet) {
     padding-right: 60px;
     vertical-align: middle;
   }
   &__title {
+    display: inline-block;
     margin: 0;
     font-size: var(--fs-large);
-    font-weight: normal;
-    @media (--tablet) {
-      display: inline-block;
-    }
+    font-weight: bold;
+    color: #222;
   }
   &__description {
-    margin: 0;
+    display: inline-block;
+    margin: 0 0 0 1.2rem;
     font-size: var(--fs-small);
-    @media (--tablet) {
-      display: inline-block;
+    @media (--sp) {
+      display: none;
     }
   }
 }

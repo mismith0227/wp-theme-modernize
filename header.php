@@ -48,19 +48,19 @@
 				<span></span>
 			</button>
 
-			<nav id="site-navigation" class="gnav" role="navigation" aria-expanded="false">
-				<?php if ( has_nav_menu( 'primary' ) ) : ?>
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'menu_class'     => 'primary-menu',
-							 ) );
-						?>
-				<?php endif; ?>
-			</nav><!-- #site-navigation -->
-
 		</div><!-- .header__inner -->
 	</header><!-- .header -->
+
+	<nav id="site-navigation" class="gnav" role="navigation" aria-expanded="false">
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'menu_class'     => 'primary-menu',
+					 ) );
+				?>
+		<?php endif; ?>
+	</nav><!-- #site-navigation -->
 
 	<?php if ( is_home() ) : ?>
 		<?php if ( get_header_image() ) : ?>

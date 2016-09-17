@@ -32,10 +32,8 @@ $(() => {
     headstyle()
   })
 
-
-
+  // sns icon
   if ($('.social-navigation').length) {
-
     const sns = [
       '500px',
       'codepen',
@@ -59,8 +57,6 @@ $(() => {
     $.each(sns, (i, sns) => {
       $('.sns-menu li').find(`a[href*="${sns}"] use`).attr('xlink:href', `#icon-${sns}`)
     })
-
-
   }
 
   var myElement = document.querySelector('.header')

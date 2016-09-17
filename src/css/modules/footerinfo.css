@@ -1,0 +1,23 @@
+.sns-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  & li {
+    margin: 0 .4rem 1.2rem;
+  }
+  & a {
+    display: block;
+  	color: #fff;
+    transition: .3s;
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+  & .icon {
+    font-size: 3rem;
+  }
+}
+
+.footer__info {
+  margin-top: 2rem;
+}

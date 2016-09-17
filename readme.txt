@@ -45,3 +45,11 @@ Source : [http://wicky.nillia.ms/headroom.js/](http://wicky.nillia.ms/headroom.j
 Normalize.css
 License: MIT
 Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
+
+IcoMoon-Free
+License: CC BY 4.0 or GPL
+Source : [https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt](https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt)
+
+## License
+
+[GNU GENERAL PUBLIC LICENSE Version 2](license.txt)

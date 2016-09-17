@@ -32,6 +32,37 @@ $(() => {
     headstyle()
   })
 
+
+
+  if ($('.social-navigation').length) {
+
+    const sns = [
+      '500px',
+      'codepen',
+      'dribbble',
+      'facebook',
+      'flickr',
+      'google',
+      'github',
+      'instagram',
+      'linkedin',
+      'npm',
+      'pinterest',
+      'tumblr',
+      'twitter',
+      'vimeo',
+      'wordpress',
+      'youtube',
+      'feed'
+    ]
+
+    $.each(sns, (i, sns) => {
+      $('.sns-menu li').find(`a[href*="${sns}"] use`).attr('xlink:href', `#icon-${sns}`)
+    })
+
+
+  }
+
   var myElement = document.querySelector('.header')
   var headroom = new Headroom(myElement, {
     offset: 100

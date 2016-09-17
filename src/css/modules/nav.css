@@ -1,6 +1,5 @@
 .gnav {
   position: relative;
-  background: #fff;
   @media (--tablet) {
     position: fixed;
     top: 0;
@@ -64,7 +63,7 @@
   & li {
     float: inherit;
     width: 220px;
-    padding: 0 10px;
+    padding: 0;
   }
   @media (--tablet) {
     position: inherit;

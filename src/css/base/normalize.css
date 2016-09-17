@@ -102,6 +102,8 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+  color: var(--link-color);
+  transition: .2s;
 }
 
 /* Text-level semantics

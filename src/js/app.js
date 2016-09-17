@@ -59,6 +59,11 @@ $(() => {
     })
   }
 
+  // search-no-results page
+  if ($('.search-no-results').length) {
+    $('.secondary form[role="search"]').hide()
+  }
+
   var myElement = document.querySelector('.header')
   var headroom = new Headroom(myElement, {
     offset: 100

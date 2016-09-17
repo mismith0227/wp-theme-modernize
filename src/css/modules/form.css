@@ -20,10 +20,8 @@
   }
 }
 
-.widget_search {
-  & .search-form {
-    position: relative;
-  }
+form[role="search"] {
+  position: relative;
   & label {
     display: block;
     width: 100%;
@@ -32,6 +30,7 @@
     display: block;
     width: calc(100% - 60px);
     height: 30px;
+    padding: 0 0 0 .8rem;
     border: 1px solid #eee;
     border-right: none;
   }

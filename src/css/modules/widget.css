@@ -7,14 +7,28 @@
     margin: 0 0 1.2rem 0;
     padding: 0 0 .8rem 0;
     border-bottom: 1px solid #eee;
-    font-size: 1.4rem;
+    font-size: var(--fs-large);
     font-weight: normal;
+  }
+  & ul {
+    padding-left: 1.2rem;
   }
   & li {
     margin-top: .8rem;
-    padding-left: 1.2rem;
     &:first-child {
       margin-top: 0;
     }
+  }
+}
+
+.widget_archive,
+.widget_categories,
+.widget_meta {
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & li {
+    margin: 0 1.2rem 1.2rem 0;
   }
 }

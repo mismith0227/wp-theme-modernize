@@ -4,7 +4,10 @@
   height: 500px;
   overflow: hidden;
   @media (--tablet) {
-    height: 00px;
+    height: 400px;
+  }
+  @media (--sp) {
+    height: 300px;
   }
   &__img {
     position: absolute;

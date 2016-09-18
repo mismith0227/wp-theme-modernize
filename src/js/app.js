@@ -1,5 +1,4 @@
 const IScroll = require('iscroll')
-require('./skip-link-focus-fix.js')
 const $ = window.jQuery
 const Headroom = require('headroom.js')
 

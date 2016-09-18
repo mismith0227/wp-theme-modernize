@@ -14,7 +14,10 @@ if ( ! function_exists( 'modernize_posted_on' ) ) :
 function modernize_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) && !is_home() && !is_archive() && !is_search() ) {
+	$entry = get_the_date();
+	$modified = get_the_modified_date();
+
+	if ( $entry !== $modified && !is_home() && !is_archive() && !is_search() ) {
 		$time_string = '
 		<span class="publised--label">Posted on<time class="entry-date published" datetime="%1$s">%2$s</time></span>
 		<span class="update--label">Edit on<time class="updated" datetime="%3$s">%4$s</time></span>

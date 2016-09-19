@@ -1,3 +1,17 @@
+:root {
+    --arrow: {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border: solid #888;
+    }
+}
+
 .posts-navigation {
   margin-top: 4.0rem;
 }
@@ -25,51 +39,37 @@
   }
 }
 
-.nav-previous {
+.nav-previous,
+.nav-next {
   display: flex;
   width: 50%;
+  vertical-align: middle;
+  & a {
+    padding: 0 1.0rem 0 1.5rem;
+  }
+}
+
+.nav-previous {
   vertical-align: middle;
   text-align: left;
   & a {
     border-right: 1px solid #e1e5e7;
-    padding: 0 1.0rem 0 1.5rem;
     &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 8px;
-      height: 8px;
-      margin: auto;
-      border: solid #888;
+      @apply --arrow;
       left: 0;
       border-width: 1px 0 0 1px;
-      -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
   }
 }
 
 .nav-next {
-  display: flex;
-  width: 50%;
-  vertical-align: middle;
+  flex: 1;
   & a {
-    padding: 0 1.5rem 0 1.0rem;
     &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 8px;
-      height: 8px;
-      margin: auto;
-      border: solid #888;
+      @apply --arrow;
       right: 0;
       border-width: 1px 1px 0 0;
-      -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
     }
   }

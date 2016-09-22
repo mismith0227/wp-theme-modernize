@@ -17,6 +17,8 @@
     }
   }
   & .entry__info {
+    padding: 40px;
+    z-index: 1;
     color: #fff;
     vertical-align: middle;
     text-align: center;
@@ -24,30 +26,28 @@
       color: #fff;
     }
   }
-}
-
-.single-post {
-  & .posted--on {
+  & .posted-on {
     display: block;
-  }
-  & .publised--label, & .update--label {
-    & time {
-      margin-left: .4rem;
-    }
-  }
-  & .update--label {
-    margin-left: .8rem;
-  }
-  @media (--sp) {
-    & .publised--label, & .update--label {
-      display: block;
-    }
-    & .update--label {
-      margin-left: 0;
-    }
   }
   & .byline {
     display: block;
-    margin-top: 1.0rem;
+    margin-top: 10px;
+  }
+}
+
+.publised-label,
+.update-label {
+  & time {
+    margin-left: 4px;
+  }
+  @media (--sp) {
+    display: block;
+  }
+}
+
+.update-label {
+  margin-left: 8px;
+  @media (--sp) {
+    margin-left: 0;
   }
 }

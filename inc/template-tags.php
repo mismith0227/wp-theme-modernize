@@ -12,15 +12,15 @@ if ( ! function_exists( 'modernize_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function modernize_posted_on() {
-	$time_string = '<span class="publised--label">Posted on<time class="entry-date published" datetime="%1$s">%2$s</time></span>';
+	$time_string = '<span class="publised-label">Posted on<time class="entry-date published" datetime="%1$s">%2$s</time></span>';
 
 	$entry = get_the_date( 'Ymd' );
 	$modified = get_the_modified_date( 'Ymd' );
 
 	if ( $entry !== $modified && !is_home() && !is_archive() && !is_search() ) {
 		$time_string = '
-		<span class="publised--label">Posted on<time class="entry-date published" datetime="%1$s">%2$s</time></span>
-		<span class="update--label">Edit on<time class="updated" datetime="%3$s">%4$s</time></span>
+		<span class="publised-label">Posted on<time class="entry-date published" datetime="%1$s">%2$s</time></span>
+		<span class="update-label">Edit on<time class="updated" datetime="%3$s">%4$s</time></span>
 		';
 	}
 
@@ -38,7 +38,7 @@ function modernize_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted--on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -76,7 +76,7 @@ function modernize_entry_footer() {
 			esc_html__( 'Edit %s', 'modernize' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit__link">',
+		'<span class="edit-link">',
 		'</span>'
 	);
 }

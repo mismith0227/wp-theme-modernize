@@ -5,18 +5,18 @@
   	appearance: none;
   }
   & textarea {
-    padding: .4rem;
+    padding: 4px;
     border: 1px solid #ccc;
-    border-radius: .3rem;
+    border-radius: 3px;
   }
   & input {
-    padding: .4rem;
+    padding: 4px;
     border: 1px solid #ccc;
-    border-radius: .3rem;
+    border-radius: 3px;
   }
   & input[name="submit"] {
     display: inline-block;
-    padding: .4rem .8rem;
+    padding: 4px 8px;
   }
 }
 
@@ -30,7 +30,7 @@ form[role="search"] {
     display: block;
     width: calc(100% - 60px);
     height: 30px;
-    padding: 0 0 0 .8rem;
+    padding: 0 0 0 8px;
     border: 1px solid #eee;
     border-right: none;
   }

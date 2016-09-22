@@ -56,7 +56,7 @@
 					esc_html__( 'Edit %s', 'modernize' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
-				'<span class="edit__link">',
+				'<span class="edit-link">',
 				'</span>'
 			);
 		?>

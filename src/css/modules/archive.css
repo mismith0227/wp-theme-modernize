@@ -1,5 +1,5 @@
 /*
-  記事一覧
+  List of articles
 */
 .entry {
   margin-top: 24px;
@@ -21,34 +21,34 @@
     }
   }
   & .entry__thumb + .entry__info {
-    margin-top: 1.6rem;
+    margin-top: 16px;
   }
   &__meta,
   &__content,
   &__footer {
-    margin-top: .8rem;
+    margin-top: 8px;
   }
   &__content {
-    color: #999;
+    color: var(--sub-color);
     font-style: italic;
     font-size: var(--fs-small);
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
   &__footer {
-    color: #999;
+    color: var(--sub-color);
     font-size: var(--fs-small);
     & a {
       color: var(--link-color);
     }
   }
-  & .edit__link {
-    margin-left: 1.0rem;
+  & .edit-link {
+    margin-left: 10px;
   }
 }
 
 /*
-  投稿ページ
+  Article page
 */
 .single-post,
 .page {
@@ -57,44 +57,34 @@
     box-shadow: none;
     border: none;
     background-color: #fafafa;
-  }
-  & .entry__content {
-    display: block;
-    @apply --theme-width;
-    margin: 80px auto 0;
-    color: var(--default-color);
-    font-style: normal;
-  }
-  & .entry__header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-height: 500px;
-    width: 100%;
-    @media (--tablet) {
-      min-height: 400px;
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 500px;
+      width: 100%;
+      @media (--tablet) {
+        min-height: 400px;
+      }
+      @media (--sp) {
+        min-height: 300px;
+      }
     }
-    @media (--sp) {
-      min-height: 300px;
+    &__title {
+      font-size: 3.0rem;
     }
-  }
-  & .entry__title {
-    font-size: 3.0rem;
-  }
-  & .entry__footer {
-    display: block;
-    @apply --theme-width;
-    margin: 40px auto 0;
-  }
-  & .post-navigation {
-    display: block;
-    @apply --theme-width;
-    margin: 40px auto 0;
-  }
-  & .entry__info {
-    position: relative;
-    z-index: 1;
-    padding: 4.0rem;
+    &__content {
+      display: block;
+      @apply --theme-width;
+      margin: 80px auto 0;
+      color: var(--default-color);
+      font-style: normal;
+    }
+    &__footer {
+      display: block;
+      @apply --theme-width;
+      margin: 40px auto 0;
+    }
   }
 }

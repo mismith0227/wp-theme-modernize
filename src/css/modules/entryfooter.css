@@ -3,13 +3,13 @@
     & .cat-links {
       display: block;
       & li {
-        margin: .5rem .5rem 0 0;
+        margin: 5px 5px 0 0;
       }
     }
     & .tags-links {
-      margin-top: 4.0rem;
+      margin-top: 40px;
       & a {
-        margin: .5rem .5rem 0 0;
+        margin: 5px 5px 0 0;
       }
     }
   }
@@ -27,7 +27,7 @@
     margin-left: 0;
     & a {
       display: inline-block;
-      margin-right: .5rem;
+      margin-right: 5px;
     }
   }
 }

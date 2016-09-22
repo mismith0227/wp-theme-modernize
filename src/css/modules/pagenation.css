@@ -1,27 +1,36 @@
 :root {
-    --arrow: {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 8px;
-      height: 8px;
-      margin: auto;
-      border: solid #888;
-    }
+  --arrow: {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    border: solid #888;
+  }
 }
 
 .posts-navigation {
-  margin-top: 4.0rem;
+  margin-top: 40px;
+}
+
+.single-post,
+.page {
+  & .post-navigation {
+    display: block;
+    @apply --theme-width;
+    margin: 40px auto 0;
+  }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 8rem;
-  padding: .8rem 0;
+  min-height: 80px;
+  padding: 8px 0;
   border-top: 1px solid #e1e5e7;
   border-bottom: 1px solid #e1e5e7;
   &::after {
@@ -45,7 +54,7 @@
   width: 50%;
   vertical-align: middle;
   & a {
-    padding: 0 1.0rem 0 1.5rem;
+    padding: 0 10px 0 15px;
   }
 }
 

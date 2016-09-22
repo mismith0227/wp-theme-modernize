@@ -2,13 +2,14 @@
 @custom-media --sp (max-width:639px);
 
 :root {
-    --default-color: #555;
-    --link-color: #20b2aa;
-    --fs-large: 2.2rem;
-    --fs-middle: 1.4rem;
-    --fs-small: 1.2rem;
-    --theme-width: {
-      width: 96%;
-      max-width: 700px;
-    }
+  --default-color: #555;
+  --link-color: #20b2aa;
+  --sub-color: #999;
+  --fs-large: 2.2rem;
+  --fs-middle: 1.4rem;
+  --fs-small: 1.2rem;
+  --theme-width: {
+    width: 96%;
+    max-width: 700px;
+  }
 }

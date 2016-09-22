@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<main id="main" class="main content-area primary" role="main">
+	<main id="main" class="primary" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();

@@ -1,0 +1,19 @@
+.sns-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  & li {
+    margin: 0 8px 16px;
+  }
+  & a {
+    display: block;
+  	color: #fff;
+    transition: .3s;
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+  & .icon {
+    font-size: 3rem;
+  }
+}

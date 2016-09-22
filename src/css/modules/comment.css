@@ -1,27 +1,30 @@
-.entry__content {
-  & h1 {
-    margin-top: 140px;
-    font-size: 3.2rem;
+.comments {
+  display: block;
+  @apply --theme-width;
+  margin: 40px auto 0;
+  & textarea {
+    width: 100%;
   }
-  & h2 {
-    margin-top: 100px;
-    font-size: 2.6rem;
+  &__list {
+    margin-left: 0;
+    padding: 0;
   }
-  & h3 {
-    margin-top: 80px;
-    font-size: 2.2rem;
+}
+
+.comment {
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  & .children {
+    padding: 0;
   }
-  & h4 {
-    margin-top: 40px;
-    font-size: 1.8rem;
+  & .comment.odd {
+    background: #fafafa;
   }
-  & h5 {
-    margin-top: 40px;
-    font-size: 1.6rem;
-  }
-  & h6 {
-    margin-top: 40px;
-    font-size: 1.4rem;
+  &.even + .odd {
+    background: #fff;
   }
   & table {
     margin-top: 40px;
@@ -55,6 +58,7 @@
       list-style: disc;
       font-size: 1.6rem;
     }
+
   }
   & ol {
     margin-top: 40px;
@@ -64,50 +68,15 @@
       list-style: decimal;
       font-size: 1.6rem;
     }
+    &.children {
+      & li {
+        list-style: none;
+      }
+    }
   }
   & li {
     & ul, & ol {
       margin-top: 8px;
-    }
-  }
-  & p {
-    margin-top: 40px;
-    font-size: 1.6rem;
-  }
-  & a {
-    padding-bottom: 4px;
-    border-bottom: 1px dashed #ccc;
-    color: var(--link-color);
-  }
-  & pre {
-    display: block;
-    width: 96%;
-    margin: 0 auto;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: #3d3d3d;
-    font-size: var(--fs-middle);
-    color: #f5f5f5;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: auto;
-  }
-  & figure {
-    margin: 40px 0 0 0;
-    & ol, & ul {
-      margin-top: 20px;
-      padding-left: 30px;
-    }
-  }
-  & figcaption {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-  & img {
-    max-width: 96%;
-    height: auto;
-    & + figcaption {
-      font-weight: normal;
     }
   }
   & blockquote {
@@ -117,6 +86,7 @@
     padding: 20px;
     margin: 0 auto;
     border-radius: 5px;
+    font-size: 1.4rem;
     margin-top: 40px;
     background-color: #eee;
     &::before {
@@ -132,12 +102,49 @@
     & p, & h1, & h2, & h3, & h4, & h5, & h6, & ul, & ol, & dl, & table {
       margin: 0;
     }
-    & + figcaption {
-      width: 96%;
-      margin: 0 auto;
-      text-align: right;
-      font-weight: normal;
-      font-style: italic;
+  }
+  & pre {
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 3px;
+    background: #eee;
+  }
+  & p {
+    margin-top: 40px;
+    font-size: 1.6rem;
+  }
+}
+
+.pingback {
+  margin-top: 8px;
+}
+
+.comment-respond {
+  & input, & button, & textarea, & select {
+  	margin: 0;
+  	background: none;
+  	appearance: none;
+  }
+  & textarea {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+  }
+  & input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  & input[name="submit"] {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--link-color);
+    border: none;
+    color: #fff;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

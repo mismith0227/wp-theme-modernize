@@ -3,7 +3,6 @@
 
 @import "layout/header.css";
 @import "layout/content.css";
-@import "layout/comment.css";
 @import "layout/footer.css";
 
 @import "modules/sitebranding.css";
@@ -22,3 +21,4 @@
 @import "modules/svgpack.css";
 @import "modules/footerinfo.css";
 @import "modules/snsmenu.css";
+@import "modules/comment.css";

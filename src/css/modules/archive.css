@@ -16,8 +16,7 @@
   &__title {
     margin: 0;
     font-size: var(--fs-large);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    word-break:break-all;
     & a:hover {
       color: var(--link-color);
     }
@@ -67,8 +66,9 @@
     border: none;
     background-color: #fafafa;
     &__header {
-      display: table;
-      table-layout: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       min-height: 500px;
       width: 100%;
@@ -94,7 +94,6 @@
       }
     }
     &__info {
-      display: table-cell;
       padding: 40px;
       z-index: 1;
       color: #fff;

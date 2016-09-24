@@ -98,6 +98,12 @@
       margin-top: 20px;
       padding-left: 30px;
     }
+    &.alignleft {
+      margin-right: 8px;
+    }
+    &.alignright {
+      margin-left: 8px;
+    }
   }
   & figcaption {
     font-size: 1.6rem;
@@ -139,5 +145,8 @@
       font-weight: normal;
       font-style: italic;
     }
+  }
+  & address {
+    font-size: 1.4rem;
   }
 }

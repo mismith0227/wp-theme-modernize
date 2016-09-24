@@ -16,7 +16,9 @@
   &__title {
     margin: 0;
     font-size: var(--fs-large);
-    a:hover {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    & a:hover {
       color: var(--link-color);
     }
   }
@@ -65,9 +67,8 @@
     border: none;
     background-color: #fafafa;
     &__header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: table;
+      table-layout: fixed;
       position: relative;
       min-height: 500px;
       width: 100%;
@@ -93,6 +94,7 @@
       }
     }
     &__info {
+      display: table-cell;
       padding: 40px;
       z-index: 1;
       color: #fff;
@@ -130,6 +132,11 @@
     display: block;
     margin-top: 10px;
   }
+}
+
+.page-title {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .publised-label,

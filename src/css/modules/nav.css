@@ -30,9 +30,12 @@
 }
 
 .primary-menu {
-  padding: 60px 0 10px;
+  padding: 65px 0 10px;
   @media (--tablet) {
     width: 100%;
+  }
+  @media (--sp) {
+    padding-top: 50px;
   }
 }
 

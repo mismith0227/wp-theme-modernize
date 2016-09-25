@@ -1,6 +1,7 @@
 const IScroll = require('iscroll')
 const $ = window.jQuery
 const Headroom = require('headroom.js')
+require('./skip-link-focus-fix.js')
 
 $(() => {
   // headerstyle

@@ -1,13 +1,7 @@
-.site-branding {
-  margin-left: 8px;
-  padding: 8px 0;
-  @media (--tablet) {
-    padding-right: 60px;
-    vertical-align: middle;
-  }
+.header {
   &__title {
     display: inline-block;
-    margin: 0;
+    margin-left: 8px;
     font-size: var(--fs-large);
     font-weight: bold;
     color: #222;

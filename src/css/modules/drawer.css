@@ -3,9 +3,9 @@
     display: block;
     position: absolute;
     margin: auto;
-    width: 25px;
+    width: 28px;
     height: 2px;
-    background-color: #eee;
+    background-color: #333;
   }
 }
 
@@ -19,12 +19,10 @@
 
 .toggle-btn {
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
   width: 50px;
   height: 50px;
-  margin: auto;
+  margin-left: auto;
   padding: 0;
   box-shadow: none;
   border: none;
@@ -33,7 +31,6 @@
   -webkit-appearance: button;
   appearance: button;
   outline: none;
-  background: #333;
   &:focus {
     box-shadow: none;
   }

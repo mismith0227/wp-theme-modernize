@@ -27,28 +27,23 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'modernize' ); ?></a>
 
 	<header class="header" role="banner">
-		<div class="header__inner">
-			<div class="site-branding">
-				<?php
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-				endif;
+		<?php
+		if ( is_front_page() && is_home() ) : ?>
+			<h1 class="header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php else : ?>
+			<p class="header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		<?php
+		endif;
 
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-branding__description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
-				endif; ?>
-			</div><!-- .site-branding -->
+		$description = get_bloginfo( 'description', 'display' );
+		if ( $description || is_customize_preview() ) : ?>
+			<p class="header__description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+		<?php
+		endif; ?>
 
-			<button class="toggle-btn js-toggle">
-				<span></span>
-			</button>
-
-		</div><!-- .header__inner -->
+		<button class="toggle-btn js-toggle">
+			<span></span>
+		</button>
 	</header><!-- .header -->
 
 	<nav id="site-navigation" class="gnav" role="navigation" aria-expanded="false">

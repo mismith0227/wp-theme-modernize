@@ -112,6 +112,7 @@
       margin: 80px auto 0;
       color: var(--default-color);
       font-style: normal;
+      font-size: 1.6rem;
     }
     &__footer {
       display: block;

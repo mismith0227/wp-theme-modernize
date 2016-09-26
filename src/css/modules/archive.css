@@ -101,6 +101,9 @@
         background: rgba(0, 0, 0, .3);
       }
     }
+    &__thumb + .entry__info {
+      margin-top: 0;
+    }
     &__info {
       padding: 40px;
       z-index: 1;

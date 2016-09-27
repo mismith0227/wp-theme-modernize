@@ -105,8 +105,9 @@
       margin-top: 0;
     }
     &__info {
-      padding: 40px;
+      position: relative;
       z-index: 1;
+      padding: 40px;
       color: #fff;
       vertical-align: middle;
       text-align: center;

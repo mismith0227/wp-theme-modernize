@@ -21,7 +21,7 @@ Modernize is an modern, white, clean, beautiful WordPress theme
 
         $ npm install
 
-1. Run gulp.apm install editorconfig
+1. Run gulp. You don't need to install gulp globally.
 
         // Development
         $ npm run dev

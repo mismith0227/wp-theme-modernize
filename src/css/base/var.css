@@ -4,6 +4,7 @@
 :root {
   --default-color: #555;
   --link-color: #20b2aa;
+  --link-hover: #137b75;
   --sub-color: #999;
   --fs-large: 2.2rem;
   --fs-middle: 1.4rem;

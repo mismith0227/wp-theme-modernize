@@ -1,33 +1,21 @@
-.single {
-  & .entry__footer {
-    & .cat-links {
-      display: block;
-      & li {
-        margin: 5px 5px 0 0;
-      }
-    }
-    & .tags-links {
-      margin-top: 20px;
-      & a {
-        margin: 5px 5px 0 0;
-      }
-    }
-  }
-}
-
 .entry__footer{
+  & .cat-links, & .tags-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
   & .post-categories {
     display: inline-block;
-    & li {
-      display: inline-block;
-    }
+    padding-left: 0;
   }
-  & .tags-links {
-    display: block;
-    margin-left: 0;
-    & a {
-      display: inline-block;
-      margin-right: 5px;
+  & li {
+    display: inline-block;
+    margin: 0;
+  }
+  & a {
+    padding: 2px 4px;
+    &:hover, &:focus {
+      color: var(--link-hover);
     }
   }
 }

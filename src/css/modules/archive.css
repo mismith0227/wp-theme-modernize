@@ -13,20 +13,24 @@
   &:first-child {
     margin-top: 0;
   }
+  &__info {
+    & a, & a:visited {
+      color: var(--default-color);
+      &:hover, &:focus {
+        color: var(--link-color);
+      }
+    }
+  }
   &__title {
     margin: 0;
     font-size: var(--fs-large);
     word-break:break-all;
-    & a:hover {
-      color: var(--link-color);
-    }
   }
   &__thumb + .entry__info {
     margin-top: 16px;
   }
   &__meta,
-  &__content,
-  &__footer {
+  &__content {
     margin-top: 8px;
   }
   &__content {

@@ -6,11 +6,11 @@ require('./skip-link-focus-fix.js')
 $(() => {
   // headerstyle
   const headstyle = () => {
-    const navHeight = $('.header').outerHeight(true)
+    const navHeight = $('#header').outerHeight(true)
     $('body').css({'padding-top': `${navHeight}px`})
     if ($('#wpadminbar').length) {
       const barHeight = $('#wpadminbar').height()
-      $('.headroom').css({'top': `${barHeight}px`})
+      $('#header').css({'top': `${barHeight}px`})
     }
   }
 

@@ -1,7 +1,13 @@
 .header {
+  & a, & a:visited {
+    color: var(--default-color);
+    &:hover, &:focus {
+      color: var(--link-color);
+    }
+  }
   &__title {
     display: inline-block;
-    margin-left: 8px;
+    margin: 0 0 0 8px;
     font-size: var(--fs-large);
     font-weight: bold;
     color: #222;

@@ -14,9 +14,16 @@
     padding-left: 12px;
   }
   & li {
+    list-style: none;
     margin-top: 8px;
     &:first-child {
       margin-top: 0;
+    }
+  }
+  & a, & a:visited {
+    color: var(--default-color);
+    &:hover, &:focus {
+      color: var(--link-color);
     }
   }
 }

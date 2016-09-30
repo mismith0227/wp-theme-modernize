@@ -8,41 +8,27 @@
 .entry__content {
   & h1 {
     margin-top: 140px;
-    font-size: 3.2rem;
   }
   & h2 {
     margin-top: 100px;
-    font-size: 2.6rem;
   }
   & h3 {
     margin-top: 80px;
-    font-size: 2.2rem;
   }
   & h4 {
     margin-top: 40px;
-    font-size: 1.8rem;
   }
   & h5 {
     margin-top: 40px;
-    font-size: 1.6rem;
   }
   & h6 {
     margin-top: 40px;
-    font-size: 1.4rem;
   }
   & table {
-    margin-top: 40px;
-    width: 96%;
     margin: 0 auto;
-    border-collapse: collapse;
-    border-spacing: 0;
   }
   & th, & td {
     padding: 10px;
-    border: 1px solid #ccc;
-  }
-  & th {
-    background-color: #eee;
   }
   & dl {
     margin-top: 40px;
@@ -53,20 +39,11 @@
   & dd {
     margin-left: 20px;
   }
-  & ul {
+  & ul, & ol {
     margin-top: 40px;
     padding-left: 20px;
     & li {
       margin-top: 8px;
-      list-style: disc;
-    }
-  }
-  & ol {
-    margin-top: 40px;
-    padding-left: 2.0rem;
-    & li {
-      margin-top: 8px;
-      list-style: decimal;
     }
   }
   & li {
@@ -77,23 +54,8 @@
   & p {
     margin-top: 40px;
   }
-  & a {
-    padding-bottom: 4px;
-    border-bottom: 1px dashed #ccc;
-    color: var(--link-color);
-  }
   & pre {
-    display: block;
-    width: 96%;
     margin: 0 auto;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: #3d3d3d;
-    font-size: var(--fs-middle);
-    color: #f5f5f5;
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: auto;
   }
   & figure {
     margin: 40px 0 0 0;

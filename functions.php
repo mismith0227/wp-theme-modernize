@@ -75,6 +75,13 @@ function modernize_setup() {
     'default-color' => 'ffffff',
     'default-image' => '',
   ) ) );
+
+  /*
+   * Enable support editor-style on WordPress dashboard.
+   */
+  add_editor_style( array(
+    'css/editor-style.css',
+  ) );
 }
 endif;
 add_action( 'after_setup_theme', 'modernize_setup' );

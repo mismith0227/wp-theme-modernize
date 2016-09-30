@@ -42,7 +42,8 @@
     display: block;
     position: relative;
     width: 100%;
-    &:hover {
+    color: var(--default-color);
+    &:hover, &:focus {
       color: var(--link-color);
     }
   }

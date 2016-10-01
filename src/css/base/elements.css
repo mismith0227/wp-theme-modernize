@@ -8,49 +8,62 @@
 h1 {
   font-size: 3.2rem;
 }
+
 h2 {
   font-size: 2.6rem;
 }
+
 h3 {
   font-size: 2.2rem;
 }
+
 h4 {
   font-size: 1.8rem;
 }
+
 h5 {
   font-size: 1.6rem;
 }
+
 h6 {
   font-size: 1.4rem;
 }
+
 table {
   width: 96%;
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 th, td {
   padding: 10px;
   border: 1px solid #ccc;
 }
+
 th {
   background-color: #eee;
 }
+
 dd {
   margin-left: 20px;
 }
+
 ul {
   & li {
     list-style: disc;
   }
 }
+
 ol {
   & li {
     list-style: decimal;
   }
 }
+
 p {
-  margin-top: 40px;
+  font-size: var(--fs-middle);
 }
+
 a, a:visited {
   padding-bottom: 4px;
   color: var(--link-color);
@@ -58,11 +71,12 @@ a, a:visited {
     color: var(--link-hover);
   }
 }
+
 pre {
   display: block;
   width: 96%;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: #3d3d3d;
   font-size: var(--fs-middle);
   color: #f5f5f5;
@@ -87,6 +101,7 @@ figure {
 
 figcaption {
   font-weight: bold;
+  font-size:
 }
 
 img {
@@ -127,24 +142,55 @@ blockquote {
   }
 }
 
-address {
-  font-size: 1.4rem;
+input, button, textarea, select {
+  margin: 0;
+  background: none;
+  appearance: none;
+  @media (--sp) {
+    width: 100%;
+  }
 }
+
+input {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+}
+
+textarea {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+}
+
+input[name="submit"] {
+  @apply --submit-btn;
+}
+
+address {
+  font-size: var(--fs-sub);
+}
+
 .bg-danger {
   @apply --textbg;
   border-color: #e67168;
   color: #e67168;
 }
+
 .bg-success {
   @apply --textbg;
   border-color: #1e8d96;
   color: #1e8d96;
 }
+
 .bg-info {
   @apply --textbg;
   border-color: #1570a6;
   color: #1570a6;
 }
+
 .bg-warning {
   @apply --textbg;
   border-color: #e7ba21;
@@ -152,18 +198,10 @@ address {
 }
 
 .column {
-  margin-top: 20px;
   padding: 16px;
   border: 1px solid #ccc;
-  font-size: 1.4rem;
+  font-size: var(--fs-sub);
   & h2, & h3, & h4, & h5, & h6 {
-    margin: 0;
-    font-size: 1.4rem;
-  }
-  & p {
-    margin-top: 16px;
-  }
-  & ul, & ol {
-    margin-top: 20px;
+    font-size: var(--fs-sub);
   }
 }

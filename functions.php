@@ -137,7 +137,7 @@ function modernize_make_excerpt($content){
 function modernize_scripts() {
   $url = get_template_directory_uri();
 
-  wp_enqueue_style( 'modernize-style', $url . '/css/bundle.css' );
+  wp_enqueue_style( 'modernize-style', $url . '/css/app.css' );
 
   wp_enqueue_script( 'modernize-main', $url . '/js/bundle.js', array('jquery'), '1.0.0', true );
 

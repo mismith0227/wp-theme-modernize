@@ -5,18 +5,28 @@
   & textarea {
     width: 100%;
   }
+  &__title {
+    font-size: var(--fs-middle);
+  }
   &__list {
     margin-left: 0;
     padding: 0;
+    & li {
+      list-style: none;
+    }
   }
 }
 
 .comment {
+  list-style: none;
   margin-top: 20px;
   padding: 24px;
   border: 1px solid #ccc;
   border-radius: 3px;
   background: #fff;
+  @media (--sp) {
+    padding: 8px;
+  }
   & .children {
     padding: 0;
   }
@@ -48,7 +58,7 @@
     margin-top: 20px;
   }
   & dd {
-    margin-left: 2.0rem;
+    margin-left: 20px;
   }
   & ul {
     margin-top: 4rem;
@@ -86,7 +96,7 @@
     padding: 20px;
     margin: 0 auto;
     border-radius: 5px;
-    font-size: 1.4rem;
+    font-size: var(--fs-sub);
     margin-top: 40px;
     background-color: #eee;
     &::before {
@@ -106,13 +116,10 @@
   & pre {
     width: 100%;
     padding: 10px;
-    overflow: auto;
-    border-radius: 3px;
-    background: #eee;
   }
   & p {
-    margin-top: 40px;
-    font-size: 1.6rem;
+    margin-top: 20px;
+    font-size: var(--fs-middle);
   }
 }
 
@@ -120,31 +127,30 @@
   margin-top: 8px;
 }
 
-.comment-respond {
-  & input, & button, & textarea, & select {
-  	margin: 0;
-  	background: none;
-  	appearance: none;
-  }
-  & textarea {
-    padding: 4px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background: #fff;
-  }
-  & input {
-    padding: 4px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  & input[name="submit"] {
-    display: inline-block;
-    padding: 8px 12px;
-    background: var(--link-color);
-    border: none;
-    color: #fff;
+.comment-author,
+.comment-meta {
+  & a {
+    color: var(--default-color);
     &:hover {
-      cursor: pointer;
+      color: var(--link-color);
     }
+  }
+}
+
+.comment-notes {
+  margin: 20px 0 10px;
+}
+
+.required {
+  color: #f00;
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  margin: 20px 0 0;
+  & label {
+    display: block;
   }
 }

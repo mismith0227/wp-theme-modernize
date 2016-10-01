@@ -35,43 +35,26 @@ const logHeader = [
 
 console.log(logHeader)
 
-const source = config.src
-
 // CLEAN
 // =====================================================
 gulp.task('clean', (cb) => {
-  return del([
-    './svgpack',
-    './css',
-    './js/bundle*.js'
-  ], cb)
+  return del(config.tasks.cleanup, cb)
 })
 
 // css
 // =====================================================
 gulp.task('css', () => {
-  const processors = [
-    require('postcss-import'),
-    require('postcss-custom-properties'),
-    require('postcss-custom-media'),
-    require('postcss-apply'),
-    require('postcss-nesting'),
-    require('postcss-flexbugs-fixes'),
-    require('autoprefixer'),
-    require('postcss-browser-reporter')({ selector: 'body:before' }),
-    require('postcss-reporter')({ clearMessages: true })
-  ]
+  const processors = config.tasks.css.processors
   const beforeReporter = processors.length - 2
 
-  if (production) processors.splice(beforeReporter, 0, require('csswring'))
+  if (production) processors.splice(beforeReporter, 0, config.tasks.css.minifyLib)
 
   return gulp
-    .src(`${source}/css/app.css`)
+    .src(config.tasks.css.src)
     .pipe(gulpIf(!production, sourcemaps.init()))
     .pipe(postcss(processors))
     .pipe(gulpIf(!production, sourcemaps.write()))
-    .pipe(rename('bundle.css'))
-    .pipe(gulp.dest(config.dest.css))
+    .pipe(gulp.dest(config.tasks.css.dest))
     .pipe(stream())
 })
 
@@ -84,44 +67,46 @@ gulp.task('webpack', () => {
     webpackConfig.devtool = 'source-map'
   }
   return gulp
-    .src(`${source}/js/app.js`)
+    .src(config.tasks.webpack.src)
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig, webpack))
-    .pipe(gulp.dest(config.dest.js))
+    .pipe(gulp.dest(config.tasks.webpack.dest))
 })
 
 // SVG
 // =====================================================
 gulp.task('svg', () => {
-  var svg = new Svgpack(`${source}/svg/*.svg`, config.dest.svgpack)
+  var svg = new Svgpack(config.tasks.svg.src, config.tasks.svg.dest)
   svg.init()
 })
 
 gulp.task('svg:rename', () => {
   return gulp
-    .src(`${config.dest.svgpack}/svgpack-sprite.svg`)
-    .pipe(rename('svgpack-sprite.php'))
-    .pipe(gulp.dest('./template-parts'))
+    .src(config.tasks.svgRename.src)
+    .pipe(rename(config.tasks.svgRename.filename))
+    .pipe(gulp.dest(config.tasks.svgRename.dest))
 })
 
 // Server
 // =====================================================
 gulp.task('server', () => {
-  return browserSync.init({
-    proxy: config.localUrl,
-    open: 'external'
-  })
+  return browserSync.init(config.tasks.server.browserSyncOptions)
 })
 
 // Watch
 // =====================================================
 gulp.task('watch', () => {
-  gulp.watch([`${source}/js/**/*.js`], ['webpack'])
-  gulp.watch([`${source}/css/**/*.css`], ['css'])
-  gulp.watch([
-    './**/*.php',
-    `${config.dest.js}/*.js`
-  ]).on('change', reload)
+  const props = []
+  Object.keys(config.tasks.watch).forEach(function (key) {
+    let task
+    if (key === 'reload') {
+      task = gulp.watch(config.tasks.watch[key]).on('change', reload)
+    } else {
+      task = gulp.watch(config.tasks.watch[key], [key])
+    }
+    return props.push(task)
+  })
+  return props
 })
 
 // Default

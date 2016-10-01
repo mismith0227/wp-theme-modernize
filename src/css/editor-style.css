@@ -1,1 +1,9 @@
+@import "base/var.css";
+@import "base/normalize.css";
+
+
 @import "base/elements.css";
+
+body#tinymce.wp-editor {
+  font-family: -apple-system, 'BlinkMacSystemFont', "Helvetica Neue", Helvetica, "Roboto", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}

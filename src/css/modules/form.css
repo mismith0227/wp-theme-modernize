@@ -21,5 +21,8 @@ form[role="search"] {
     height: 30px;
     border: 1px solid #eee;
     background-color: #fff;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

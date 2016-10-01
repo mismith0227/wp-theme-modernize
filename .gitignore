@@ -1,3 +1,4 @@
 /node_modules
 svgpack
 *.js.map
+npm-debug.log

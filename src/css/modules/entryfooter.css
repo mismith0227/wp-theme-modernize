@@ -18,4 +18,22 @@
       color: var(--link-hover);
     }
   }
+  & .comments-link {
+    display: block;
+  }
+  & .edit-link {
+    display: inline-block;
+    margin-top: 4px;
+  }
+  & .post-edit-link {
+    display: inline-block;
+    border-radius: 3px;
+    border: none;
+    background: var(--link-color);
+    color: #fff;
+    &:hover {
+      background: var(--link-hover);
+      color: #fff;
+    }
+  }
 }

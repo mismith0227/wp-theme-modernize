@@ -5,11 +5,11 @@ import webpack from 'webpack'
 export default {
   devtool: '',
   entry: [
-    path.join(__dirname, `${config.src}/js/app.js`)
+    path.join(__dirname, config.tasks.webpack.src)
   ],
   output: {
     path: path.join(__dirname, './'),
-    filename: 'bundle.js'
+    filename: config.tasks.webpack.filename
   },
   module: {
     preLoaders: [

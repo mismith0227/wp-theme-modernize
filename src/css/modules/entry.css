@@ -111,36 +111,12 @@
     }
   }
   & address {
-    font-size: 1.4rem;
-  }
-  & .bg-danger {
-    @apply --textbg;
-    border-color: #e67168;
-    color: #e67168;
-  }
-  & .bg-success {
-    @apply --textbg;
-    border-color: #1e8d96;
-    color: #1e8d96;
-  }
-  & .bg-info {
-    @apply --textbg;
-    border-color: #1570a6;
-    color: #1570a6;
-  }
-  & .bg-warning {
-    @apply --textbg;
-    border-color: #e7ba21;
-    color: #e7ba21;
+    font-size: var(--fs-sub);
   }
   & .column {
     margin-top: 20px;
-    padding: 16px;
-    border: 1px solid #ccc;
-    font-size: 1.4rem;
     & h2, & h3, & h4, & h5, & h6 {
       margin: 0;
-      font-size: 1.4rem;
     }
     & p {
       margin-top: 16px;
@@ -149,4 +125,19 @@
       margin-top: 20px;
     }
   }
+}
+
+.page-links {
+  margin: 40px 0;
+  text-align: center;
+}
+
+input[name="post_password"] {
+  display: block;
+  margin-top: 8px;
+}
+
+input[name="Submit"] {
+  margin-top: 8px;
+  @apply --submit-btn;
 }

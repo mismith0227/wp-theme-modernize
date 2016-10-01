@@ -7,10 +7,22 @@
   --link-hover: #137b75;
   --sub-color: #999;
   --fs-large: 2.2rem;
-  --fs-middle: 1.4rem;
+  --fs-middle: 1.6rem;
+  --fs-sub: 1.4rem;
   --fs-small: 1.2rem;
   --theme-width: {
     width: 96%;
     max-width: 700px;
+  }
+  --submit-btn: {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: none;
+    background: var(--link-color);
+    color: #fff;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

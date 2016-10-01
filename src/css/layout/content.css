@@ -46,3 +46,10 @@
     @apply --theme-width;
   }
 }
+
+.error404 {
+  & .primary {
+    height: 350px;
+    padding-top: 100px;
+  }
+}

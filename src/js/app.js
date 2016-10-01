@@ -47,7 +47,7 @@ $(() => {
   }
 
   // search-no-results page
-  if ($('.search-no-results').length) {
+  if ($('.error404').length) {
     $('.secondary form[role="search"]').hide()
   }
 

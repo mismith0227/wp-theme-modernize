@@ -113,23 +113,18 @@ function modernize_widgets_init() {
 }
 add_action( 'widgets_init', 'modernize_widgets_init' );
 
-
-//hooks
-add_filter( 'the_content' , 'modernize_the_content_filter' );
-function modernize_the_content_filter( $content ) {
-    if ( is_home() || is_archive() ){
-      $content = modernize_make_excerpt($content);
-    }
-    return $content;
+/*
+ * Register excerpt length.
+ */
+function custom_excerpt_length( $length ) {
+	return 120;
 }
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-function modernize_make_excerpt($content){
-    global $post;
-    $length = 120;
-    $content = mb_substr( strip_tags( $post -> post_content ), 0, $length );
-    $content = $content . "...";
-    return $content;
+function wpdocs_excerpt_more( $more ) {
+  return '[&hellip;]';
 }
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 /**
  * Enqueue scripts and styles.

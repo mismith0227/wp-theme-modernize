@@ -33,13 +33,6 @@
   &__content {
     margin-top: 8px;
   }
-  &__content {
-    color: var(--sub-color);
-    font-style: italic;
-    font-size: var(--fs-small);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
   &__footer {
     color: var(--sub-color);
     font-size: var(--fs-small);
@@ -53,6 +46,21 @@
     border-radius: 3px;
     background: #333;
     color: #fff;
+  }
+}
+
+.home,
+.archive,
+.search {
+  & .entry {
+    &__content p {
+      margin: 0;
+      color: var(--sub-color);
+      font-style: italic;
+      font-size: var(--fs-small);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
   }
 }
 
@@ -166,5 +174,16 @@
   margin-left: 8px;
   @media (--sp) {
     margin-left: 0;
+  }
+}
+
+.search {
+  & .entry {
+    &__content {
+      margin: 8px 0 0;
+    }
+    &__footer {
+      margin: 00;
+    }
   }
 }

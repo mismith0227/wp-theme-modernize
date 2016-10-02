@@ -41,9 +41,9 @@
     </div>
   </header><!-- .entry__header -->
 
-  <div class="entry-summary">
+  <div class="entry__content">
     <?php the_excerpt(); ?>
-  </div><!-- .entry-summary -->
+  </div><!-- .entry__content -->
 
   <footer class="entry__footer">
     <?php modernize_entry_footer(); ?>

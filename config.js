@@ -29,10 +29,10 @@ const tasks = {
     ],
     minifyLib: require('csswring'),
     src: [
-      `${config.src}/css/app.css`,
+      `${config.src}/css/style.css`,
       `${config.src}/css/editor-style.css`
     ],
-    dest: './css'
+    dest: './'
   },
   webpack: {
     src: `${config.src}/js/app.js`,

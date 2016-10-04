@@ -1,3 +1,19 @@
+/*!
+Theme Name: modernize
+Theme URI: http://blog.mismithportfolio.com/
+Author: Takuma Misumi
+Author URI: https://profiles.wordpress.org/mismith227
+Description: Modernize is an modern, white, clean, beautiful WordPress theme
+Version: 1.6.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: modernize
+Tags: one-column, blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @import "base/var.css";
 @import "base/normalize.css";
 @import "base/elements.css";

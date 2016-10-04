@@ -80,7 +80,7 @@ function modernize_setup() {
    * Enable support editor-style on WordPress dashboard.
    */
   add_editor_style( array(
-    'css/editor-style.css',
+    'editor-style.css',
   ) );
 }
 endif;
@@ -132,7 +132,7 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 function modernize_scripts() {
   $url = get_template_directory_uri();
 
-  wp_enqueue_style( 'modernize-style', $url . '/css/app.css' );
+  wp_enqueue_style( 'modernize-style', $url . '/style.css' );
 
   wp_enqueue_script( 'modernize-main', $url . '/js/bundle.js', array('jquery'), '1.0.0', true );
 

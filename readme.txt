@@ -1,51 +1,49 @@
-# Modernize [![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize) [![license](https://img.shields.io/github/license/mismith0227/wp-theme-modernize.svg?maxAge=2592000)](https://github.com/mismith0227/wp-theme-modernize/blob/master/license.txt) [![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+/* -------------------------------------------------------------- */
+/* modernize
+/* -------------------------------------------------------------- */
+Author: Takuma Misumi
+Tags: one-column, blog
+License: GPLv2 or later
+License URI: license.txt
 
+== Description ==
 Modernize is an modern, white, clean, beautiful WordPress theme
 
-## Features
+== Copyright ==
+modernize WordPress Theme, Copyright 2015 Takuma Misumi
+modernize is distributed under the terms of the GNU GPL
 
-* gulp
-* webpack
-* PostCSS
-* Babel
-* SVG Sprite
-* Standard
 
-## Setup
+/* Installation
+/* -------------------------------------------------------------- */
 
-1. Make WordPress environment.
+== Installation using "Add New Theme" ==
+1. From your Admin UI (Dashboard), go to Appearance => Themes. Click the "Add New" button.
+2. Search for theme, or click the "Upload" button, and then select the theme you want to install.
+3. Click the "Install Now" button.
 
-1. Install some dependencies, and set your hostname.Default is ` modernize.dev `.
+== Manual installation ==
+1. Upload the "modernize" folder to the "/wp-content/themes/" directory.
 
-1. Install Node modules
+== Activiation and Use ==
+1. Activate the Theme through the "Themes" menu in WordPress.
 
-        $ npm install
 
-1. Run gulp. You don't need to install gulp globally.
-
-        // Development
-        $ npm run dev
-
-        // Production (compress)
-        $ npm run prod
-
-        // Build
-        $ npm run build
-
-## Third-party resources
+/* Third Party Resources
+/* -------------------------------------------------------------- */
 
 iScroll
 License: MIT
-Source : [http://iscrolljs.com/](http://iscrolljs.com/)
+Source : http://iscrolljs.com/
 
 Headroom.js
 License: MIT
-Source : [http://wicky.nillia.ms/headroom.js/](http://wicky.nillia.ms/headroom.js/)
+Source : http://wicky.nillia.ms/headroom.js/
 
 Normalize.css
 License: MIT
-Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
+Source : https://necolas.github.io/normalize.css/
 
 IcoMoon-Free
 License: CC BY 4.0 or GPL
-Source : [https://github.com/Keyamoon/IcoMoon-Free](https://github.com/Keyamoon/IcoMoon-Free)
+Source : https://github.com/Keyamoon/IcoMoon-Free

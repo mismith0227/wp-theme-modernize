@@ -28,6 +28,15 @@ modernize is distributed under the terms of the GNU GPL
 == Activiation and Use ==
 1. Activate the Theme through the "Themes" menu in WordPress.
 
+/* Theme Features
+/* -------------------------------------------------------------- */
+
+== Navigation ==
+* Global navigation ( in drawer menu )
+* Social links ( in footer )
+
+== Using minified JavaScript ==
+bundle.js is a compressed file, and compiled out of files located in /src/js/
 
 /* Third Party Resources
 /* -------------------------------------------------------------- */
@@ -47,3 +56,4 @@ Source : https://necolas.github.io/normalize.css/
 IcoMoon-Free
 License: CC BY 4.0 or GPL
 Source : https://github.com/Keyamoon/IcoMoon-Free
+using the SVG file of this for in

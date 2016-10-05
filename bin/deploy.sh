@@ -31,7 +31,8 @@ node_modules
 package.json
 svgpack
 tmp
-src/css" > .gitignore
+src/css
+src/images" > .gitignore
 
 git init
 git config user.name "Travis CI"

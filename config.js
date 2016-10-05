@@ -39,6 +39,10 @@ const tasks = {
     dest: './js',
     filename: 'bundle.js'
   },
+  images: {
+    src: `${config.src}/images/**/*`,
+    dest: './images'
+  },
   svg: {
     src: `${config.src}/svg/*.svg`,
     dest: './svgpack',

@@ -4,6 +4,7 @@ import config from './config'
 import del from 'del'
 import gulp from 'gulp'
 import gulpIf from 'gulp-if'
+import imagemin from 'gulp-imagemin'
 import minimist from 'minimist'
 import plumber from 'gulp-plumber'
 import postcss from 'gulp-postcss'
@@ -73,6 +74,15 @@ gulp.task('webpack', () => {
     .pipe(gulp.dest(config.tasks.webpack.dest))
 })
 
+// Image
+// =====================================================
+gulp.task('image', () => {
+  return gulp
+    .src(config.tasks.images.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(config.tasks.images.dest))
+});
+
 // SVG
 // =====================================================
 gulp.task('svg', () => {
@@ -128,6 +138,7 @@ gulp.task('build', (cb) => {
     ['svg'],
     'css',
     'webpack',
+    'image',
     'svg:rename',
     cb
   )

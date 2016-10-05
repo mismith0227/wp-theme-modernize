@@ -27,6 +27,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.3",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",

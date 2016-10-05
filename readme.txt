@@ -13,6 +13,8 @@ Modernize is an modern, white, clean, beautiful WordPress theme
 modernize WordPress Theme, Copyright 2015 Takuma Misumi
 modernize is distributed under the terms of the GNU GPL
 
+images/1.jpg, 2.jpg used in the screenshot is taken by the theme author and is released under GPL.
+
 
 /* Installation
 /* -------------------------------------------------------------- */
@@ -36,7 +38,7 @@ modernize is distributed under the terms of the GNU GPL
 * Social links ( in footer )
 
 == Using minified JavaScript ==
-bundle.js is a compressed file, and compiled out of files located in /src/js/
+bundle.js is a compressed file, which is compiled from files located in /src/js/
 
 /* Third Party Resources
 /* -------------------------------------------------------------- */
@@ -56,4 +58,4 @@ Source : https://necolas.github.io/normalize.css/
 IcoMoon-Free
 License: CC BY 4.0 or GPL
 Source : https://github.com/Keyamoon/IcoMoon-Free
-using the SVG file of this for in
+This theme utilize its SVG files.

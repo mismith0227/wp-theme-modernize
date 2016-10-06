@@ -2,9 +2,10 @@
 /**
  * Template part for displaying page content in page.php.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package modernize
+ * @author Takuma Misumi
+ * @link http://blog.mismithportfolio.com/
+ * @license GPLv2 or later
  */
 
 ?>

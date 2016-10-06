@@ -1,0 +1,5 @@
+.page .fw-primary {
+ & .entry__content {
+    max-width: 1200px;
+  }
+}

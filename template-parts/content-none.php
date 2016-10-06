@@ -2,9 +2,10 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package modernize
+ * @author Takuma Misumi
+ * @link http://blog.mismithportfolio.com/
+ * @license GPLv2 or later
  */
 
 ?>

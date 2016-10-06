@@ -2255,3 +2255,10 @@ input[name="Submit"]:hover {
 .comment-form-comment label, .comment-form-author label, .comment-form-email label, .comment-form-url label {
   display: block;
 }
+
+.page .fw-primary {
+}
+
+.page .fw-primary .entry__content {
+  max-width: 1200px;
+}

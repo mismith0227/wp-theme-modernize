@@ -4,7 +4,7 @@ Theme URI: http://blog.mismithportfolio.com/
 Author: Takuma Misumi
 Author URI: https://profiles.wordpress.org/mismith227
 Description: Modernize is an modern, white, clean, beautiful WordPress theme
-Version: 1.6.6
+Version: 1.7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: modernize
@@ -848,13 +848,13 @@ address {
   color: #e7ba21;
 }
 
-.column {
+.note {
   padding: 16px;
   border: 1px solid #ccc;
   font-size: 1.4rem
 }
 
-.column h2, .column h3, .column h4, .column h5, .column h6 {
+.note h2, .note h3, .note h4, .note h5, .note h6 {
   font-size: 1.4rem;
 }
 
@@ -968,6 +968,170 @@ address {
 
 .footer a {
   color: #fff;
+}
+
+.page .fw-primary {
+}
+
+.page .fw-primary .entry__content {
+  max-width: 1200px;
+}
+
+/* grid */
+
+.mdr-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+@media (max-width:767px) {
+
+  .mdr-columns {
+    display: block;
+  }
+  }
+
+.mdr-columns.is-responsive {
+}
+
+@media (max-width:767px) {
+
+  .mdr-columns.is-responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.mdr-columns.is-multiline {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mdr-column,
+.mdr-tile {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1
+}
+
+.mdr-column.is-2, .mdr-tile.is-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 16.66667%;
+}
+
+.mdr-column.is-3, .mdr-tile.is-3 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 25%;
+}
+
+.mdr-column.is-4, .mdr-tile.is-4 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 33.33333%;
+}
+
+.mdr-column.is-5, .mdr-tile.is-5 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 41.66667%;
+}
+
+.mdr-column.is-6, .mdr-tile.is-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50%;
+}
+
+.mdr-column.is-7, .mdr-tile.is-7 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 58.33333%;
+}
+
+.mdr-column.is-8, .mdr-tile.is-8 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 66.66667%;
+}
+
+.mdr-column.is-9, .mdr-tile.is-9 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 75%;
+}
+
+.mdr-column.is-10, .mdr-tile.is-10 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 83.33333%;
+}
+
+.mdr-column.is-11, .mdr-tile.is-11 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 91.66667%;
+}
+
+@media (max-width:767px) {
+
+  .mdr-column,
+.mdr-tile {
+}
+
+  .mdr-column.is-2, .mdr-column.is-3, .mdr-column.is-4, .mdr-column.is-5, .mdr-column.is-6, .mdr-column.is-7, .mdr-column.is-8, .mdr-column.is-9, .mdr-column.is-10, .mdr-column.is-11, .mdr-tile.is-2, .mdr-tile.is-3, .mdr-tile.is-4, .mdr-tile.is-5, .mdr-tile.is-6, .mdr-tile.is-7, .mdr-tile.is-8, .mdr-tile.is-9, .mdr-tile.is-10, .mdr-tile.is-11 {
+    width: 100%;
+  }
+  }
+
+.mdr-column {
+  display: block;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  padding: 10px;
+}
+
+.mdr-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content
+}
+
+@media (max-width:767px) {
+
+  .mdr-tile {
+    display: block;
+  }
+  }
+
+.mdr-tile.is-vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header {
@@ -1939,19 +2103,19 @@ form[role="search"] .search-submit:hover {
   font-size: 1.4rem;
 }
 
-.entry__content .column {
+.entry__content .note {
   margin-top: 20px;
 }
 
-.entry__content .column h2, .entry__content .column h3, .entry__content .column h4, .entry__content .column h5, .entry__content .column h6 {
+.entry__content .note h2, .entry__content .note h3, .entry__content .note h4, .entry__content .note h5, .entry__content .note h6 {
   margin: 0;
 }
 
-.entry__content .column p {
+.entry__content .note p {
   margin-top: 16px;
 }
 
-.entry__content .column ul, .entry__content .column ol {
+.entry__content .note ul, .entry__content .note ol {
   margin-top: 20px;
 }
 
@@ -2254,11 +2418,4 @@ input[name="Submit"]:hover {
 
 .comment-form-comment label, .comment-form-author label, .comment-form-email label, .comment-form-url label {
   display: block;
-}
-
-.page .fw-primary {
-}
-
-.page .fw-primary .entry__content {
-  max-width: 1200px;
 }

@@ -670,12 +670,12 @@ address {
   border-color: #e7ba21;
   color: #e7ba21;
 }
-.column {
+.note {
   padding: 16px;
   border: 1px solid #ccc;
   font-size: 1.4rem
 }
-.column h2, .column h3, .column h4, .column h5, .column h6 {
+.note h2, .note h3, .note h4, .note h5, .note h6 {
   font-size: 1.4rem;
 }
 body#tinymce.wp-editor {

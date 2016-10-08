@@ -113,7 +113,7 @@
   & address {
     font-size: var(--fs-sub);
   }
-  & .column {
+  & .note {
     margin-top: 20px;
     & h2, & h3, & h4, & h5, & h6 {
       margin: 0;

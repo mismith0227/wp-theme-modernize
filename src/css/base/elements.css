@@ -146,7 +146,7 @@ input, button, textarea, select {
   margin: 0;
   background: none;
   appearance: none;
-  @media (--sp) {
+  @media (--small) {
     width: 100%;
   }
 }
@@ -197,7 +197,7 @@ address {
   color: #e7ba21;
 }
 
-.column {
+.note {
   padding: 16px;
   border: 1px solid #ccc;
   font-size: var(--fs-sub);

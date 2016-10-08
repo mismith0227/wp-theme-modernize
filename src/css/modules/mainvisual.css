@@ -3,10 +3,10 @@
   width: 100%;
   height: 500px;
   overflow: hidden;
-  @media (--tablet) {
+  @media (--large) {
     height: 400px;
   }
-  @media (--sp) {
+  @media (--small) {
     height: 300px;
   }
   &__img {

@@ -1,7 +1,7 @@
 .site-content {
   @apply --theme-width;
   margin: 40px auto 0;
-  @media (--sp) {
+  @media (--small) {
     display: block;
     width: 100%;
     margin-top: 40px;
@@ -10,7 +10,7 @@
 
 .primary {
   width: 100%;
-  @media (--sp) {
+  @media (--small) {
     display: block;
     width: 96%;
     margin: 0 auto;
@@ -22,7 +22,7 @@
   display: block;
   width: 100%;
   margin: 80px auto 0;
-  @media (--sp) {
+  @media (--small) {
     display: block;
     width: 96%;
     margin: 40px auto 0;
@@ -38,7 +38,7 @@
     padding-top: 0;
   }
   & .primary {
-    @media (--sp) {
+    @media (--small) {
       width: 100%;
     }
   }

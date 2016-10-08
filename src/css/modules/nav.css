@@ -7,7 +7,7 @@
   height: 100%;
   overflow: hidden;
   background-color: #fff;
-  @media (--sp) {
+  @media (--small) {
     right: -80%;
     width: 80%;
   }
@@ -31,10 +31,10 @@
 
 .primary-menu {
   padding: 65px 0 10px;
-  @media (--tablet) {
+  @media (--large) {
     width: 100%;
   }
-  @media (--sp) {
+  @media (--small) {
     padding-top: 50px;
   }
 }

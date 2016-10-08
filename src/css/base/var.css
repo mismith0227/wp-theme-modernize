@@ -1,5 +1,6 @@
-@custom-media --tablet (max-width:1023px);
-@custom-media --sp (max-width:639px);
+@custom-media --large (max-width:1023px);
+@custom-media --medium (max-width:767px);
+@custom-media --small (max-width:639px);
 
 :root {
   --default-color: #555;

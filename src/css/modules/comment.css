@@ -24,7 +24,7 @@
   border: 1px solid #ccc;
   border-radius: 3px;
   background: #fff;
-  @media (--sp) {
+  @media (--small) {
     padding: 8px;
   }
   & .children {

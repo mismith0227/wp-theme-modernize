@@ -16,7 +16,7 @@
     display: inline-block;
     margin: 0 0 0 12px;
     font-size: var(--fs-small);
-    @media (--sp) {
+    @media (--small) {
       display: none;
     }
   }

@@ -134,7 +134,11 @@ function modernize_scripts() {
 
   wp_enqueue_style( 'modernize-style', $url . '/style.css' );
 
-  wp_enqueue_script( 'modernize-main', $url . '/js/bundle.js', array('jquery'), '1.0.0', true );
+  if ( is_child_theme() ) {
+    wp_enqueue_style( get_stylesheet(), get_stylesheet_uri(), array( 'modernize-style' ), '1.7.1');
+  }
+
+  wp_enqueue_script( 'modernize-main', $url . '/js/bundle.js', array('jquery'), '1.7.1', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );

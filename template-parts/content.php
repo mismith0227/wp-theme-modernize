@@ -45,7 +45,7 @@
           <div class="entry__featured">
             <span>
               <svg viewBox="0 0 64 64" class="icon">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pushpin">500px</use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pushpin"></use>
               </svg>
               <?php echo esc_html__( 'featured', 'modernize' ); ?>
             </span>

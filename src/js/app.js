@@ -88,7 +88,7 @@ $(() => {
 
     function _toggle () {
       $(`.${setting.class.toggle}`).on('click', () => {
-        if ($(`.${setting.class.menu}`).attr('aria-expanded') === 'true') {
+        if ($(`.${setting.class.menu}`).attr('aria-hidden') === 'false') {
           $('body').removeClass(setting.class.fixed)
           _close()
         } else {
@@ -111,18 +111,18 @@ $(() => {
     function _open () {
       myScroll.enable()
       _noScroll()
-      $(`.${setting.class.toggle}`).addClass(setting.class.toggleopen)
+      $(`.${setting.class.toggle}`).addClass(setting.class.toggleopen).attr('aria-expanded', 'true')
       $(`.${setting.class.ovly}`).addClass(setting.class.bgshow)
-      $(`.${setting.class.menu}`).addClass(setting.class.open).attr('aria-expanded', 'true')
+      $(`.${setting.class.menu}`).addClass(setting.class.open).attr('aria-hidden', 'false')
     }
 
     function _close () {
       myScroll.disable()
       _returnScroll()
 
-      $(`.${setting.class.toggle}`).removeClass(setting.class.toggleopen)
+      $(`.${setting.class.toggle}`).removeClass(setting.class.toggleopen).attr('aria-expanded', 'false')
       $(`.${setting.class.ovly}`).removeClass(setting.class.bgshow)
-      $(`.${setting.class.menu}`).removeClass(setting.class.open).attr('aria-expanded', 'false')
+      $(`.${setting.class.menu}`).removeClass(setting.class.open).attr('aria-hidden', 'true')
     }
 
     return {

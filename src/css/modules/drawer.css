@@ -30,7 +30,6 @@
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
   appearance: button;
-  outline: none;
   &:focus {
     box-shadow: none;
   }

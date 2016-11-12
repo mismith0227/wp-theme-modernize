@@ -39,12 +39,12 @@
 		<?php
 		endif; ?>
 
-		<button class="toggle-btn js-toggle">
+		<button class="toggle-btn js-toggle" aria-expanded="false">
 			<span></span>
 		</button>
 	</header><!-- .header -->
 
-	<nav id="site-navigation" class="gnav" role="navigation" aria-expanded="false">
+	<nav id="site-navigation" class="gnav" role="navigation" aria-hidden="true">
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<?php
 					wp_nav_menu( array(

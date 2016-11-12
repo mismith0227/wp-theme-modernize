@@ -7,22 +7,22 @@
 
 .entry__content {
   & h1 {
-    margin-top: 140px;
+    margin-top: 70px;
   }
   & h2 {
-    margin-top: 100px;
+    margin-top: 60px;
   }
   & h3 {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   & h4 {
-    margin-top: 40px;
+    margin-top: 32px;
   }
   & h5 {
-    margin-top: 40px;
+    margin-top: 32px;
   }
   & h6 {
-    margin-top: 40px;
+    margin-top: 32px;
   }
   & table {
     margin: 0 auto;
@@ -31,7 +31,7 @@
     padding: 10px;
   }
   & dl {
-    margin-top: 40px;
+    margin-top: 32px;
   }
   & dt {
     margin-top: 20px;
@@ -40,10 +40,10 @@
     margin-left: 20px;
   }
   & ul, & ol {
-    margin-top: 40px;
+    margin-top: 32px;
     padding-left: 20px;
     & li {
-      margin-top: 8px;
+      margin-top: 6px;
     }
   }
   & li {
@@ -52,15 +52,16 @@
     }
   }
   & p {
-    margin-top: 40px;
+    margin-top: 32px;
+    word-break: break-all;
   }
   & pre {
     margin: 0 auto;
   }
   & figure {
-    margin: 40px 0 0 0;
+    margin: 32px 0 0 0;
     & ol, & ul {
-      margin-top: 20px;
+      margin: 0;
       padding-left: 30px;
     }
     &.alignleft {
@@ -87,7 +88,7 @@
     padding: 20px;
     margin: 0 auto;
     border-radius: 5px;
-    margin-top: 40px;
+    margin-top: 32px;
     background-color: #eee;
     &::before {
       content: "“";
@@ -128,7 +129,7 @@
 }
 
 .page-links {
-  margin: 40px 0;
+  margin: 32px 0;
   text-align: center;
 }
 

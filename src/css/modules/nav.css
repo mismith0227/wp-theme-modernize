@@ -31,9 +31,9 @@
 
 .primary-menu {
   width: 100%;
-  padding: 50px 0 10px;
+  padding: var(--header-head-s) 0 10px;
   @media (--sm) {
-    padding-top: 65px;
+    padding-top: var(--header-head-l);
   }
 }
 

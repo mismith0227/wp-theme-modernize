@@ -12,6 +12,8 @@
   --fs-middle: 1.6rem;
   --fs-sub: 1.4rem;
   --fs-small: 1.2rem;
+  --header-head-l: 75px;
+  --header-head-s: 50px;
   --theme-width: {
     width: 96%;
     max-width: 700px;

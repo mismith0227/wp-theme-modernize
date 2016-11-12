@@ -1,13 +1,15 @@
+
+
 .header {
   display: flex;
   z-index: 5;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: var(--header-head-s);
   border-bottom: 1px solid #eee;
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
   background-color: #fff;
   @media (--sm) {
-    height: 65px;
+    height: var(--header-head-l);
   }
 }

@@ -854,7 +854,7 @@ address {
 
   .secondary {
     width: 100%;
-    margin: 80px auto 0;
+    margin: 40px auto 0;
   }
   }
 
@@ -1235,7 +1235,7 @@ address {
 }
 
 .widget {
-  margin-top: 60px
+  margin-top: 40px
 }
 
 .widget:first-child {
@@ -1244,8 +1244,8 @@ address {
 
 .widget__title {
   margin: 0 0 12px 0;
-  padding: 0 0 8px 0;
-  border-bottom: 1px solid #eee;
+  padding: 0 0 0 8px;
+  border-left: 2px solid #888;
   font-size: 2.2rem;
   font-weight: normal;
 }

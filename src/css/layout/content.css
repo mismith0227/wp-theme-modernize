@@ -23,7 +23,7 @@
   margin: 40px auto 0;
   @media (--sm) {
     width: 100%;
-    margin: 80px auto 0;
+    margin: 40px auto 0;
   }
 }
 

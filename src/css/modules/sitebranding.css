@@ -13,11 +13,11 @@
     color: #222;
   }
   &__description {
-    display: inline-block;
-    margin: 0 0 0 12px;
-    font-size: var(--fs-small);
-    @media (--small) {
-      display: none;
+    display: none;
+    @media (--sm) {
+      display: inline-block;
+      margin: 0 0 0 12px;
+      font-size: var(--fs-small);
     }
   }
 }

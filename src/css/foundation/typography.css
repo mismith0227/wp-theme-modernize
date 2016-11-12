@@ -1,7 +1,9 @@
-@import "foundation/var.css";
-@import "foundation/normalize.css";
-@import "foundation/elements.css";
+html {
+  font-size: 62.5%;
+}
 
-body#tinymce.wp-editor {
+body {
   font-family: -apple-system, 'BlinkMacSystemFont', "Helvetica Neue", Helvetica, "Roboto", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1.4rem;
+  color: var(--default-color);
 }

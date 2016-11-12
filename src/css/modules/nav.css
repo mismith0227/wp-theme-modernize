@@ -1,15 +1,15 @@
 .gnav {
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -80%;
   z-index: 3;
-  width: 300px;
+  width: 80%;
   height: 100%;
   overflow: hidden;
   background-color: #fff;
-  @media (--small) {
-    right: -80%;
-    width: 80%;
+  @media (--sm) {
+    right: -300px;
+    width: 300px;
   }
   & li {
     display: block;
@@ -30,12 +30,10 @@
 }
 
 .primary-menu {
-  padding: 65px 0 10px;
-  @media (--large) {
-    width: 100%;
-  }
-  @media (--small) {
-    padding-top: 50px;
+  width: 100%;
+  padding: 50px 0 10px;
+  @media (--sm) {
+    padding-top: 65px;
   }
 }
 

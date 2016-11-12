@@ -1,6 +1,7 @@
-@custom-media --large (max-width:1023px);
-@custom-media --medium (max-width:767px);
-@custom-media --small (max-width:639px);
+@custom-media --lg (min-width:1024px);
+@custom-media --lmd (min-width:768px);
+@custom-media --md (max-width:767px);
+@custom-media --sm (min-width:640px);
 
 :root {
   --default-color: #555;
@@ -15,6 +16,7 @@
     width: 96%;
     max-width: 700px;
   }
+
   --submit-btn: {
     display: inline-block;
     padding: 8px 12px;

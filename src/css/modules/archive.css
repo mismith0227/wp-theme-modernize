@@ -3,12 +3,12 @@
 */
 .entry {
   margin-top: 24px;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #eee;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
   background-color: #fff;
-  @media (--small) {
-    padding: 10px;
+  @media (--sm) {
+    padding: 20px;
   }
   &:first-child {
     margin-top: 0;
@@ -79,14 +79,14 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      min-height: 500px;
+      min-height: 300px;
       width: 100%;
       background-color: #666;
-      @media (--large) {
+      @media (--lmd) {
         min-height: 400px;
       }
-      @media (--small) {
-        min-height: 300px;
+      @media (--lg) {
+        min-height: 500px;
       }
     }
     &__thumb {
@@ -162,18 +162,19 @@
 
 .publised-label,
 .update-label {
+  display: block;
+  @media (--sm) {
+    display: inline;
+  }
   & time {
     margin-left: 4px;
-  }
-  @media (--small) {
-    display: block;
   }
 }
 
 .update-label {
-  margin-left: 8px;
-  @media (--small) {
-    margin-left: 0;
+  margin-left: 0;
+  @media (--sm) {
+    margin-left: 8px;
   }
 }
 

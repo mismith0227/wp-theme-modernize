@@ -20,12 +20,12 @@
 .comment {
   list-style: none;
   margin-top: 20px;
-  padding: 24px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
   background: #fff;
-  @media (--small) {
-    padding: 8px;
+  @media (--sm) {
+    padding: 24px;
   }
   & .children {
     padding: 0;

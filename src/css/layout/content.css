@@ -1,31 +1,29 @@
 .site-content {
-  @apply --theme-width;
+  display: block;
+  width: 100%;
   margin: 40px auto 0;
-  @media (--small) {
-    display: block;
-    width: 100%;
-    margin-top: 40px;
+  @media (--sm) {
+    @apply --theme-width;
   }
 }
 
 .primary {
-  width: 100%;
-  @media (--small) {
+  width: 96%;
+  margin: 0 auto;
+  padding-right: 0;
+  @media (--sm) {
     display: block;
-    width: 96%;
-    margin: 0 auto;
-    padding-right: 0;
+    width: 100%;
   }
 }
 
 .secondary {
   display: block;
-  width: 100%;
-  margin: 80px auto 0;
-  @media (--small) {
-    display: block;
-    width: 96%;
-    margin: 40px auto 0;
+  width: 96%;
+  margin: 40px auto 0;
+  @media (--sm) {
+    width: 100%;
+    margin: 80px auto 0;
   }
 }
 
@@ -38,9 +36,7 @@
     padding-top: 0;
   }
   & .primary {
-    @media (--small) {
-      width: 100%;
-    }
+    width: 100%;
   }
   & .secondary {
     @apply --theme-width;

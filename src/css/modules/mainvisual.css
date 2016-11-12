@@ -1,13 +1,13 @@
 .main-visual {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 300px;
   overflow: hidden;
-  @media (--large) {
+  @media (--lmd) {
     height: 400px;
   }
-  @media (--small) {
-    height: 300px;
+  @media (--lg) {
+    height: 500px;
   }
   &__img {
     position: absolute;

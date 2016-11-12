@@ -146,9 +146,7 @@ input, button, textarea, select {
   margin: 0;
   background: none;
   appearance: none;
-  @media (--small) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 input {

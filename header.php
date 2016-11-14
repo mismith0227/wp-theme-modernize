@@ -39,21 +39,24 @@
 		<?php
 		endif; ?>
 
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 		<button class="toggle-btn js-toggle" aria-expanded="false">
 			<span></span>
 		</button>
+		<?php endif; ?>
+
 	</header><!-- .header -->
 
+	<?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<nav id="site-navigation" class="gnav" role="navigation" aria-hidden="true">
-		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'menu_class'     => 'primary-menu',
-					 ) );
-				?>
-		<?php endif; ?>
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_class'     => 'primary-menu',
+			 ) );
+		?>
 	</nav><!-- #site-navigation -->
+	<?php endif; ?>
 
 	<?php if ( is_home() ) : ?>
 		<?php if ( get_header_image() ) : ?>

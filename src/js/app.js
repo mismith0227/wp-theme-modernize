@@ -57,7 +57,11 @@ $(() => {
   })
   headroom.init()
 
+  const isPrimaryNav = $('#site-navigation').children().length
+
   const Drawer = (() => {
+    if (isPrimaryNav === 0) return
+
     const myScroll = new IScroll('#site-navigation', {
       mouseWheel: true,
       preventDefault: false
@@ -130,5 +134,7 @@ $(() => {
     }
   })()
 
-  Drawer.toggle()
+  if (isPrimaryNav !== 0) {
+    Drawer.toggle()
+  }
 })

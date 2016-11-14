@@ -93,7 +93,7 @@ add_action( 'after_setup_theme', 'modernize_setup' );
  *
  */
 function modernize_content_width() {
-  $GLOBALS['content_width'] = apply_filters( 'modernize_content_width', 640 );
+  $GLOBALS['content_width'] = apply_filters( 'modernize_content_width', 700 );
 }
 add_action( 'after_setup_theme', 'modernize_content_width', 0 );
 

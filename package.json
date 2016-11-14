@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "throttle-debounce": "^1.0.1",
     "iscroll": "^5.2.0",
     "headroom.js": "^0.9.3"
   },

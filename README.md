@@ -42,8 +42,8 @@ Headroom.js
 License: MIT  
 Source : [http://wicky.nillia.ms/headroom.js/](http://wicky.nillia.ms/headroom.js/)
 
-throttle-debounce
-License: MIT and GPL. 
+throttle-debounce  
+License: MIT and GPL.  
 Source : [https://github.com/niksy/throttle-debounce](https://github.com/niksy/throttle-debounce)
 
 Normalize.css  

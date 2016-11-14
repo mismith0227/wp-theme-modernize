@@ -3,6 +3,8 @@ const $ = window.jQuery
 const Headroom = require('headroom.js')
 require('./skip-link-focus-fix.js')
 
+import debounce from 'throttle-debounce/debounce'
+
 $(() => {
   // headerstyle
   const headstyle = () => {
@@ -15,9 +17,11 @@ $(() => {
   }
 
   headstyle()
-  $(window).on('resize', () => {
+
+  $(window).on('resize', debounce(200, () => {
     headstyle()
-  })
+    Drawer.close()
+  }))
 
   // sns icon
   if ($('.social-navigation').length) {
@@ -126,7 +130,8 @@ $(() => {
     }
 
     return {
-      toggle: _toggle
+      toggle: _toggle,
+      close: _close
     }
   })()
 

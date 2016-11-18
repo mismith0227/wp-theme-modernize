@@ -39,7 +39,7 @@
   &:hover {
     cursor: pointer;
   }
-  & span {
+  & span:not(.screen-reader-text) {
     @apply --hum-icon;
     top: 0;
     bottom: 0;

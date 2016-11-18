@@ -42,6 +42,7 @@
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 		<button class="toggle-btn js-toggle" aria-expanded="false">
 			<span></span>
+      <span class="screen-reader-text">menu</span>
 		</button>
 		<?php endif; ?>
 

@@ -1791,7 +1791,7 @@ form[role="search"] .search-submit:hover {
   cursor: pointer;
 }
 
-.toggle-btn span {
+.toggle-btn span:not(.screen-reader-text) {
   display: block;
   position: absolute;
   margin: auto;
@@ -1804,7 +1804,7 @@ form[role="search"] .search-submit:hover {
   right: 0;
 }
 
-.toggle-btn span::before {
+.toggle-btn span:not(.screen-reader-text)::before {
   content: "";
   display: block;
   position: absolute;
@@ -1823,7 +1823,7 @@ form[role="search"] .search-submit:hover {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.toggle-btn span::after {
+.toggle-btn span:not(.screen-reader-text)::after {
   content: "";
   display: block;
   position: absolute;

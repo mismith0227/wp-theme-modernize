@@ -26,6 +26,9 @@
     }
   }
   @media (--lmd) {
+    &.is-2, &.is-3, &.is-4, &.is-5, &.is-6, &.is-7, &.is-8, &.is-9, &.is-10, &.is-11 {
+      flex: none;
+    }
     &.is-2 {
       width: 16.66667%;
     }

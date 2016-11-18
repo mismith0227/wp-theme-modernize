@@ -965,6 +965,12 @@ address {
 .mdr-tile {
 }
 
+  .mdr-column.is-2, .mdr-column.is-3, .mdr-column.is-4, .mdr-column.is-5, .mdr-column.is-6, .mdr-column.is-7, .mdr-column.is-8, .mdr-column.is-9, .mdr-column.is-10, .mdr-column.is-11, .mdr-tile.is-2, .mdr-tile.is-3, .mdr-tile.is-4, .mdr-tile.is-5, .mdr-tile.is-6, .mdr-tile.is-7, .mdr-tile.is-8, .mdr-tile.is-9, .mdr-tile.is-10, .mdr-tile.is-11 {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+
   .mdr-column.is-2, .mdr-tile.is-2 {
     width: 16.66667%;
   }

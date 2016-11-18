@@ -2,12 +2,12 @@
 /* modernize
 /* -------------------------------------------------------------- */
 Author: Takuma Misumi
-Tags: one-column, blog
+Tags: one-column, blog, custom-background, editor-style, full-width-template, theme-options
 License: GPLv2 or later
 License URI: license.txt
 
 == Description ==
-Modernize is an modern, white, clean, beautiful WordPress theme
+modernize is a modern, simple and beautiful WordPress theme. It is supposed to be used on a blog. Customizers and social menu icons, as well as several templates are available.
 
 == Copyright ==
 modernize WordPress Theme, Copyright 2015 Takuma Misumi

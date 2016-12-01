@@ -24,3 +24,21 @@
     }
   }
 }
+
+.custom-logo-link {
+  display: inline-block;
+  width: 40px;
+  margin: 0 0 0 8px;
+  padding: 0;
+  @media (--sm) {
+    width: 50px;
+    margin: 0 0 0 24px;
+  }
+  & .custom-logo {
+    width: 100%;
+    vertical-align: middle;
+  }
+  & + .header__title {
+    margin-left: 12px;
+  }
+}

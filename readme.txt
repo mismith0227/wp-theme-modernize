@@ -7,7 +7,7 @@ License: GPLv2 or later
 License URI: license.txt
 
 == Description ==
-modernize is a modern, simple and beautiful WordPress theme. It is supposed to be used on a blog. Customizers and social menu icons, as well as several templates are available.
+modernize is a modern, simple and beautiful WordPress theme. I made it for blogging. Customizer, social menu icon, several templates, logo addition, switching function between one column and two columns, etc. are also available.
 
 == Copyright ==
 modernize WordPress Theme, Copyright 2015 Takuma Misumi

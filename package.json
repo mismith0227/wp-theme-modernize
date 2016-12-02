@@ -1,6 +1,6 @@
 {
   "name": "modernize",
-  "version": "1.7.4",
+  "version": "1.8.0",
   "description": "modernize is a modern, simple and beautiful WordPress theme. It is supposed to be used on a blog. Customizers and social menu icons, as well as several templates are available.",
   "main": "index.js",
   "scripts": {

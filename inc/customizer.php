@@ -28,7 +28,7 @@ function modernize_customize_register( $wp_customize ) {
       'type' => 'radio',
       'choices'    => array(
           'col-1' => 'one column article list',
-          'col-2' => 'twe column article list',
+          'col-2' => 'two column article list',
       ),
   ));
 }

@@ -4,6 +4,9 @@
   margin: 40px auto 0;
   @media (--sm) {
     @apply --theme-width;
+    &.col-2 {
+      @apply --theme-width-col2;
+    }
   }
 }
 
@@ -42,6 +45,20 @@
     @apply --theme-width;
   }
 }
+
+.blog, .archive, .search {
+  & .col-2 {
+    & .article-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    & .entry {
+      width: 48%;
+    }
+  }
+}
+
 
 .error404 {
   & .primary {

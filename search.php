@@ -19,6 +19,8 @@ get_header(); ?>
         <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'modernize' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
       </header><!-- .page-header -->
 
+      <div class="article-wrap">
+
       <?php
       /* Start the Loop */
       while ( have_posts() ) : the_post();
@@ -31,6 +33,12 @@ get_header(); ?>
         get_template_part( 'template-parts/content', 'search' );
 
       endwhile;
+
+      ?>
+
+      </div>
+
+      <?php
 
       the_posts_navigation();
 

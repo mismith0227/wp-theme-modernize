@@ -120,6 +120,17 @@ function modernize_widgets_init() {
 }
 add_action( 'widgets_init', 'modernize_widgets_init' );
 
+/**
+ * Register customize.
+ */
+add_action( 'customize_register', 'theme_customize_register' );
+function theme_customize_register($wp_customize) {
+  $wp_customize->add_section( 'article_column_section', array(
+      'title'          =>'Article Layout',
+      'priority'       => 200,
+  ));
+}
+
 /*
  * Register excerpt length.
  */

@@ -17,6 +17,20 @@ function modernize_customize_register( $wp_customize ) {
   $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
   $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
   $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+  $wp_customize->add_setting('article_column_options[radio01]', array(
+    'default'  => 'col-1',
+    'type'  => 'option',
+  ));
+   $wp_customize->add_control( 'article_column', array(
+      'settings' => 'article_column_options[radio01]',
+      'label' =>'Article Layout',
+      'section' => 'article_column_section',
+      'type' => 'radio',
+      'choices'    => array(
+          'col-1' => 'one column article list',
+          'col-2' => 'twe column article list',
+      ),
+  ));
 }
 add_action( 'customize_register', 'modernize_customize_register' );
 

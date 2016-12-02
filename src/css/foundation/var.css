@@ -18,6 +18,10 @@
     width: 96%;
     max-width: 700px;
   }
+  --theme-width-col2: {
+    width: 96%;
+    max-width: 1000px;
+  }
 
   --submit-btn: {
     display: inline-block;

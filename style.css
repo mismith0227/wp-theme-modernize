@@ -828,6 +828,11 @@ address {
     width: 96%;
     max-width: 700px;
   }
+
+  .site-content.col-2 {
+    width: 96%;
+    max-width: 1000px;
+  }
   }
 
 .primary {
@@ -876,6 +881,27 @@ address {
 .single-post .secondary, .page .secondary {
   width: 96%;
   max-width: 700px;
+}
+
+.blog, .archive, .search {
+}
+
+.blog .col-2, .archive .col-2, .search .col-2 {
+}
+
+.blog .col-2 .article-wrap, .archive .col-2 .article-wrap, .search .col-2 .article-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog .col-2 .entry, .archive .col-2 .entry, .search .col-2 .entry {
+  width: 48%;
 }
 
 .error404 {
@@ -1385,6 +1411,13 @@ address {
   border-radius: 3px;
   background: #333;
   color: #fff;
+}
+
+.col-2 {
+}
+
+.col-2 .entry:nth-child(2) {
+  margin-top: 0;
 }
 
 .home,

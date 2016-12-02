@@ -49,6 +49,12 @@
   }
 }
 
+.col-2 {
+  & .entry:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
 .home,
 .archive,
 .search {

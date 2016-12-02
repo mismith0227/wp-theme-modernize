@@ -68,4 +68,9 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<div id="content" class="site-content">
+  <?php
+    $options =  get_option('article_column_options');
+    $colmnclass = esc_attr($options['radio01']);
+  ?>
+
+	<div id="content" class="site-content <?php echo $colmnclass ?>">

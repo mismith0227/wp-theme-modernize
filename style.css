@@ -4,7 +4,7 @@ Theme URI: http://blog.mismithportfolio.com/modernize
 Author: Takuma Misumi
 Author URI: https://profiles.wordpress.org/mismith227
 Description: modernize is a modern, simple and beautiful WordPress theme. I made it for blogging. Customizer, social menu icon, several templates, logo addition, switching function between one column and two columns, etc. are also available.
-Version: 1.8.0
+Version: 1.7.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: modernize
@@ -1250,7 +1250,7 @@ address {
 
 .gnav a {
   display: block;
-  padding: 10px 10px;
+  padding: 14px 10px;
   color: #333;
 }
 
@@ -1385,6 +1385,14 @@ address {
   margin: 0;
   font-size: 2.2rem;
   word-break: break-all;
+  line-height: 1.4;
+}
+
+@media (min-width:768px) {
+
+  .entry__title {
+    line-height: 1.57;
+  }
 }
 
 .entry__thumb + .entry__info {

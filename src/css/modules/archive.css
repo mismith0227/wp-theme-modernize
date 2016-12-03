@@ -25,6 +25,10 @@
     margin: 0;
     font-size: var(--fs-large);
     word-break:break-all;
+    line-height: 1.4;
+    @media (--lmd) {
+      line-height: 1.57;
+    }
   }
   &__thumb + .entry__info {
     margin-top: 16px;

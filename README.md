@@ -19,18 +19,18 @@ modernize is a modern, simple and beautiful WordPress theme. I made it for blogg
 
 1. Install Node modules
 
-        $ npm install
+        $ yarn
 
 1. Run gulp. You don't need to install gulp globally.
 
         // Development
-        $ npm run dev
+        $ yarn run dev
 
         // Production (compress)
-        $ npm run prod
+        $ yarn run prod
 
         // Build
-        $ npm run build
+        $ yarn run build
 
 ## Third-party resources
 

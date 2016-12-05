@@ -2,5 +2,5 @@
 
 set -e
 
-npm install
-npm run build
+yarn
+yarn run build

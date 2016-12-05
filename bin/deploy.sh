@@ -32,7 +32,8 @@ package.json
 svgpack
 tmp
 src/css
-src/images" > .gitignore
+src/images
+yarn.lock" > .gitignore
 
 git init
 git config user.name "Travis CI"

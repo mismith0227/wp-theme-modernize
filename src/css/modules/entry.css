@@ -53,7 +53,7 @@
   }
   & p {
     margin-top: 32px;
-    word-break: break-all;
+    word-wrap: break-word;
   }
   & pre {
     margin: 0 auto;

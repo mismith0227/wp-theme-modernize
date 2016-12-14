@@ -24,7 +24,7 @@
   &__title {
     margin: 0;
     font-size: var(--fs-large);
-    word-break:break-all;
+    word-wrap: break-word;
     line-height: 1.4;
     @media (--lmd) {
       line-height: 1.57;
@@ -126,10 +126,13 @@
     &__info {
       position: relative;
       z-index: 1;
-      padding: 40px;
+      padding: 0 10px;
       color: #fff;
       vertical-align: middle;
       text-align: center;
+      @media (--lmd) {
+        padding: 0 60px;
+      }
       & a {
         color: #fff;
       }

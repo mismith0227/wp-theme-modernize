@@ -1,4 +1,4 @@
-# modernize [![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize) [![license](https://img.shields.io/github/license/mismith0227/wp-theme-modernize.svg?maxAge=2592000)](https://github.com/mismith0227/wp-theme-modernize/blob/master/license.txt) [![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+# modernize [![Build Status](https://travis-ci.org/mismith0227/wp-theme-modernize.svg?branch=master)](https://travis-ci.org/mismith0227/wp-theme-modernize) [![license](https://img.shields.io/github/license/mismith0227/wp-theme-modernize.svg?maxAge=2592000)](https://github.com/mismith0227/wp-theme-modernize/blob/master/license.txt) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 modernize is a modern, simple and beautiful WordPress theme. I made it for blogging. Customizer, social menu icon, several templates, logo addition, switching function between one column and two columns, etc. are also available.
 

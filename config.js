@@ -45,8 +45,7 @@ const tasks = {
   },
   svg: {
     src: `${config.src}/svg/*.svg`,
-    dest: './svgpack',
-
+    dest: './svgpack'
   },
   svgRename: {
     src: './svgpack/svgpack-sprite.svg',

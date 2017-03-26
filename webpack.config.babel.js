@@ -12,18 +12,17 @@ export default {
     filename: config.tasks.webpack.filename
   },
   module: {
-    preLoaders: [
+    rules: [
       {
+        enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'standard'
-      }
-    ],
-    loaders: [
+        loader: 'standard-loader'
+      },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        use: 'babel-loader',
+        exclude: /node_modules/
       }
     ]
   },

@@ -46,7 +46,7 @@
     "standard": "^8.6.0",
     "standard-loader": "^5.0.0",
     "svgpack": "^3.0.1",
-    "webpack": "^1.13.3",
+    "webpack": "^2.3.2",
     "webpack-stream": "^3.2.0"
   }
 }

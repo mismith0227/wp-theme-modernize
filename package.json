@@ -11,7 +11,7 @@
   },
   "repository": "git@github.com:mismith0227/wp-theme-modernize.git",
   "author": "mismith0227 <doraepon2216@gmail.com>",
-  "license": "GPL",
+  "license": "GPL-2.0",
   "dependencies": {
     "headroom.js": "^0.9.3",
     "iscroll": "^5.2.0",
@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
     "browser-sync": "^2.18.2",
     "chalk": "^1.1.3",
     "csswring": "^5.1.0",

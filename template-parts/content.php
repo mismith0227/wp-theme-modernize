@@ -44,7 +44,7 @@
         <?php if ( is_sticky() ) : ?>
           <div class="entry__featured">
             <span>
-              <svg viewBox="0 0 64 64" class="icon">
+              <svg viewBox="0 0 64 64" class="icon" aria-hidden="true">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pushpin"></use>
               </svg>
               <?php echo esc_html__( 'featured', 'modernize' ); ?>

@@ -85,7 +85,9 @@ gulp.task('image', () => {
 // SVG
 // =====================================================
 gulp.task('svg', () => {
-  var svg = new Svgpack(config.tasks.svg.src, config.tasks.svg.dest)
+  var svg = new Svgpack(config.tasks.svg.src, {
+    dest: config.tasks.svg.dest
+  })
   svg.init()
 })
 

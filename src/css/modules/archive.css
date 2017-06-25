@@ -179,7 +179,8 @@
   @media (--sm) {
     display: inline;
   }
-  & time {
+  & time,
+  & span {
     margin-left: 4px;
   }
 }

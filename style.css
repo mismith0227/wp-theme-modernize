@@ -1592,7 +1592,10 @@ address {
   }
   }
 
-.publised-label time, .update-label time {
+.publised-label time,
+  .publised-label span,
+  .update-label time,
+  .update-label span {
   margin-left: 4px;
 }
 

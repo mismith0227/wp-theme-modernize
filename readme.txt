@@ -63,3 +63,8 @@ IcoMoon-Free
 License: CC BY 4.0 or GPL
 Source : https://github.com/Keyamoon/IcoMoon-Free
 This theme utilize its SVG files.
+
+Flexicon
+License: MIT
+Source : https://github.com/blivesta/flexicon
+This theme utilize its SVG files.

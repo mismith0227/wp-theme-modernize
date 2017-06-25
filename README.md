@@ -53,3 +53,7 @@ Source : [https://necolas.github.io/normalize.css/](https://necolas.github.io/no
 IcoMoon-Free  
 License: CC BY 4.0 or GPL  
 Source : [https://github.com/Keyamoon/IcoMoon-Free](https://github.com/Keyamoon/IcoMoon-Free)
+
+Flexicon
+License: MIT
+Source : [https://github.com/blivesta/flexicon](https://github.com/blivesta/flexicon)

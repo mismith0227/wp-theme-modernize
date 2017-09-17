@@ -24,24 +24,32 @@ function modernize_sanitize_select( $input, $setting ) {
 	}
 }
 
+// Columns
+function modernize_sanitize_select_columns( $input ) {
+	$valid = array( '1', '2' );
+	if ( in_array( $input, $valid, true ) ) {
+		return $input;
+	}
+	return '1';
+}
+
 function modernize_customize_register( $wp_customize ) {
   $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
   $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
   $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-  $wp_customize->add_setting('article_column_options[radio01]', array(
-    'default'  => 'col-1',
-    'type'  => 'option',
-    // 'sanitize_callback' => 'modernize_sanitize_select',
+  $wp_customize->add_setting('article_column_options', array(
+    'default'  => 1,
+    'sanitize_callback' => 'modernize_sanitize_select_columns',
   ));
   $wp_customize->add_control( 'article_column', array(
-    'settings' => 'article_column_options[radio01]',
     'label' =>'Article Layout',
     'section' => 'article_column_section',
-    'type' => 'radio',
-    'choices'    => array(
-      'col-1' => 'one column article list',
-      'col-2' => 'twe column article list',
-    ),
+    'settings' => 'article_column_options',
+    'type' => 'select',
+    'choices' =>  array(
+  		'1' =>  __( '1 Column', 'modernize' ),
+  		'2' =>  __( '2 Columns', 'modernize' ),
+  	),
   ));
 }
 add_action( 'customize_register', 'modernize_customize_register' );

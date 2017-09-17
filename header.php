@@ -69,8 +69,7 @@
 	<?php endif; ?>
 
   <?php
-    $options =  get_option('article_column_options');
-    $colmnclass = esc_attr($options['radio01']);
-  ?>
+		$columns = ' col-' . intval( get_theme_mod( 'article_column_options', '1' ) );
+	?>
 
-  <div id="content" class="site-content <?php echo $colmnclass ?>">
+  <div id="content" class="site-content <?php echo $columns ?>">

@@ -32,6 +32,12 @@ modernize is a modern, simple and beautiful WordPress theme. I made it for blogg
         // Build
         $ yarn run build
 
+## Contributing
+
+Pull requests, bug fixes and new features are welcome!
+
+Please create feature branches from [develop](https://github.com/mismith0227/wp-theme-modernize/tree/develop) and submit a PR for any change.
+
 ## Third-party resources
 
 iScroll  

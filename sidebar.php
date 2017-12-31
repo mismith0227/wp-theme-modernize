@@ -13,6 +13,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside class="secondary" role="complementary">
+<aside class="secondary l-content l-sidebar" role="complementary">
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

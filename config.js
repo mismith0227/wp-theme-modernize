@@ -2,7 +2,7 @@ import pkg from './package.json'
 
 const config = {
   src: 'src',
-  localUrl: `${pkg.name}.dev`
+  localUrl: `wocker.test`
 }
 
 const tasks = {

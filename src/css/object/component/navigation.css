@@ -1,0 +1,19 @@
+.navigation {
+  max-width: 750px;
+  width: 96%;
+  margin: 80px auto 0;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-previous,
+.nav-next {
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+.nav-next {
+  text-align: right;
+}

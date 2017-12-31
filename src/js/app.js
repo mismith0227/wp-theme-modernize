@@ -1,25 +1,23 @@
 const IScroll = require('iscroll')
 const $ = window.jQuery
-const Headroom = require('headroom.js')
-require('./skip-link-focus-fix.js')
 
 import debounce from 'throttle-debounce/debounce'
 
 $(() => {
   // headerstyle
-  const headstyle = () => {
-    const navHeight = $('#header').outerHeight(true)
-    $('body').css({'padding-top': `${navHeight}px`})
-    if ($('#wpadminbar').length) {
-      const barHeight = $('#wpadminbar').height()
-      $('#header').css({'top': `${barHeight}px`})
-    }
-  }
+  // const headstyle = () => {
+  //   const navHeight = $('#header').outerHeight(true)
+  //   $('body').css({'padding-top': `${navHeight}px`})
+  //   if ($('#wpadminbar').length) {
+  //     const barHeight = $('#wpadminbar').height()
+  //     $('#header').css({'top': `${barHeight}px`})
+  //   }
+  // }
 
-  headstyle()
+  // headstyle()
 
   $(window).on('resize', debounce(200, () => {
-    headstyle()
+    // headstyle()
     Drawer.close()
   }))
 
@@ -46,7 +44,7 @@ $(() => {
     ]
 
     $.each(sns, (i, sns) => {
-      $('.sns-menu li').find(`a[href*="${sns}"] use`).attr('xlink:href', `#icon-${sns}`)
+      $('.p-snsmenu li').find(`a[href*="${sns}"] use`).attr('xlink:href', `#icon-${sns}`)
     })
   }
 
@@ -54,12 +52,6 @@ $(() => {
   if ($('.error404').length) {
     $('.secondary form[role="search"]').hide()
   }
-
-  const myElement = document.querySelector('.header')
-  const headroom = new Headroom(myElement, {
-    offset: 100
-  })
-  headroom.init()
 
   const isPrimaryNav = $('#site-navigation').children().length
 

@@ -1,0 +1,49 @@
+.c-entry {
+  display: block;
+  margin-top: 144px;
+  &__info {
+    position: relative;
+  }
+  &__featured {
+    width: 22px;
+    height: 22px;
+  }
+  &__title {
+    margin: 0 0 16px;
+    font-size: 2.8rem;
+    & a {
+      color: #555;
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+  &__thumb {
+    position: relative;
+    margin: 32px 0 0;
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  &__meta {
+    & span {
+      margin-right: .8rem;
+      font-size: 1.6rem;
+      & a {
+        color: #555;
+        &:hover {
+          color: var(--link-color);
+        }
+      }
+    }
+  }
+  &__content {
+    margin: 40px 0 0;
+    color: #888;
+  }
+}

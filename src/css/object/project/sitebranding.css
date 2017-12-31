@@ -1,0 +1,19 @@
+.custom-logo-link {
+  width: 80px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.p-sitebranding {
+  &__name {
+    margin: 16px 0 0;
+    & a {
+      color: var(--color-text);
+    }
+  }
+  &__description {
+    margin: 8px 0 0;
+  }
+}

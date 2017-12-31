@@ -24,24 +24,24 @@
 
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'modernize' ); ?></a>
 
-	<header id="header" class="header" role="banner">
+	<header id="header" class="l-header" role="banner">
     <?php the_custom_logo(); ?>
     <?php
 		if ( is_front_page() && is_home() ) : ?>
-			<h1 class="header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="p-sitebranding__name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php else : ?>
-			<p class="header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php
-		endif;
+			<p class="p-sitebranding__name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+    <?php endif; ?>
 
-		$description = get_bloginfo( 'description', 'display' );
-		if ( $description || is_customize_preview() ) : ?>
-			<p class="header__description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-		<?php
-		endif; ?>
+    <?php
+      $description = get_bloginfo( 'description', 'display' );
+      if ( $description || is_customize_preview() ) :
+    ?>
+			<p class="p-sitebranding__description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+		<?php endif; ?>
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-		<button class="toggle-btn js-toggle" aria-expanded="false">
+		<button class="p-togglebtn js-toggle" aria-expanded="false">
 			<span></span>
       <span class="screen-reader-text">menu</span>
 		</button>
@@ -50,7 +50,7 @@
 	</header><!-- .header -->
 
 	<?php if ( has_nav_menu( 'primary' ) ) : ?>
-	<nav id="site-navigation" class="gnav" role="navigation" aria-hidden="true">
+	<nav id="site-navigation" class="p-menu" role="navigation" aria-hidden="true">
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary',

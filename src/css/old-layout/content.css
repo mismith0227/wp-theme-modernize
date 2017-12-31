@@ -1,0 +1,68 @@
+.site-content {
+  display: block;
+  width: 100%;
+  margin: 40px auto 0;
+  @media (--sm) {
+    @apply --theme-width;
+    &.col-2 {
+      @apply --theme-width-col2;
+    }
+  }
+}
+
+.primary {
+  width: 96%;
+  margin: 0 auto;
+  padding-right: 0;
+  @media (--sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.secondary {
+  display: block;
+  width: 96%;
+  margin: 40px auto 0;
+  @media (--sm) {
+    width: 100%;
+    margin: 40px auto 0;
+  }
+}
+
+.single-post,
+.page {
+  & .site-content {
+    width: 100%;
+    max-width: inherit;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  & .primary {
+    width: 100%;
+  }
+  & .secondary {
+    @apply --theme-width;
+  }
+}
+
+.blog, .archive, .search {
+  & .col-2 {
+    & .article-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    & .entry {
+      width: 48%;
+    }
+  }
+}
+
+
+.error404 {
+  & .primary {
+    height: 350px;
+    padding-top: 100px;
+  }
+}

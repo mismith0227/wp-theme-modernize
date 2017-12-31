@@ -1,0 +1,61 @@
+:root {
+  --toggle-icon: {
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 28px;
+    height: 2px;
+    background-color: #555;
+  }
+}
+
+.p-togglebtn {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background-color: inherit;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  @media (--lg) {
+    margin-right: 24px;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  & span:not(.screen-reader-text) {
+    @apply --toggle-icon;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &::before {
+      content: "";
+      @apply --toggle-icon;
+      top: 9px;
+      left: 0;
+      right: 0;
+      transform: rotate(0);
+      transition: transform .3s;
+    }
+    &::after {
+      content: "";
+      @apply --toggle-icon;
+      bottom: 9px;
+      left: 0;
+      right: 0;
+      transform: rotate(0);
+      transition: transform .3s;
+    }
+  }
+}

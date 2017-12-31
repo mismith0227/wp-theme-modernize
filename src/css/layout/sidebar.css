@@ -1,0 +1,30 @@
+.l-sidebar {
+  margin-top: 144px;
+  & .widget {
+    margin: 32px 0 0;
+  }
+  & .widget__title {
+    margin: 0;
+    font-size: 2.4rem;
+  }
+  & ul {
+    margin: 16px 0 0;
+    padding: 0 0 0 24px;
+  }
+  & .widget_archive ul,
+  & .widget_categories ul,
+  & .widget_meta ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & li {
+    margin: .8rem .8rem 0 0;
+    list-style: none;
+  }
+  & a {
+    color: #555;
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+}
